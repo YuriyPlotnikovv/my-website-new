@@ -1,0 +1,133 @@
+.works {
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media (max-width: $tablet-max-width) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: calc((100% - 100px) / 3);
+    height: auto;
+
+    background-color: $colorWhite;
+    border-radius: 10px;
+    box-shadow: $boxShadowCard;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      box-shadow: $boxShadowCardHover;
+      transform: scale(1.05);
+
+      @media (max-width: $tablet-max-width) {
+        transform: none;
+      }
+
+      .works__item-image {
+        filter: blur(2px) brightness(0.7);
+      }
+
+      .works__item-content {
+        z-index: 2;
+
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: $desktop-mid-width) {
+      width: calc((100% - 80px) / 3);
+    }
+    @media (max-width: $tablet-max-width) {
+      width: calc((100% - 30px) / 2);
+    }
+    @media (max-width: $mobile-mid-width) {
+      width: 100%;
+    }
+  }
+
+  &__item-link {
+    position: relative;
+
+    display: block;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+
+  &__item-image {
+    grid-row: 1 / 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: all 0.4s ease-in-out;
+
+    @media (max-width: $tablet-max-width) {
+      filter: blur(2px) brightness(0.7);
+    }
+  }
+
+  &__item-content {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+
+    text-align: center;
+    text-shadow: 0 5px 15px $colorBlack;
+    color: $colorWhite;
+
+    opacity: 0;
+
+    transition: all 0.4s ease-in-out;
+
+    @media (max-width: $tablet-max-width) {
+      z-index: 2;
+
+      opacity: 1;
+    }
+  }
+
+  &__item-title {
+    grid-row: 2 / 3;
+
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 500;
+
+    @media (max-width: $desktop-mid-width) {
+      font-size: 28px;
+    }
+    @media (max-width: $mobile-mid-width) {
+      font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    grid-row: 3 / 4;
+
+    font-size: 24px;
+
+    @media (max-width: $desktop-mid-width) {
+      font-size: 20px;
+    }
+    @media (max-width: $tablet-max-width) {
+      font-size: 18px;
+    }
+  }
+}

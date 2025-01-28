@@ -1,0 +1,28 @@
+.quotes-list {
+  .slider__wrapper {
+    height: 150px;
+
+    @media (max-width: $tablet-max-width) {
+      height: 200px;
+    }
+    @media (max-width: $mobile-mid-width) {
+      height: 250px;
+    }
+  }
+
+  &__item {
+    display: block;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: $colorWhite;
+    border-radius: 10px;
+    box-shadow: $boxShadowCard;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}

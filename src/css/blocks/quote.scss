@@ -1,0 +1,15 @@
+.quote {
+  &__text {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: $colorWhite;
+    border-radius: 10px;
+    box-shadow: $boxShadowCard;
+  }
+}

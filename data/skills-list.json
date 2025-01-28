@@ -1,0 +1,42 @@
+[
+    {
+        "name": "HTML",
+        "icon": "icon-html",
+        "link": "https://html.spec.whatwg.org/multipage/"
+    },
+    {
+        "name": "CSS",
+        "icon": "icon-css",
+        "link": "https://www.w3.org/Style/CSS/"
+    },
+    {
+        "name": "SCSS",
+        "icon": "icon-scss",
+        "link": "https://sass-scss.ru/"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "icon-js",
+        "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+    },
+    {
+        "name": "PHP",
+        "icon": "icon-php",
+        "link": "https://www.php.net/"
+    },
+    {
+        "name": "Gulp",
+        "icon": "icon-gulp",
+        "link": "https://gulpjs.com/"
+    },
+    {
+        "name": "Vue",
+        "icon": "icon-vue",
+        "link": "https://vuejs.org/"
+    },
+    {
+        "name": "React",
+        "icon": "icon-react",
+        "link": "https://react.dev/"
+    }
+]

@@ -1,0 +1,30 @@
+.socials {
+  &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &__item-icon {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    fill: $colorWhite;
+    stroke: $colorWhite;
+  }
+}

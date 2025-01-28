@@ -1,0 +1,104 @@
+.slider {
+  box-sizing: border-box;
+  overflow: hidden;
+
+  width: 100%;
+
+  &__wrapper {
+    overflow: hidden;
+
+    padding: 5px;
+  }
+
+  &__item {
+    position: relative;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  &__pagination.swiper-pagination {
+    position: absolute;
+    top: unset;
+    bottom: 30px;
+    left: 50%;
+    z-index: 2;
+
+    display: flex;
+    gap: 5px;
+    width: max-content;
+
+    transform: translate(-50%, 0);
+
+    @media (max-width: $mobile-max-width) {
+      bottom: 10px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 10px;
+      margin: 0;
+
+      background-color: $colorGrayThree;
+      border-radius: 5px;
+
+      transition: all 0.4s ease-in-out;
+
+      &:hover, &:active {
+        background-color: $colorGray;
+      }
+
+      &-active {
+        background-color: $colorGray;
+
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
+
+  &__navigation-button {
+    position: relative;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      opacity: 0.6;
+
+      transform: scale(1.1);
+    }
+
+    &--prev {
+      left: 10px;
+    }
+
+    &--next {
+      right: 10px;
+
+      transform: rotate(180deg);
+
+      &:hover, &:active {
+        transform: rotate(180deg) scale(1.1);
+      }
+    }
+  }
+
+  &__navigation-button-icon {
+    width: 30px;
+    height: auto;
+  }
+}

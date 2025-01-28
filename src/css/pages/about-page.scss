@@ -1,0 +1,21 @@
+.about-page {
+  &__intro {
+    background-color: $colorWhite;
+  }
+
+  &__quotes-list {
+    background-color: $colorGrayTwo;
+  }
+
+  &__photo-list {
+    background-color: $colorWhite;
+  }
+
+  &__skills-list {
+    background-color: $colorGrayTwo;
+  }
+
+  &__my-way {
+    background-color: $colorWhite;
+  }
+}

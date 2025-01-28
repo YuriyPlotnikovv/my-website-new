@@ -1,0 +1,713 @@
+[
+    {
+        "id": 8,
+        "name": "my-website-new",
+        "title-ru": "My Website v.2.0",
+        "title-en": "My Website v.2.0",
+        "textFirst-ru": "Личный проект на PHP",
+        "textSecond-ru": "Новая версия моего сайта. В этой версии все собрано полностью с нуля на других технологиях, реализована сложная логика работы.",
+        "textFirst-en": "Personal project in PHP",
+        "textSecond-en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented.",
+        "image": "/public/img/projects/my-website-new-preview.webp",
+        "deploy": "",
+        "repository": "",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Hard",
+                "name-en": "Difficulty",
+                "description-en": "Hard"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 0,9%",
+                    "CSS - 1,4%",
+                    "JS - 97,7%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 0.9%",
+                    "CSS - 1.4%",
+                    "JS - 97.7%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Обо мне",
+                    "Портфолио",
+                    "Контакты",
+                    "Детальные страницы проектов"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "About Me",
+                    "Projects",
+                    "Contacts",
+                    "Detailed project pages"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Подключены Swiper и Lightgallery",
+                    "Интеграция с VK Api (для получения фото)",
+                    "Английский язык (переводы из переменных), определение языка на основе url страницы",
+                    "Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)",
+                    "Данные из JSON файлов"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Swiper and Lightgallery are integrated",
+                    "VK integration (photos)",
+                    "English language (translations from variables), automatic language detection by url",
+                    "Url rewrite (links are not the actual location of the pages on the server)",
+                    "Data from JSON files"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Страница с примерами реализации",
+                    "Страница с полезными материалами",
+                    "Форма отправки сообщения на почту",
+                    "Фильтры и сортировка проектов (пока особо нечего фильтровать)"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Page with implementation examples",
+                    "Page with useful materials",
+                    "Form for sending a message to the mail",
+                    "Filters and sorting of projects (there is nothing much to filter yet)"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "countdown",
+        "title-ru": "Счётчик до Нового Года",
+        "title-en": "New Year Countdown",
+        "textFirst-ru": "Простой проект для развлечения",
+        "textSecond-ru": "Проект с обратным отсчётом до Нового года, анимацией снега и веселой музыкой для поднятия Новогоднего настроения.",
+        "textFirst-en": "Simple project for fun",
+        "textSecond-en": "A project with a countdown to the New Year, snow animation and fun music to cheer up the New Year mood.",
+        "image": "/public/img/projects/countdown-preview.webp",
+        "deploy": "https://countdown-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/ny-countdown/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Easy",
+                "name-en": "Difficulty",
+                "description-en": "Easy"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 31,3%",
+                    "CSS - 23,8%",
+                    "JS - 44,9%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 31.3%",
+                    "CSS - 23.8%",
+                    "JS - 44.9%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Счётчик и календарь выполнены на чистом JS",
+                    "Включение и выключение музыки",
+                    "Снегопад с сугробами",
+                    "Адаптивность под разные устройства"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "The counter and calendar are made in pure JS",
+                    "Turning music on and off",
+                    "Snowfall with snowdrifts",
+                    "Adaptability to different devices"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Гирлянда",
+                    "Потоковое воспроизведение музыки"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Garland",
+                    "Music streaming"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "angelavladi",
+        "title-ru": "AngelaVladi",
+        "title-en": "AngelaVladi",
+        "textFirst-ru": "Проект на 1C-Bitrix и PHP",
+        "textSecond-ru": "Проект каталога дизайнерской одежды без онлайн покупок, но с оформлением заявок. Полностью с нуля написанный дизайн, структура и вся логика работы.",
+        "textFirst-en": "Project on 1C-Bitrix",
+        "textSecond-en": "A design clothing catalog project without online shopping, but with order requests. A completely written design, project structure and the logic of the work.",
+        "image": "/public/img/projects/angelavladi-preview.webp",
+        "deploy": "https://angelavladi.ru/",
+        "repository": "https://angelavladi.netlify.app/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Medium",
+                "name-en": "Difficulty",
+                "description-en": "Medium"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 54,2%",
+                    "CSS - 37,1%",
+                    "JS - 8,7%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 54.2%",
+                    "CSS - 37.1%",
+                    "JS - 8.7%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Каталог",
+                    "Коллекции",
+                    "Как заказать",
+                    "О нас",
+                    "Отзывы",
+                    "Контакты",
+                    "Детальные страницы товаров"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Home",
+                    "Catalog",
+                    "Collections",
+                    "How to Order",
+                    "About Us",
+                    "Reviews",
+                    "Contacts",
+                    "Detailed product pages"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Многоязычность на одной копии системы",
+                    "Библиотеки Swiper и Lightgallery",
+                    "Настроен адаптивный ресайз фото и сборка в тег picture",
+                    "Формы обратной связи и отзывов с сохранением в админку",
+                    "ReCaptcha Google",
+                    "Полностью все данные редактируются из админки"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Multilingual website on a single system copy",
+                    "Swiper and Lightgallery libraries",
+                    "Adaptive photo resizing configured and assembled into a picture tag",
+                    "Feedback and review forms with saving to the admin panel",
+                    "Google ReCaptcha",
+                    "All data can be fully edited from the admin panel"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Кастомное свойство типа цвет (для товаров)"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Custom property of type color (for products)"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "cinematic",
+        "title-ru": "Cinematic",
+        "title-en": "Cinematic",
+        "textFirst-ru": "Проект на JS и MVP",
+        "textSecond-ru": "Пятый учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект направлен на изучение работы фреймворков под капотом: реализация паттерна MVP с разделением зон ответственности частей приложения.",
+        "textFirst-en": "Project on JS and MVP",
+        "textSecond-en": "The fifth training project was developed as part of the Frontend Developer course from the HTML Academy. The project is aimed at studying the work of frameworks under the hood: the implementation of the MVP pattern with the separation of responsibilities of parts of the application.",
+        "image": "/public/img/projects/cinematic-preview.webp",
+        "deploy": "https://cinematic-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/cinematic/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Hard",
+                "name-en": "Difficulty",
+                "description-en": "Hard"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 47,5%",
+                    "CSS - 18,5%",
+                    "JS - 34%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 47.5%",
+                    "CSS - 18.5%",
+                    "JS - 34%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Данные хранятся на сервере, приходят через fetch-запросы",
+                    "Фильтрация и сортировка фильмов",
+                    "Добавление в списки",
+                    "Комментарии к фильмам",
+                    "Динамическое обновление данных на странице и сервере"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Data is stored on the server, it comes through fetch requests",
+                    "Filtering and sorting movies",
+                    "Adding to lists",
+                    "Comments on movies",
+                    "Dynamic updating of data on the page and server"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Адаптивность под разные устройства"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Adaptability to different devices"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "my-website",
+        "title-ru": "My website v.1.0",
+        "title-en": "My website v.1.0",
+        "textFirst-ru": "Проект на ReactJs",
+        "textSecond-ru": "Проект моего личного сайта. Создавался для резюме как SPA-приложение, чтобы показать навыки и знания.",
+        "textFirst-en": "Project on ReactJs",
+        "textSecond-en": "The project of my personal website. It was created for a resume as a SPA application to show skills and knowledge.",
+        "image": "/public/img/projects/my-website-old-preview.webp",
+        "deploy": "https://yuriyplotnikovv-first-version.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/my-website/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Medium",
+                "name-en": "Difficulty",
+                "description-en": "Medium"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 0,9%",
+                    "CSS - 1,4%",
+                    "JS - 97,7%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 0.9%",
+                    "CSS - 1.4%",
+                    "JS - 97.7%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Обо мне",
+                    "Портфолио",
+                    "Контакты",
+                    "Детальные страницы проектов"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "About Me",
+                    "Projects",
+                    "Contacts",
+                    "Detailed project pages"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Подключен слайдер",
+                    "Данные передаются из data-файлов",
+                    "Элементы отрисовываются по единым шаблонам"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Slider connected",
+                    "Data is transferred from data files",
+                    "Elements are drawn using the same templates"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Адаптивность под разные устройства",
+                    "Анимации",
+                    "Форма отправки сообщения на почту"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Adaptability to different devices",
+                    "Animations",
+                    "Message sending form"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "farmerproducts",
+        "title-ru": "Farmer Products",
+        "title-en": "Farmer Products",
+        "textFirst-ru": "Простой проект на ReactJS",
+        "textSecond-ru": "Четвертый учебный проект, разработан в рамках курса JavaScript-разработчик от HTML Academy. Проект на изучение возможностей и синтаксиса библиотеки ReactJS.",
+        "textFirst-en": "Simple project on ReactJS",
+        "textSecond-en": "The fourth training project was developed as part of the JavaScript Developer course from the HTML Academy. A project to explore the capabilities and syntax of the ReactJS.",
+        "image": "/public/img/projects/farmer-products-preview.webp",
+        "deploy": "https://farmer-products-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/farmer-products/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Easy",
+                "name-en": "Difficulty",
+                "description-en": "Easy"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 1,4%",
+                    "JS - 98,6%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 1.4%",
+                    "JS - 98.6%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Каталог"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "Catalog"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Слайдер в каталоге",
+                    "Привязка слайдера к чекбоксам выбора продукта",
+                    "Табы в описании продукта",
+                    "Оформленный заказ выводится в Alert на сайте (для наглядности)"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Slider in catalog",
+                    "Slider linked to product selection checkboxes",
+                    "Tabs in product description",
+                    "The completed order is displayed in an Alert on the website (for clarity)"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Полноценное оформление заказа с отправкой на сервер",
+                    "Адаптивность под разные устройства"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Full order processing with server submission",
+                    "Adaptability to different devices"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "keksogram",
+        "title-ru": "Keksogram",
+        "title-en": "Keksogram",
+        "textFirst-ru": "Проект на JavaScript",
+        "textSecond-ru": "Третий учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение возможностей JavaScript на практике.",
+        "textFirst-en": "Project on JavaScript",
+        "textSecond-en": "The third training project was developed as part of the Frontend Developer course from the HTML Academy. A project to explore the possibilities of JavaScript in practice.",
+        "image": "/public/img/projects/keksogram-preview.webp",
+        "deploy": "https://keksogram-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/keksogram/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Medium",
+                "name-en": "Difficulty",
+                "description-en": "Medium"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 8,4%",
+                    "CSS - 19,2%",
+                    "JS - 72,4%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 8.4%",
+                    "CSS - 19.2%",
+                    "JS - 72.4%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Модальное окно загрузки фотографий"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "Photo Upload Modal"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Подключены валидатор и слайдер",
+                    "Загрузка данных с сервера",
+                    "Фильтры изображения",
+                    "Сортировка отображения на сайте",
+                    "Попап статуса загрузки",
+                    "Динамическая подгрузка комментариев и данных фотографий"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Validator and slider connected",
+                    "public loading from server",
+                    "Image filters",
+                    "Sorting display on site",
+                    "Upload status popup",
+                    "Dynamic loading of comments and photo public"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Добавление комментария к фотографиям",
+                    "Отображение загруженного изображения на сайте"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Adding comments to photos",
+                    "Displaying uploaded image on the site"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "cat-energy",
+        "title-ru": "Cat Energy",
+        "title-en": "Cat Energy",
+        "textFirst-ru": "Проект с препроцессором Less",
+        "textSecond-ru": "Второй учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение работы с препроцессорами, и реализацию адаптивности сайта для разных устройств.",
+        "textFirst-en": "Project with Less preprocessor",
+        "textSecond-en": "The second training project was developed as part of the Frontend Developer course from the HTML Academy. A project to study how to work with preprocessors, and implement site adaptability for different devices.",
+        "image": "/public/img/projects/cat-energy-preview.webp",
+        "deploy": "https://cat-energy-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/cat-energy/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Medium",
+                "name-en": "Difficulty",
+                "description-en": "Medium"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 39,5%",
+                    "LESS - 56,3%",
+                    "JS - 4,2%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 39.5%",
+                    "LESS - 56.3%",
+                    "JS - 4.2%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Каталог",
+                    "Подбор программы"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "Catalog",
+                    "Program Selection"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Адаптив под телефон, планшет и десктоп",
+                    "Подключены интерактивные карты от Яндекса",
+                    "Отправка формы заявки на подбор программы",
+                    "Сборка и оптимизация через Gulp"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Responsive design for phone, tablet, and desktop",
+                    "Yandex interactive maps connected",
+                    "Program selection form submission",
+                    "Build and optimization via Gulp"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Слайдер на главной странице",
+                    "Корзина",
+                    "Получение ассортимента продукции с сервера"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Slider on the main page",
+                    "Shopping cart",
+                    "Getting the product range from the server"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 0,
+        "name": "sedona",
+        "title-ru": "Sedona",
+        "title-en": "Sedona",
+        "textFirst-ru": "Проект на вёрстку",
+        "textSecond-ru": "Первый учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Простой проект по изучению базовой разметки и стилизации, без логики взаимодействия с пользователем.",
+        "textFirst-en": "Layout project",
+        "textSecond-en": "The first training project developed as part of the Frontend Developer course from the HTML Academy. A simple project to study basic markup and styling, without the logic of user interaction.",
+        "image": "/public/img/projects/sedona-preview.webp",
+        "deploy": "https://sedona-training.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/sedona/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Easy",
+                "name-en": "Difficulty",
+                "description-en": "Easy"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "HTML - 56,4%",
+                    "CSS - 41,4%",
+                    "JS - 2,0%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "HTML - 56.4%",
+                    "CSS - 41.4%",
+                    "JS - 2.0%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная",
+                    "Каталог",
+                    "Модальное окно"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main",
+                    "Catalog",
+                    "Modal window"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Ручная оптимизация всех фотографий"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Manual optimization of all photos"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Страница «О Седоне»",
+                    "Слайдер в каталоге",
+                    "Сортировка и вид карточек в каталоге",
+                    "Динамическая загрузка карточек",
+                    "Адаптивность под разные устройства"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "The «About Sedona» page",
+                    "Slider in the catalog",
+                    "Sorting and type of cards in the catalog",
+                    "Dynamic loading of cards",
+                    "Adaptability to different devices"
+                ]
+            }
+        ]
+    }
+]

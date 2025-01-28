@@ -1,0 +1,45 @@
+.skills-list {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  &__item-link {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    filter: $dropShadow;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      filter: $dropShadowHover;
+
+      transform: scale(1.05);
+    }
+  }
+
+  &__item-icon {
+    box-sizing: border-box;
+    width: 80px;
+    height: 60px;
+  }
+
+  &__item-name {
+    font-style: italic;
+  }
+}

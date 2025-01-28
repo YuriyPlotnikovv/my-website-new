@@ -1,0 +1,87 @@
+.project-info {
+  &__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    @media (max-width: $tablet-max-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__features-title {
+    margin-bottom: 10px;
+
+    font-size: 26px;
+    font-weight: 500;
+    color: $colorBlackThree;
+
+    @media (max-width: $desktop-mid-width) {
+      font-size: 24px;
+    }
+    @media (max-width: $mobile-mid-width) {
+      font-size: 22px;
+    }
+  }
+
+  &__features-description {
+    margin-left: 40px;
+
+    font-size: 22px;
+    color: $colorGray;
+
+    @media (max-width: $desktop-mid-width) {
+      font-size: 20px;
+    }
+    @media (max-width: $tablet-max-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__features-description-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__features-description-item {
+    list-style-type: circle;
+  }
+
+  &__links-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__links-item-link {
+    display: block;
+    padding: 15px 50px;
+
+    font-size: 22px;
+    font-weight: 500;
+    color: $colorWhite;
+
+    border-radius: 20px;
+    border-color: $colorBlackThree;
+    box-shadow: $buttonShadow;
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      color: $colorBlackThree;
+
+      box-shadow: $buttonShadowActive;
+
+      transform: scale(1.05);
+    }
+
+    @media (max-width: $desktop-mid-width) {
+      font-size: 20px;
+    }
+    @media (max-width: $tablet-max-width) {
+      font-size: 18px;
+    }
+  }
+}

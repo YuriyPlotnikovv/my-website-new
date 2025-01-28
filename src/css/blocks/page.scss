@@ -1,0 +1,43 @@
+.page {
+  &--fixed {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+
+  &__body {
+    height: 100%;
+
+    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  &__header {
+    position: fixed;
+    z-index: 100;
+
+    width: 100%;
+
+    background-color: $colorBlackTwo;
+
+    color: $colorWhite;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  &__footer {
+    margin: auto 0 0;
+
+    color: $colorBlackThree;
+
+    background-color: $colorGraySeven;
+    box-shadow: $boxShadowSection;
+  }
+}
