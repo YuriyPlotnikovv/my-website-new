@@ -3,21 +3,6 @@ global $MESS, $PATH, $LANG;
 
 $allowed_languages = ['en', 'ru'];
 
-function getLangFromBrowser($allowed_languages)
-{
-    if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
-        $browser_languages = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-
-        foreach ($browser_languages as $lang) {
-            $lang = substr($lang, 0, 2);
-            if (in_array($lang, $allowed_languages)) {
-                return $lang;
-            }
-        }
-    }
-    return 'en';
-}
-
 function getLangFromUrl($uri, $allowed_languages)
 {
     $path = parse_url($uri, PHP_URL_PATH);
@@ -31,8 +16,6 @@ function getLangFromUrl($uri, $allowed_languages)
 }
 
 $langFromUrl = getLangFromUrl($_SERVER['REQUEST_URI'], $allowed_languages);
-//$langFromBrowser = getLangFromBrowser($allowed_languages);
-
 $lang = $langFromUrl;
 
 $LANG = $lang;

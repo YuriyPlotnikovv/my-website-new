@@ -40,9 +40,9 @@ $contactsList = Tools::getData('contacts-list');
                             <use xlink:href="/public/img/sprite.svg#<?= $icon ?>"/>
                         </svg>
 
-                        <h2 class="contacts__item-title">
+                        <span class="contacts__item-title">
                             <?= $title ?>
-                        </h2>
+                        </span>
                     </a>
                 </li>
             <?php endforeach; ?>
@@ -68,9 +68,9 @@ $contactsList = Tools::getData('contacts-list');
                             <use xlink:href="/public/img/sprite.svg#<?= $icon ?>"/>
                         </svg>
 
-                        <h2 class="contacts__item-title">
+                        <span class="contacts__item-title">
                             <?= $title ?>
-                        </h2>
+                        </span>
                     </a>
                 </li>
             <?php endforeach; ?>

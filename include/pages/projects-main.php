@@ -35,7 +35,7 @@ $projectsList = Tools::getData('projects-list');
                 $text = $item['textFirst-' . $LANG];
                 ?>
                 <li class="works__item">
-                    <a class="works__item-link link" href="<?= $link ?>">
+                    <a class="works__item-link link" href="<?= $link ?>" title="<?= $title ?>">
                         <img class="works__item-image" src="<?= $image ?>" alt="<?= $title ?>" loading="lazy">
 
                         <div class="works__item-content">

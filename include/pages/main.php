@@ -13,11 +13,11 @@ $projectsList = Tools::getData('projects-list');
             <p class="intro__text intro__text--second"><?= $MESS['MAIN_TEXT_SECOND'] ?></p>
         </div>
 
+        <img class="intro__image intro__image--main" src="/public/img/page-main.webp" alt="" width="700" height="885">
+
         <svg class="intro__background" viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="/public/img/sprite.svg#main-bg"/>
         </svg>
-
-        <img class="intro__image intro__image--main" src="/public/img/page-main.webp" alt="">
 
         <?php Tools::includeFile('scroll-button') ?>
     </div>
@@ -50,7 +50,7 @@ $projectsList = Tools::getData('projects-list');
                 $text = $item['textFirst-' . $LANG];
                 ?>
                 <li class="works__item">
-                    <a class="works__item-link link" href="<?= $link ?>">
+                    <a class="works__item-link link" href="<?= $link ?>" title="<?= $title ?>">
                         <img class="works__item-image" src="<?= $image ?>" alt="<?= $title ?>" loading="lazy">
 
                         <div class="works__item-content">

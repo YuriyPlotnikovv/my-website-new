@@ -35,8 +35,8 @@
         "link": "https://vuejs.org/"
     },
     {
-        "name": "React",
-        "icon": "icon-react",
-        "link": "https://react.dev/"
+        "name": "Bitrix",
+        "icon": "icon-bitrix",
+        "link": "https://dev.1c-bitrix.ru/"
     }
 ]

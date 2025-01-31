@@ -1,5 +1,5 @@
 <?php
-global $MESS;
+global $MESS, $LANG;
 $url = $_SERVER['REQUEST_URI'];
 $projectsList = Tools::getData('projects-list');
 $project = Tools::getDetailData($url, $projectsList);
@@ -9,8 +9,8 @@ if (!$project) {
     exit();
 }
 
-$pageTitle = $MESS['PROJECT'] . $project['title-ru'] . ' - ' . $MESS['PAGE_TITLE'];
-$pageDescription = $project['textSecond-ru'];
+$pageTitle = $MESS['PROJECT'] . $project['title-' . $LANG] . ' - ' . $MESS['PAGE_TITLE'];
+$pageDescription = $project['textSecond-' . $LANG];
 ?>
 <?php require_once $_SERVER['DOCUMENT_ROOT'] . "/include/header.php"; ?>
 

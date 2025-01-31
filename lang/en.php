@@ -6,6 +6,7 @@ return [
     'ABOUT_PAGE_DESCRIPTION' => 'Learn more about me, my story, skills, and approach to work.',
     'CONTACTS_PAGE_DESCRIPTION' => 'Contact me to discuss your projects. Find contact details and forms for communication on this page.',
     'PROJECTS_PAGE_DESCRIPTION' => 'Explore my projects — examples of modern and interactive websites created by an experienced frontend developer.',
+    'MAIN' => 'Main page',
     'PROJECT' => 'Project ',
     'MENU' => 'Menu',
     'ABOUT' => 'About Me',

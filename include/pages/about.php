@@ -81,7 +81,7 @@ $wayList = Tools::getData('way-list');
                     $title = $item['text'] ?? '';
                     ?>
                     <li class="photo-list__item slider__item swiper-slide" data-src="<?= htmlspecialchars($photoFullUrl, ENT_QUOTES) ?>">
-                        <img class="photo-list__item-image" src="<?= htmlspecialchars($photoUrl, ENT_QUOTES) ?>" alt="<?= htmlspecialchars($title, ENT_QUOTES) ?>" loading="lazy">
+                        <img class="photo-list__item-image" src="<?= htmlspecialchars($photoUrl, ENT_QUOTES) ?>" alt="<?= htmlspecialchars($title, ENT_QUOTES) ?>" width="250" height="300" loading="lazy">
                     </li>
                 <?php endforeach; ?>
 

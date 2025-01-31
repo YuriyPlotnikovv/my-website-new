@@ -31,13 +31,13 @@ switch (count($segments)) {
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/' . $language . '/' . $segments[0] . '/detail.php';
         break;
     default:
-        http_response_code(404);
         header("Location: /404/");
+        exit;
 }
 
 if (file_exists($filePath)) {
     include $filePath;
 } else {
-    http_response_code(404);
     header("Location: /404/");
+    exit;
 }

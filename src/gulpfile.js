@@ -32,7 +32,7 @@ const paths = {
     watch: "js/modules/**/*.js"
   },
   images: {
-    src: ['img/**/*.{jpg,jpeg,png}', '!img/svg/**/*'],
+    src: ['img/**/*.{jpg,jpeg,png}', '!img/og-image.png', '!img/svg/**/*'],
     dest: '../public/img',
     watch: 'img/**/*.{jpg,jpeg,png,svg}'
   },
@@ -45,7 +45,8 @@ const paths = {
       "js/vendor/*.js",
       "css/vendor/*.css",
       "fonts/*.{woff,woff2}",
-      "img/*.gif"
+      "img/*.gif",
+      "img/og-image.png",
     ],
     dest: "../public/"
   },

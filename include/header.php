@@ -23,6 +23,11 @@ global $MESS, $PAGE_TYPE, $PATH;
     <meta name="description" content="<?= $pageDescription ?>">
     <meta name="keywords" content="<?= $MESS['PAGE_KEYWORDS'] ?>">
 
+    <?php
+    echo Tools::getHrefLang();
+    echo Tools::getOpenGraphMetaTags($pageTitle, $pageDescription);
+    ?>
+
     <link rel="preload" href="/public/fonts/ProximaNova-Bold.woff2" as="font"
           type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/public/fonts/ProximaNova-Light.woff2" as="font"
@@ -31,6 +36,12 @@ global $MESS, $PAGE_TYPE, $PATH;
           type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/public/fonts/ProximaNovaCond-Black.woff2" as="font"
           type="font/woff2" crossorigin="anonymous">
+    <link rel="prefetch" href="/public/css/vendor/swiper-bundle.css" as="style">
+    <link rel="prefetch" href="/public/css/vendor/lightgallery.min.css" as="style">
+
+    <?php if ($PAGE_TYPE === 'main'): ?>
+        <link rel="preload" href="/public/img/page-main.webp" as="image">
+    <?php endif; ?>
 
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -42,14 +53,15 @@ global $MESS, $PAGE_TYPE, $PATH;
         <link href="/public/css/vendor/swiper-bundle.css" rel="stylesheet">
         <link href="/public/css/vendor/lightgallery.min.css" rel="stylesheet">
     <?php endif; ?>
-    <link href="/public/css/style.min.css" rel="stylesheet">
+
+    <link href="<?= Tools::addTimestampToFile('/public/css/style.min.css') ?>" rel="stylesheet">
 </head>
 
 <body class="page__body">
 
 <header class="page__header header">
     <div class="header__wrapper">
-        <a href="<?= $PATH ?>" class="header__logo-link link">
+        <a href="<?= $PATH ?>" class="header__logo-link link" title="<?= $MESS['MAIN'] ?>">
             <svg class="header__logo-image" viewBox="0 0 70 70" width="70" height="70"
                  xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="/public/img/sprite.svg#logo-image"/>
@@ -68,6 +80,8 @@ global $MESS, $PAGE_TYPE, $PATH;
         <div class="header__socials socials">
             <?php Tools::includeFile('socials'); ?>
         </div>
+
+        <?php Tools::includeFile('lang-switcher'); ?>
 
         <button class="header__menu-button" type="button">
             <span class="visually-hidden"><?= $MESS['MENU'] ?></span>

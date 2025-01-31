@@ -30,6 +30,13 @@
     display: flex;
     flex-direction: column;
     margin-top: 80px;
+
+    @media (max-width: $tablet-max-width) {
+      margin-top: 70px;
+    }
+    @media (max-width: $mobile-mid-width) {
+      margin-top: 60px;
+    }
   }
 
   &__footer {

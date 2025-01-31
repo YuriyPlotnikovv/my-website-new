@@ -29,6 +29,6 @@ global $MESS, $PAGE_TYPE;
     <script src="/public/js/vendor/lg-zoom.min.js"></script>
     <script src="/public/js/vendor/swiper-bundle.js"></script>
 <?php endif; ?>
-<script src="/public/js/script.min.js"></script>
+<script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>"></script>
 </body>
 </html>

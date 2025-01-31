@@ -10,7 +10,7 @@
         "textSecond-en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented.",
         "image": "/public/img/projects/my-website-new-preview.webp",
         "deploy": "",
-        "repository": "",
+        "repository": "https://github.com/YuriyPlotnikovv/my-website-new/",
         "features": [
             {
                 "name-ru": "Сложность",
@@ -21,15 +21,15 @@
             {
                 "name-ru": "Использованные технологии",
                 "description-ru": [
-                    "HTML - 0,9%",
-                    "CSS - 1,4%",
-                    "JS - 97,7%"
+                    "PHP - 54,2%",
+                    "SCSS - 36,7%",
+                    "JS - 8,9%"
                 ],
                 "name-en": "Technologies Used",
                 "description-en": [
-                    "HTML - 0.9%",
-                    "CSS - 1.4%",
-                    "JS - 97.7%"
+                    "PHP - 54,2%",
+                    "SCSS - 36,7%",
+                    "JS - 8,9%"
                 ]
             },
             {
@@ -170,7 +170,7 @@
         "textSecond-en": "A design clothing catalog project without online shopping, but with order requests. A completely written design, project structure and the logic of the work.",
         "image": "/public/img/projects/angelavladi-preview.webp",
         "deploy": "https://angelavladi.ru/",
-        "repository": "https://angelavladi.netlify.app/",
+        "repository": "https://github.com/YuriyPlotnikovv/angelavladi/",
         "features": [
             {
                 "name-ru": "Сложность",

@@ -12,11 +12,12 @@
       padding: 80px;
     }
     @media (max-width: $tablet-max-width) {
+      min-height: 400px;
       padding: 40px;
     }
     @media (max-width: $mobile-max-width) {
       grid-template-columns: 1fr;
-
+      min-height: 350px;
       padding: 20px;
     }
   }
@@ -132,20 +133,12 @@
     width: 100%;
     height: auto;
     max-height: 700px;
+    margin: auto 0;
 
     object-fit: contain;
 
     @media (max-width: $tablet-max-width) {
       max-height: 500px;
-    }
-    @media (max-width: $mobile-max-width) {
-      display: none;
-    }
-
-    &--main, &--about {
-      @media (max-width: $mobile-max-width) {
-        display: block;
-      }
     }
   }
 }
