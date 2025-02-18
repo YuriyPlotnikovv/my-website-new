@@ -1,15 +1,4 @@
 .quotes-list {
-  .slider__wrapper {
-    height: 150px;
-
-    @media (max-width: $tablet-max-width) {
-      height: 200px;
-    }
-    @media (max-width: $mobile-mid-width) {
-      height: 250px;
-    }
-  }
-
   &__item {
     display: block;
     height: auto;

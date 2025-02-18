@@ -8,7 +8,7 @@
         "textSecond-ru": "Сайт с прогнозом погоды. Показывается текущая погода, прогноз на сутки и прогноз на неделю. Местоположение определяется по ip или по геолокации.",
         "textFirst-en": "Personal project in PHP and JS",
         "textSecond-en": "A website with a weather forecast. It shows the current weather, the forecast for the day and the forecast for the week. The location is determined by ip or geolocation.",
-        "image": "/public/img/projects/weather-forecast.webp",
+        "image": "/public/img/projects/weather-forecast-preview.webp",
         "deploy": "https://weather-forecast.yuriyplotnikovv.ru/",
         "repository": "https://github.com/YuriyPlotnikovv/weather-forecast/",
         "features": [

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const sliders = document.querySelectorAll(".slider");
+  const sliders = document.querySelectorAll('.slider');
 
   const defaultSliderOptions = {
     speed: 1500,
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderOptions = {...defaultSliderOptions};
 
-    if (elem.hasAttribute("data-single")) {
+    if (elem.hasAttribute('data-single')) {
       sliderOptions.spaceBetween = 20;
       sliderOptions.grabCursor = true;
       sliderOptions.effect = 'fade';
@@ -26,14 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       };
+      sliderOptions.autoHeight = true;
     }
 
-    if (elem.hasAttribute("data-slides")) {
+    if (elem.hasAttribute('data-slides')) {
       sliderOptions.on = {
         init: function () {
           const lg = lightGallery(elem, {
             plugins: [lgZoom],
-            selector: "li",
+            selector: 'li',
             speed: 500,
             download: false,
             actualSize: false,
@@ -45,12 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
             },
           });
 
-          elem.addEventListener("lgBeforeOpen", () => {
+          elem.addEventListener('lgBeforeOpen', () => {
             swiper.autoplay.stop();
           });
 
-          elem.addEventListener("lgBeforeClose", () => {
-            swiper.slideTo(lg.index, 1500)
+          elem.addEventListener('lgBeforeClose', () => {
+            swiper.slideTo(lg.index, 1500);
             swiper.autoplay.start();
           });
         },
@@ -81,10 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
 
-    if (elem.hasAttribute("data-pagination")) {
+    if (elem.hasAttribute('data-pagination')) {
       sliderOptions.pagination = {
-        el: ".slider__pagination",
-        type: "bullets",
+        el: '.slider__pagination',
+        type: 'bullets',
         clickable: true,
       };
     }
