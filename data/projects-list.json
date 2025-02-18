@@ -1,5 +1,76 @@
 [
     {
+        "id": 9,
+        "name": "weather-forecast",
+        "title-ru": "Прогноз погоды",
+        "title-en": "Weather forecast",
+        "textFirst-ru": "Личный проект на PHP и JS",
+        "textSecond-ru": "Сайт с прогнозом погоды. Показывается текущая погода, прогноз на сутки и прогноз на неделю. Местоположение определяется по ip или по геолокации.",
+        "textFirst-en": "Personal project in PHP and JS",
+        "textSecond-en": "A website with a weather forecast. It shows the current weather, the forecast for the day and the forecast for the week. The location is determined by ip or geolocation.",
+        "image": "/public/img/projects/weather-forecast.webp",
+        "deploy": "https://weather-forecast.yuriyplotnikovv.ru/",
+        "repository": "https://github.com/YuriyPlotnikovv/weather-forecast/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Medium",
+                "name-en": "Difficulty",
+                "description-en": "Medium"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "PHP - 40,0%",
+                    "SCSS - 26,6%",
+                    "JS - 34,4%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "PHP - 40,0%",
+                    "SCSS - 26,6%",
+                    "JS - 34,4%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Подключен Swiper",
+                    "Интеграция с Api: met.no (погода), openstreetmap.org (адрес), ipdata.co (координаты по ip), timezonedb.com (временной регион)",
+                    "Английский язык (переводы из переменных), определение языка на основе предпочтений в браузере",
+                    "Кешированные данные из JSON файлов"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Swiper is connected",
+                    "Integration with APIs: met.no (weather), openstreetmap.org (address), ipdata.co (coordinates by IP), timezonedb.com (time zone)",
+                    "English language (translations from variables), language detection based on browser preferences",
+                    "Cached data from JSON files"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Карта погоды"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Weather map"
+                ]
+            }
+        ]
+    },
+    {
         "id": 8,
         "name": "my-website-new",
         "title-ru": "My Website v.2.0",
@@ -21,15 +92,15 @@
             {
                 "name-ru": "Использованные технологии",
                 "description-ru": [
-                    "PHP - 54,2%",
-                    "SCSS - 36,7%",
-                    "JS - 8,9%"
+                    "PHP - 55,9%",
+                    "SCSS - 35,5%",
+                    "JS - 8,4%"
                 ],
                 "name-en": "Technologies Used",
                 "description-en": [
-                    "PHP - 54,2%",
-                    "SCSS - 36,7%",
-                    "JS - 8,9%"
+                    "PHP - 55,9%",
+                    "SCSS - 35,5%",
+                    "JS - 8,4%"
                 ]
             },
             {
@@ -219,20 +290,20 @@
             {
                 "name-ru": "Дополнительно",
                 "description-ru": [
-                    "Многоязычность на одной копии системы",
                     "Библиотеки Swiper и Lightgallery",
                     "Настроен адаптивный ресайз фото и сборка в тег picture",
                     "Формы обратной связи и отзывов с сохранением в админку",
                     "ReCaptcha Google",
+                    "Карты Яндекс",
                     "Полностью все данные редактируются из админки"
                 ],
                 "name-en": "Additional",
                 "description-en": [
-                    "Multilingual website on a single system copy",
                     "Swiper and Lightgallery libraries",
                     "Adaptive photo resizing configured and assembled into a picture tag",
                     "Feedback and review forms with saving to the admin panel",
                     "Google ReCaptcha",
+                    "Yandex maps",
                     "All data can be fully edited from the admin panel"
                 ]
             },
