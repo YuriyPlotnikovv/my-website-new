@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .project-info {
   &__features {
     display: grid;
@@ -5,7 +7,7 @@
     gap: 20px;
     margin-bottom: 50px;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       grid-template-columns: 1fr;
     }
   }
@@ -15,12 +17,12 @@
 
     font-size: 26px;
     font-weight: 500;
-    color: $colorBlackThree;
+    color: var.$colorBlackThree;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       font-size: 24px;
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       font-size: 22px;
     }
   }
@@ -29,12 +31,12 @@
     margin-left: 40px;
 
     font-size: 22px;
-    color: $colorGray;
+    color: var.$colorGray;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       font-size: 20px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       font-size: 18px;
     }
   }
@@ -62,25 +64,25 @@
 
     font-size: 22px;
     font-weight: 500;
-    color: $colorWhite;
+    color: var.$colorWhite;
 
     border-radius: 20px;
-    border-color: $colorBlackThree;
-    box-shadow: $buttonShadow;
+    border-color: var.$colorBlackThree;
+    box-shadow: var.$buttonShadow;
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
-      color: $colorBlackThree;
+      color: var.$colorBlackThree;
 
-      box-shadow: $buttonShadowActive;
+      box-shadow: var.$buttonShadowActive;
 
       transform: scale(1.05);
     }
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       font-size: 20px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       font-size: 18px;
     }
   }

@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .page {
   &--fixed {
     touch-action: none;
@@ -21,9 +23,9 @@
 
     width: 100%;
 
-    background-color: $colorBlackTwo;
+    background-color: var.$colorBlackTwo;
 
-    color: $colorWhite;
+    color: var.$colorWhite;
   }
 
   &__main {
@@ -31,10 +33,10 @@
     flex-direction: column;
     margin-top: 80px;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       margin-top: 70px;
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       margin-top: 60px;
     }
   }
@@ -42,9 +44,9 @@
   &__footer {
     margin: auto 0 0;
 
-    color: $colorBlackThree;
+    color: var.$colorBlackThree;
 
-    background-color: $colorGraySeven;
-    box-shadow: $boxShadowSection;
+    background-color: var.$colorGraySeven;
+    box-shadow: var.$boxShadowSection;
   }
 }

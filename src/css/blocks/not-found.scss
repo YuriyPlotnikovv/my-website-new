@@ -1,3 +1,6 @@
+@use "../global/variables" as var;
+@use "sass:math";
+
 .not-found {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -9,7 +12,7 @@
 
   text-align: center;
 
-  @media (max-width: $tablet-max-width) {
+  @media (max-width: var.$tablet-max-width) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100%;
@@ -19,7 +22,7 @@
   &__text-wrapper {
     justify-self: end;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       order: 2;
       justify-self: center;
     }
@@ -31,9 +34,9 @@
     font-size: 240px;
     line-height: 1;
     font-weight: 700;
-    color: $colorBlackThree;
+    color: var.$colorBlackThree;
 
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       font-size: 140px;
     }
   }
@@ -46,13 +49,13 @@
     line-height: 1.2;
     text-wrap: balance;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       width: 100%;
       padding: 0 22px;
 
       font-size: 36px;
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       font-size: 28px;
     }
   }
@@ -65,14 +68,14 @@
     width: 300px;
     height: 350px;
 
-    background: $windowGradient;
-    box-shadow: $boxShadowWindow;
+    background: var.$windowGradient;
+    box-shadow: var.$boxShadowWindow;
     border-radius: 100px;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       margin: 0 auto;
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       width: 250px;
     }
   }
@@ -91,21 +94,21 @@
   &__star {
     position: absolute;
 
-    background: $colorWhite;
+    background: var.$colorWhite;
     border-radius: 50%;
 
     @for $i from 1 through 100 {
-      $size: random(3) + px;
+      $size: math.random(3) + px;
 
       &:nth-of-type(#{$i}) {
-        left: random(800) + px;
-        top: random(350) + px;
+        left: math.random(800) + px;
+        top: math.random(350) + px;
 
         width: $size;
         height: $size;
 
-        animation: twinkle random(8) + 5s linear infinite;
-        animation-delay: random(15) + 3s;
+        animation: twinkle math.random(8) + 5s linear infinite;
+        animation-delay: math.random(15) + 3s;
 
         &:before {
           position: absolute;
@@ -115,7 +118,7 @@
           width: $size;
           height: $size;
 
-          background: $colorWhite;
+          background: var.$colorWhite;
           filter: blur(1px);
 
           content: "";

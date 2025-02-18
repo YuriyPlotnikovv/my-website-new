@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .photo-list {
   &__list {
     display: flex;
@@ -10,22 +12,22 @@
     padding: 5px;
     box-sizing: border-box;
 
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
     border-radius: 10px;
-    box-shadow: $boxShadowCard;
+    box-shadow: var.$boxShadowCard;
 
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 
     &:hover, &:active {
-      box-shadow: $boxShadowCardHover;
+      box-shadow: var.$boxShadowCardHover;
       transform: scale(1.05);
     }
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       height: 350px;
     }
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       height: 400px;
     }
   }

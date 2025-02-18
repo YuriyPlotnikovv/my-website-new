@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .skills-list {
   &__list {
     display: flex;
@@ -22,12 +24,12 @@
     align-items: center;
     padding: 5px;
 
-    filter: $dropShadow;
+    filter: var.$dropShadow;
 
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
-      filter: $dropShadowHover;
+      filter: var.$dropShadowHover;
 
       transform: scale(1.05);
     }

@@ -1,9 +1,11 @@
+@use "../global/variables" as var;
+
 .projects-page {
   &__intro {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__works {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 }

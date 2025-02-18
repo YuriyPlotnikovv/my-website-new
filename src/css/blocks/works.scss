@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .works {
   &__list {
     display: flex;
@@ -5,7 +7,7 @@
     flex-wrap: wrap;
     gap: 30px;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       gap: 20px;
     }
   }
@@ -15,17 +17,17 @@
     width: calc((100% - 100px) / 3);
     height: auto;
 
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
     border-radius: 10px;
-    box-shadow: $boxShadowCard;
+    box-shadow: var.$boxShadowCard;
 
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
-      box-shadow: $boxShadowCardHover;
+      box-shadow: var.$boxShadowCardHover;
       transform: scale(1.05);
 
-      @media (max-width: $tablet-max-width) {
+      @media (max-width: var.$tablet-max-width) {
         transform: none;
       }
 
@@ -40,13 +42,13 @@
       }
     }
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       width: calc((100% - 80px) / 3);
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       width: calc((100% - 30px) / 2);
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       width: 100%;
     }
   }
@@ -72,7 +74,7 @@
 
     transition: all 0.4s ease-in-out;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       filter: blur(2px) brightness(0.7);
     }
   }
@@ -90,14 +92,14 @@
     padding: 20px;
 
     text-align: center;
-    text-shadow: 0 5px 15px $colorBlack;
-    color: $colorWhite;
+    text-shadow: 0 5px 15px var.$colorBlack;
+    color: var.$colorWhite;
 
     opacity: 0;
 
     transition: all 0.4s ease-in-out;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       z-index: 2;
 
       opacity: 1;
@@ -111,10 +113,10 @@
     line-height: 1.2;
     font-weight: 500;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       font-size: 28px;
     }
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       font-size: 22px;
     }
   }
@@ -124,10 +126,10 @@
 
     font-size: 24px;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       font-size: 20px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       font-size: 18px;
     }
   }

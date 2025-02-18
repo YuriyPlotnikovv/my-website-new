@@ -1,21 +1,23 @@
+@use "../global/variables" as var;
+
 .about-page {
   &__intro {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__quotes-list {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 
   &__photo-list {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__skills-list {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 
   &__my-way {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 }

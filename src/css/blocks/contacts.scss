@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .contacts {
   &__list {
     display: flex;
@@ -6,7 +8,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    @media (max-width: $mobile-mid-width) {
+    @media (max-width: var.$mobile-mid-width) {
       flex-direction: column;
     }
   }
@@ -19,7 +21,7 @@
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
-      filter: $dropShadow;
+      filter: var.$dropShadow;
 
       transform: scale(1.05);
     }
@@ -29,10 +31,10 @@
     box-sizing: border-box;
     width: 60px;
     height: 60px;
-    fill: $colorBlackThree;
-    stroke: $colorBlackThree;
+    fill: var.$colorBlackThree;
+    stroke: var.$colorBlackThree;
 
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       width: 40px;
       height: 40px;
     }

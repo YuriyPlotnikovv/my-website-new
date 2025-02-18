@@ -1,21 +1,23 @@
+@use "../global/variables" as var;
+
 .footer {
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    max-width: $desktop-mid-width;
+    max-width: var.$desktop-mid-width;
     margin: 0 auto;
     padding: 10px 100px;
     box-sizing: border-box;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       padding: 10px 80px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       padding: 10px 40px;
     }
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       padding: 10px 20px;
     }
   }
@@ -49,7 +51,7 @@
   }
 
   &__navigation {
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       display: none;
     }
   }

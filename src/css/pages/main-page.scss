@@ -1,13 +1,15 @@
+@use "../global/variables" as var;
+
 .main-page {
   &__intro {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__quote {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 
   &__works {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 }

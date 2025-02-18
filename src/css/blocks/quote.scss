@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .quote {
   &__text {
     display: block;
@@ -8,8 +10,8 @@
     padding: 20px;
     box-sizing: border-box;
 
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
     border-radius: 10px;
-    box-shadow: $boxShadowCard;
+    box-shadow: var.$boxShadowCard;
   }
 }

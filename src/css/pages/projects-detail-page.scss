@@ -1,13 +1,15 @@
+@use "../global/variables" as var;
+
 .projects-detail-page {
   &__intro {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__project-info {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 
   &__project-images {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 }

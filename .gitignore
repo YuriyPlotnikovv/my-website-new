@@ -11,6 +11,8 @@ google*.html
 yandex*.html
 .DS_Store
 Thumbs.db
+errors.log
+errors.php
 
 .git/
 .idea/
@@ -25,3 +27,4 @@ photos/
 plugins/
 tmp/
 node_modules/
+public/

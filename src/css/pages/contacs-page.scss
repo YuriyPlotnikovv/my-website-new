@@ -1,13 +1,15 @@
+@use "../global/variables" as var;
+
 .contacts-page {
   &__intro {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 
   &__socials {
-    background-color: $colorGrayTwo;
+    background-color: var.$colorGrayTwo;
   }
 
   &__contacts {
-    background-color: $colorWhite;
+    background-color: var.$colorWhite;
   }
 }

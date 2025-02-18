@@ -1,3 +1,5 @@
+@use "../global/variables" as var;
+
 .intro {
   &__wrapper {
     position: relative;
@@ -8,14 +10,14 @@
     gap: 20px;
     min-height: 450px;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       padding: 80px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       min-height: 400px;
       padding: 40px;
     }
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       grid-template-columns: 1fr;
       min-height: 350px;
       padding: 20px;
@@ -48,11 +50,11 @@
     padding: 20px;
 
     .intro__wrapper--main & {
-      background: rgba($colorWhite, 0.1);
-      border: 1px solid rgba($colorWhite, 0.3);
+      background: rgba(var.$colorWhite, 0.1);
+      border: 1px solid rgba(var.$colorWhite, 0.3);
       border-radius: 10px;
       backdrop-filter: blur(10px);
-      box-shadow: $boxShadowGlass;
+      box-shadow: var.$boxShadowGlass;
     }
   }
 
@@ -62,19 +64,19 @@
     font-size: 102px;
     line-height: 1;
     font-weight: 700;
-    color: $colorBlackThree;
+    color: var.$colorBlackThree;
 
     user-select: none;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       margin-bottom: 40px;
       font-size: 90px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       margin-bottom: 20px;
       font-size: 72px;
     }
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       margin-bottom: 20px;
       font-size: 48px;
     }
@@ -89,12 +91,12 @@
       font-size: 34px;
       line-height: 1.3;
       font-weight: 500;
-      color: $colorGray;
+      color: var.$colorGray;
 
-      @media (max-width: $desktop-mid-width) {
+      @media (max-width: var.$desktop-mid-width) {
         font-size: 28px;
       }
-      @media (max-width: $mobile-mid-width) {
+      @media (max-width: var.$mobile-mid-width) {
         font-size: 22px;
       }
     }
@@ -103,12 +105,12 @@
       font-size: 24px;
       line-height: 1.3;
       font-weight: 400;
-      color: $colorBlackThree;
+      color: var.$colorBlackThree;
 
-      @media (max-width: $desktop-mid-width) {
+      @media (max-width: var.$desktop-mid-width) {
         font-size: 20px;
       }
-      @media (max-width: $tablet-max-width) {
+      @media (max-width: var.$tablet-max-width) {
         font-size: 18px;
       }
     }
@@ -137,7 +139,7 @@
 
     object-fit: contain;
 
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       max-height: 500px;
     }
   }

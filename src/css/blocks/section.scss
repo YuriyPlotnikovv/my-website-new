@@ -1,23 +1,25 @@
+@use "../global/variables" as var;
+
 .section {
   display: block;
 
-  box-shadow: $boxShadowSection;
+  box-shadow: var.$boxShadowSection;
 
   &__wrapper {
     position: relative;
     overflow: hidden;
 
-    max-width: $desktop-mid-width;
+    max-width: var.$desktop-mid-width;
     margin: 0 auto;
     padding: 30px 100px 70px;
 
-    @media (max-width: $desktop-mid-width) {
+    @media (max-width: var.$desktop-mid-width) {
       padding: 30px 80px 70px;
     }
-    @media (max-width: $tablet-max-width) {
+    @media (max-width: var.$tablet-max-width) {
       padding: 30px 40px 70px;
     }
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       padding: 20px 20px 40px;
     }
 
@@ -34,11 +36,11 @@
     font-size: 24px;
     line-height: 1.2;
     font-weight: 500;
-    color: $colorGray;
+    color: var.$colorGray;
 
     user-select: none;
 
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: var.$mobile-max-width) {
       margin: 0 auto 20px;
     }
 
@@ -50,7 +52,7 @@
       width: 200px;
       height: 1px;
 
-      background-color: $colorGrayFour;
+      background-color: var.$colorGrayFour;
 
       content: "";
       transform: translateY(-50%);

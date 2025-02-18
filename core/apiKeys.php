@@ -1,0 +1,4 @@
+<?php
+$ownerId = '';
+$albumId = '';
+$accessToken = '';

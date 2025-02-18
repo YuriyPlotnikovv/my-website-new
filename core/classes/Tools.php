@@ -1,4 +1,6 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
+
 class Tools
 {
     public static function includeFile(string $fileName): void
@@ -83,9 +85,9 @@ class Tools
 
     public static function getPhotosFormVk(): array
     {
-        $ownerId = '';
-        $albumId = '';
-        $accessToken = '';
+        global $ownerId;
+        global $albumId;
+        global $accessToken;
 
         $vkPhotoFetcher = new VkPhotoFetcher($ownerId, $albumId, $accessToken);
         return $vkPhotoFetcher->getPhotos();
