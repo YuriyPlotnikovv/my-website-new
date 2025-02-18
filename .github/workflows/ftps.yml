@@ -1,4 +1,4 @@
-name: Deploy weather-forecast to Beget via FTP
+name: Deploy my-website-new to Beget via FTP
 
 on:
     push:
