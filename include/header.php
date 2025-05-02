@@ -1,9 +1,9 @@
 <?php
-global $MESS, $PAGE_TYPE, $PATH;
+global $MESS, $PAGE_TYPE, $PATH, $LANG;
 ?>
 
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page" lang="<?= $LANG ?>">
 
 <head>
     <meta charset="utf-8">
@@ -11,11 +11,11 @@ global $MESS, $PAGE_TYPE, $PATH;
 
     <?php
     if (!isset($pageTitle)) {
-        $pageTitle = $MESS["PAGE_TITLE"];
+        $pageTitle = $MESS['PAGE_TITLE'];
     }
 
     if (!isset($pageDescription)) {
-        $pageDescription = $MESS["PAGE_DESCRIPTION"];
+        $pageDescription = $MESS['PAGE_DESCRIPTION'];
     }
     ?>
 
@@ -23,10 +23,9 @@ global $MESS, $PAGE_TYPE, $PATH;
     <meta name="description" content="<?= $pageDescription ?>">
     <meta name="keywords" content="<?= $MESS['PAGE_KEYWORDS'] ?>">
 
-    <?php
-    echo Tools::getHrefLang();
-    echo Tools::getOpenGraphMetaTags($pageTitle, $pageDescription);
-    ?>
+    <?= Tools::getHrefLang(); ?>
+    <?= Tools::getOpenGraphMetaTags($pageTitle, $pageDescription); ?>
+    <?= Tools::getSchemaOrgTags($pageTitle, $pageDescription) ?>
 
     <link rel="preload" href="/public/fonts/ProximaNova-Bold.woff2" as="font"
           type="font/woff2" crossorigin="anonymous">
@@ -47,7 +46,7 @@ global $MESS, $PAGE_TYPE, $PATH;
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="application-name" content="<?= $MESS["PAGE_TITLE"] ?>>">
+    <meta name="application-name" content="<?= $MESS['PAGE_TITLE'] ?>>">
 
     <?php if ($PAGE_TYPE === 'about'): ?>
         <link href="/public/css/vendor/swiper-bundle.css" rel="stylesheet">

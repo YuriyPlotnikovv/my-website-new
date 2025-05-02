@@ -10,7 +10,7 @@ class Tools
         if (file_exists($filePath)) {
             include $filePath;
         } else {
-            error_log("File not found: " . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+            error_log('File not found: ' . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
         }
     }
 
@@ -27,7 +27,7 @@ class Tools
     {
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/data/' . $fileName . '.json';
         if (!file_exists($filePath)) {
-            error_log("File not found: " . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+            error_log('File not found: ' . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
             return null;
         }
 
@@ -35,7 +35,7 @@ class Tools
         $data = json_decode($jsonContent, true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log("JSON decode error: " . json_last_error_msg(), 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+            error_log('JSON decode error: ' . json_last_error_msg(), 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
             return null;
         }
         return $data;
@@ -119,9 +119,9 @@ class Tools
             (isset($parsedUrl['fragment']) ? '#' . $parsedUrl['fragment'] : '');
     }
 
-    public static function getCurrentUrl()
+    public static function getCurrentUrl(): string
     {
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
         $host = $_SERVER['HTTP_HOST'];
         $requestUri = $_SERVER['REQUEST_URI'];
 
@@ -130,9 +130,9 @@ class Tools
 
     public static function getHrefLang(): string {
         $url = self::getCurrentUrl();
-        $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
-        $host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-        $server = $protocol . "://" . $host;
+        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+        $host = $_SERVER['HTTP_HOST'];
+        $server = $protocol . $host;
 
         $parsedUrl = parse_url($url);
         $path = $parsedUrl['path'] ?? '';
@@ -160,18 +160,48 @@ class Tools
     public static function getOpenGraphMetaTags($pageTitle, $pageDescription): string {
         global $LANG;
 
+        $title = htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8');
+        $description = htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8');
+        $locale = mb_strtolower($LANG) . '_' . mb_strtoupper($LANG);
+        $currentUrl = htmlspecialchars(self::getCurrentUrl(), ENT_QUOTES, 'UTF-8');
+        $host = htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES, 'UTF-8');
+
         $metaTags = [
             '<meta property="og:type" content="website" />',
-            '<meta property="og:title" content="' . htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8') . '" />',
-            '<meta property="og:description" content="' . htmlspecialchars($pageDescription, ENT_QUOTES, 'UTF-8') . '" />',
-            '<meta property="og:url" content="' . htmlspecialchars(self::getCurrentUrl(), ENT_QUOTES, 'UTF-8') . '" />',
-            '<meta property="og:locale" content="' . mb_strtolower($LANG) . '_' . mb_strtoupper($LANG) . '" />',
-            '<meta property="og:image" content="https://' . htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES, 'UTF-8') . '/public/img/og-image.png" />',
-            '<meta property="og:image:type" content="image/png">',
-            '<meta property="og:image:width" content="1200">',
-            '<meta property="og:image:height" content="630">',
+            '<meta property="og:title" content="' . $title . '" />',
+            '<meta property="og:description" content="' . $description . '" />',
+            '<meta property="og:url" content="' . $currentUrl . '" />',
+            '<meta property="og:locale" content="' . $locale . '" />',
+            '<meta property="og:image" content="https://' . $host . '/public/img/og-image.png" />',
+            '<meta property="og:image:type" content="image/png" />',
+            '<meta property="og:image:width" content="1200" />',
+            '<meta property="og:image:height" content="630" />',
         ];
 
         return implode("\n", $metaTags) . "\n";
+    }
+
+    public static function getSchemaOrgTags(string $name, string $description): string {
+        $currentUrl = self::getCurrentUrl();
+
+        $data = [
+            '@context' => 'https://schema.org',
+            '@type' => 'WebSite',
+            'name' => $name,
+            'url' => $currentUrl,
+            'description' => $description,
+            'applicationCategory' => 'UtilitiesApplication',
+            'operatingSystem' => 'All',
+            'browserRequirements' => 'Modern browser with JavaScript support',
+            'creator' => [
+                '@type' => 'Person',
+                'name' => 'Yuriy Plotnikov',
+                'url' => 'https://yuriyplotnikovv.ru/',
+            ],
+        ];
+
+        $json = json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+
+        return "<script type=\"application/ld+json\">\n" . $json . "\n</script>\n";
     }
 }

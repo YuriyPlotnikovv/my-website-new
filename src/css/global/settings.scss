@@ -25,18 +25,18 @@ html,
 body {
   display: flex;
   flex-direction: column;
-  height: 100%;
   min-width: var.$mobile-min-width;
+  height: 100%;
 
   font-family: var.$font-main;
   font-size: 14px;
   line-height: normal;
-  -webkit-overflow-scrolling: touch;
+  color: var.$colorBlackTwo;
+  background-color: var.$colorWhite;
+
   scroll-behavior: smooth;
 
-  color: var.$colorBlackTwo;
-
-  background-color: var.$colorWhite;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,8 +49,8 @@ li {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -60,11 +60,6 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-svg path {
-  fill: inherit;
-  stroke: inherit;
 }
 
 strong,
@@ -93,39 +88,39 @@ source {
 
   display: block;
 
-  opacity: 0;
-
   visibility: hidden;
+
+  opacity: 0;
 }
 
 button {
+  background-color: inherit;
+  border: none;
   appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
-  border: none;
-  background-color: inherit;
 }
 
 .visually-hidden {
   position: absolute;
 
+  overflow: hidden;
+  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
+
   margin: -1px;
   padding: 0;
 
-  border: 0;
   white-space: nowrap;
+  border: 0;
 
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-
-  overflow: hidden;
 }
 
 label:has(+ .required)::after {
-  content: " *";
   color: var.$colorRed;
+  content: " *";
 }
 
 textarea {

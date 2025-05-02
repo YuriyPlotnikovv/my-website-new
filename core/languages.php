@@ -3,7 +3,7 @@ global $MESS, $PATH, $LANG;
 
 $allowed_languages = ['en', 'ru'];
 
-function getLangFromUrl($uri, $allowed_languages)
+function getLangFromUrl($uri, $allowed_languages): string
 {
     $path = parse_url($uri, PHP_URL_PATH);
     $segments = explode('/', trim($path, '/'));

@@ -34,4 +34,3 @@ function determinePageType($url, $pageTypes)
 }
 
 $PAGE_TYPE = determinePageType($currentUrl, $pageTypes);
-?>

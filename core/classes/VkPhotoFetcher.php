@@ -39,7 +39,7 @@ class VkPhotoFetcher
         $data = json_decode($response, true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
-            $this->logError("JSON decode error: " . json_last_error_msg());
+            $this->logError('JSON decode error: ' . json_last_error_msg());
             return null;
         }
 
@@ -57,7 +57,7 @@ class VkPhotoFetcher
         return null;
     }
 
-    private function isCacheValid()
+    private function isCacheValid(): bool
     {
         $cacheFilePath = $_SERVER['DOCUMENT_ROOT'] . self::CACHE_FILE;
         return file_exists($cacheFilePath) && (time() - filemtime($cacheFilePath) < self::CACHE_DURATION);
@@ -70,22 +70,22 @@ class VkPhotoFetcher
         $data = json_decode($cachedData, true);
 
         if (json_last_error() !== JSON_ERROR_NONE) {
-            $this->logError("JSON decode error: " . json_last_error_msg());
+            $this->logError('JSON decode error: ' . json_last_error_msg());
             return null;
         }
 
         return $data;
     }
 
-    private function setCache($data)
+    private function setCache($data): void
     {
         $cacheFilePath = $_SERVER['DOCUMENT_ROOT'] . self::CACHE_FILE;
         if (!file_put_contents($cacheFilePath, json_encode($data))) {
-            $this->logError("Ошибка записи в файл кеша: " . $cacheFilePath);
+            $this->logError('Ошибка записи в файл кеша: ' . $cacheFilePath);
         }
     }
 
-    private function logError($message)
+    private function logError($message): void
     {
         $timestamp = date('Y-m-d H:i:s');
         $formattedMessage = "[{$timestamp}] {$message}\n";

@@ -1,18 +1,20 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/core/init.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . '/core/init.php';
 global $LANG;
 
 $allowed_languages = ['en', 'ru'];
 
 $uri = $_SERVER['REQUEST_URI'];
 $trimmedUri = trim($uri, '/');
-$segments = explode('/', $trimmedUri);
+$segments = $trimmedUri === '' ? [] : explode('/', $trimmedUri);
 
 if (isset($segments[0]) && preg_match('/^[a-zA-Z]{2}$/', $segments[0]) && in_array($segments[0], $allowed_languages)) {
     $language = array_shift($segments);
 } else {
     $language = $LANG;
 }
+
+$redirectLang = $language === 'ru' ? '' : $language . '/';
 
 switch (count($segments)) {
     case 0:
@@ -31,13 +33,13 @@ switch (count($segments)) {
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/' . $language . '/' . $segments[0] . '/detail.php';
         break;
     default:
-        header("Location: /404/");
+        header("Location: /{$redirectLang}404/");
         exit;
 }
 
 if (file_exists($filePath)) {
     include $filePath;
 } else {
-    header("Location: /404/");
+    header("Location: /{$redirectLang}404/");
     exit;
 }

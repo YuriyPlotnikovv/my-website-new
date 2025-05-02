@@ -1,5 +1,82 @@
 [
     {
+        "id": 10,
+        "name": "snowfall-generator",
+        "title-ru": "Генератор снегопада",
+        "title-en": "Snowfall generator",
+        "textFirst-ru": "Личный проект на PHP и JS",
+        "textSecond-ru": "Сайт с выбором настроек и Node.js сервер для генерации кастомного скрипта падающего снега на сайт. Скрипт генерируется с учётом заданных параметров и упаковывается в ZIP-архив вместе с лицензией и инструкцией.",
+        "textFirst-en": "Personal project in PHP and JS",
+        "textSecond-en": "A website with settings selection and a Node.js server for generating a custom falling snow script for a website. The script is generated based on the specified parameters and packaged into a ZIP archive along with a license and instructions.",
+        "image": "/public/img/projects/snowfall-generator-preview.webp",
+        "deploy": "https://snowfall-generator.ru/",
+        "repository": "https://github.com/YuriyPlotnikovv/snowfall-generator/",
+        "features": [
+            {
+                "name-ru": "Сложность",
+                "description-ru": "Hard",
+                "name-en": "Difficulty",
+                "description-en": "Hard"
+            },
+            {
+                "name-ru": "Использованные технологии",
+                "description-ru": [
+                    "PHP - 42,6%",
+                    "SCSS - 18,7%",
+                    "JS - 38,7%"
+                ],
+                "name-en": "Technologies Used",
+                "description-en": [
+                    "PHP - 42,6%",
+                    "SCSS - 18,7%",
+                    "JS - 38,7%"
+                ]
+            },
+            {
+                "name-ru": "Страницы",
+                "description-ru": [
+                    "Главная"
+                ],
+                "name-en": "Pages",
+                "description-en": [
+                    "Main"
+                ]
+            },
+            {
+                "name-ru": "Дополнительно",
+                "description-ru": [
+                    "Отдельный сервер для генерации",
+                    "Английский язык (переводы из переменных), определение языка на основе url страницы",
+                    "Настройки внешнего вида, размера и поведения снежинок",
+                    "Динамическое отображение выбранных параметров снегопада",
+                    "Изоляция внутренней разметки и стилей снегопада",
+                    "Генерация и минификация скрипта для установки на сайт"
+                ],
+                "name-en": "Additional",
+                "description-en": [
+                    "Separate server for generation",
+                    "English language (translations from variables), automatic language detection by url",
+                    "Settings for appearance, size, and behavior of snowflakes",
+                    "Dynamic display of selected snowfall parameters",
+                    "Isolation of internal markup and styles of snowfall",
+                    "Generation and minification of the script for website installation"
+                ]
+            },
+            {
+                "name-ru": "Не реализовано",
+                "description-ru": [
+                    "Выбор 2х видов снежинок",
+                    "Кастомные стили для input"
+                ],
+                "name-en": "Not Implemented",
+                "description-en": [
+                    "Selection of 2 types of snowflakes",
+                    "Custom styles for input elements"
+                ]
+            }
+        ]
+    },
+    {
         "id": 9,
         "name": "weather-forecast",
         "title-ru": "Прогноз погоды",
