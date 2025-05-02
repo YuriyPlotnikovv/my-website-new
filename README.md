@@ -1,6 +1,7 @@
 [🇬🇧 English](#english) | [🇷🇺 Русский](#русский)
 
 ---
+
 ## English
 
 # My Personal Website Project YuriyPlotnikovv v.2.0
@@ -24,7 +25,7 @@ A personal project built with PHP:
 
 ---
 
-**Project deployment:** https://yuriyplotnikovv.ru/
+**Project deployment:** [https://yuriyplotnikovv.ru/](https://yuriyplotnikovv.ru/)
 
 ---
 
@@ -37,6 +38,7 @@ This is a new version of my website. In this version, everything is built comple
 This project is licensed under the [GNU Affero General Public License v3 (AGPLv3)](https://www.gnu.org/licenses/agpl-3.0.html).
 
 ---
+
 ## Русский
 
 # Проект моего личного сайта YuriyPlotnikovv v.2.0
@@ -60,7 +62,7 @@ This project is licensed under the [GNU Affero General Public License v3 (AGPLv3
 
 ---
 
-**Деплой проекта:** https://yuriyplotnikovv.ru/
+**Деплой проекта:** [https://yuriyplotnikovv.ru/](https://yuriyplotnikovv.ru/)
 
 ---
 
