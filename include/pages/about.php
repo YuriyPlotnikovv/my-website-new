@@ -2,7 +2,7 @@
 global $LANG, $MESS;
 
 $quotesList = Tools::randomSort(Tools::getData('quotes-list'));
-$photosList = Tools::randomSort(Tools::getPhotosFormVk());
+$photosList = Tools::randomSort(Tools::getData('photos-list'));
 $skillsList = Tools::getData('skills-list');
 $wayList = Tools::getData('way-list');
 ?>

@@ -13,6 +13,7 @@ yandex*.html
 Thumbs.db
 errors.log
 errors.php
+package-lock.json
 
 .git/
 .idea/

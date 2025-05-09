@@ -1,8 +1,18 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 
+/**
+ * Class Tools
+ *
+ * Набор утилит для работы с файлами, данными и URL.
+ */
 class Tools
 {
+    /**
+     * Подключает PHP-файл из папки /include по имени файла (без расширения).
+     *
+     * @param string $fileName Имя файла без расширения
+     * @return void
+     */
     public static function includeFile(string $fileName): void
     {
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/include/' . $fileName . '.php';
@@ -14,7 +24,14 @@ class Tools
         }
     }
 
-    public static function addTimestampToFile($filePath) {
+    /**
+     * Добавляет к пути файла параметр с временной меткой последнего изменения файла.
+     *
+     * @param string $filePath Относительный путь к файлу (от DOCUMENT_ROOT)
+     * @return string
+     */
+    public static function addTimestampToFile(string $filePath): string
+    {
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . $filePath)) {
             $timestamp = filemtime($_SERVER['DOCUMENT_ROOT'] . $filePath);
             return $filePath . '?v=' . $timestamp;
@@ -23,6 +40,12 @@ class Tools
         }
     }
 
+    /**
+     * Получает и декодирует JSON-данные из файла в папке /data.
+     *
+     * @param string $fileName Имя файла без расширения .json
+     * @return mixed|null
+     */
     public static function getData(string $fileName): mixed
     {
         $filePath = $_SERVER['DOCUMENT_ROOT'] . '/data/' . $fileName . '.json';
@@ -41,6 +64,13 @@ class Tools
         return $data;
     }
 
+    /**
+     * Получает детальные данные из массива по URL.
+     *
+     * @param string $url URL для анализа
+     * @param array $data Массив данных для поиска
+     * @return mixed|null
+     */
     public static function getDetailData(string $url, array $data): mixed
     {
         $urlParts = explode('/', trim($url, '/'));
@@ -63,6 +93,12 @@ class Tools
         return null;
     }
 
+    /**
+     * Получает случайный элемент из JSON-файла в папке /data.
+     *
+     * @param string $fileName Имя файла без расширения .json
+     * @return mixed|null
+     */
     public static function getRandomElement(string $fileName): mixed
     {
         $data = self::getData($fileName);
@@ -74,27 +110,26 @@ class Tools
         return null;
     }
 
+    /**
+     * Перемешивает массив случайным образом и возвращает новый массив.
+     *
+     * @param array $array Входной массив
+     * @return array
+     */
     public static function randomSort(array $array): array
     {
         $shuffledArray = $array;
-
         shuffle($shuffledArray);
-
         return $shuffledArray;
     }
 
-    public static function getPhotosFormVk(): array
-    {
-        global $ownerId;
-        global $albumId;
-        global $accessToken;
-
-        $vkPhotoFetcher = new VkPhotoFetcher($ownerId, $albumId, $accessToken);
-        return $vkPhotoFetcher->getPhotos();
-    }
-
-
-    public static function toggleLanguage($url): string
+    /**
+     * Переключает язык в URL, добавляя или убирая сегмент 'en' в начале пути.
+     *
+     * @param string $url Исходный URL
+     * @return string
+     */
+    public static function toggleLanguage(string $url): string
     {
         $parsedUrl = parse_url($url);
         $path = $parsedUrl['path'] ?? '';
@@ -119,6 +154,11 @@ class Tools
             (isset($parsedUrl['fragment']) ? '#' . $parsedUrl['fragment'] : '');
     }
 
+    /**
+     * Возвращает текущий URL страницы.
+     *
+     * @return string
+     */
     public static function getCurrentUrl(): string
     {
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
@@ -128,7 +168,13 @@ class Tools
         return $protocol . $host . $requestUri;
     }
 
-    public static function getHrefLang(): string {
+    /**
+     * Формирует теги Hreflang для SEO.
+     *
+     * @return string
+     */
+    public static function getHrefLang(): string
+    {
         $url = self::getCurrentUrl();
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
         $host = $_SERVER['HTTP_HOST'];
@@ -157,7 +203,15 @@ class Tools
         return implode("\n", $hrefLangTags) . "\n";
     }
 
-    public static function getOpenGraphMetaTags($pageTitle, $pageDescription): string {
+    /**
+     * Формирует теги Open Graph для SEO.
+     *
+     * @param string $pageTitle Заголовок страницы
+     * @param string $pageDescription Описание страницы
+     * @return string
+     */
+    public static function getOpenGraphMetaTags(string $pageTitle, string $pageDescription): string
+    {
         global $LANG;
 
         $title = htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8');
@@ -181,7 +235,15 @@ class Tools
         return implode("\n", $metaTags) . "\n";
     }
 
-    public static function getSchemaOrgTags(string $name, string $description): string {
+    /**
+     * Формирует разметку Schema.org для SEO.
+     *
+     * @param string $name Название сайта или страницы
+     * @param string $description Описание сайта или страницы
+     * @return string
+     */
+    public static function getSchemaOrgTags(string $name, string $description): string
+    {
         $currentUrl = self::getCurrentUrl();
 
         $data = [
@@ -203,5 +265,39 @@ class Tools
         $json = json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 
         return "<script type=\"application/ld+json\">\n" . $json . "\n</script>\n";
+    }
+
+    /**
+     * Записывает данные в кеш.
+     *
+     * @param string $fileName
+     * @param array $data Данные для записи
+     * @return void
+     */
+    public static function setCache(string $fileName, array $data): void
+    {
+        $cacheFilePath = $_SERVER['DOCUMENT_ROOT'] . $fileName;
+        $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+        if ($json === false) {
+            Tools::logError('Ошибка кодирования данных в JSON для кеша');
+            return;
+        }
+
+        if (file_put_contents($cacheFilePath, $json) === false) {
+            Tools::logError('Ошибка записи в файл кеша: ' . $cacheFilePath);
+        }
+    }
+
+    /**
+     * Записывает сообщение об ошибке в лог.
+     *
+     * @param string $message Сообщение об ошибке
+     * @return void
+     */
+    public static function logError(string $message): void
+    {
+        $timestamp = date('Y-m-d H:i:s');
+        $formattedMessage = "[{$timestamp}] {$message}\n";
+        @error_log($formattedMessage, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
     }
 }

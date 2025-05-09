@@ -1,4 +1,5 @@
 <?php
 $ownerId = '';
 $albumId = '';
-$accessToken = '';
+$vkApiKey = '';
+$gitHubApiKey = '';
