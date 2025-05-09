@@ -6,7 +6,7 @@
     "textFirst-en": "Personal project in PHP",
     "textSecond-ru": "Новая версия моего сайта. В этой версии все собрано полностью с нуля на других технологиях, реализована сложная логика работы.",
     "textSecond-en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented.",
-    "deploy": "",
+    "deploy": "https://yuriyplotnikovv.ru",
     "features": [
         {
             "name-ru": "Страницы",

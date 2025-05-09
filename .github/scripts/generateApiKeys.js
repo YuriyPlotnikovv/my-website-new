@@ -7,7 +7,7 @@ const albumId = process.env.ALBUM_ID;
 const vkApiKey = process.env.VK_API_KEY;
 const gitHubApiKey = process.env.GIT_API_KEY;
 
-if (!ownerId || !albumId || !accessToken) {
+if (!ownerId || !albumId || !vkApiKey || !gitHubApiKey) {
   console.error('API keys are not set.');
   process.exit(1);
 }
