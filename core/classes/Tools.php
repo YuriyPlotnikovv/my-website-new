@@ -276,7 +276,7 @@ class Tools
      */
     public static function setCache(string $fileName, array $data): void
     {
-        $cacheFilePath = $_SERVER['DOCUMENT_ROOT'] . $fileName;
+        $cacheFilePath = __DIR__ . '/../../' . ltrim($fileName, '/');
         $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
         if ($json === false) {
             Tools::logError('Ошибка кодирования данных в JSON для кеша');
@@ -298,6 +298,6 @@ class Tools
     {
         $timestamp = date('Y-m-d H:i:s');
         $formattedMessage = "[{$timestamp}] {$message}\n";
-        @error_log($formattedMessage, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+        @error_log($formattedMessage, 3, __DIR__ . '/../../' . '/errors.log');
     }
 }

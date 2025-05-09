@@ -174,7 +174,7 @@ class GitHubProjectsFetcher
     {
         $filename = $repoName . '-preview.webp';
 
-        $localDir = $_SERVER['DOCUMENT_ROOT'] . self::LOCAL_IMAGE_DIR;
+        $localDir =  __DIR__ . '/../../' . self::LOCAL_IMAGE_DIR;
         if (!is_dir($localDir) && !mkdir($localDir, 0755, true) && !is_dir($localDir)) {
             Tools::logError("Не удалось создать директорию {$localDir}");
             return null;
