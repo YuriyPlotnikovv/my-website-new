@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   (function observeSections() {
     const options = {
       root: null,
-      rootMargin: '-200px',
+      rootMargin: '0px',
       threshold: 0
     };
 
