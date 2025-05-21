@@ -91,7 +91,9 @@
     box-shadow: var.$buttonShadow;
     border-color: var.$colorBlackThree;
     border-radius: 20px;
+
     transition: all 0.4s ease-in-out;
+    will-change: transform, box-shadow;
 
     &:hover, &:active {
       color: var.$colorBlackThree;

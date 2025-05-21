@@ -1,8 +1,8 @@
 @use "../global/variables" as var;
 
 .slider {
-  box-sizing: border-box;
   overflow: hidden;
+  box-sizing: border-box;
 
   width: 100%;
 
@@ -16,6 +16,7 @@
     position: relative;
 
     transition: all 0.4s ease-in-out;
+    will-change: transform, opacity;
   }
 
   &__pagination.swiper-pagination {
@@ -44,6 +45,7 @@
       border-radius: 5px;
 
       transition: all 0.4s ease-in-out;
+      will-change: background-color;
 
       &:hover, &:active {
         background-color: var.$colorGray;
@@ -53,6 +55,7 @@
         background-color: var.$colorGray;
 
         transition: all 0.4s ease-in-out;
+        will-change: background-color;
       }
     }
   }
@@ -77,6 +80,7 @@
     cursor: pointer;
 
     transition: all 0.4s ease-in-out;
+    will-change: transform, opacity;
 
     &:hover, &:active {
       opacity: 0.6;

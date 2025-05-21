@@ -3,10 +3,10 @@
 .header {
   &__wrapper {
     display: flex;
-    box-sizing: border-box;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     gap: 50px;
+    box-sizing: border-box;
     max-width: var.$desktop-mid-width;
     margin: 0 auto;
     padding: 10px 100px;
@@ -30,6 +30,7 @@
     margin-right: auto;
 
     transition: all 0.4s ease-in-out;
+    will-change: opacity;
 
     &:hover, &:active {
       opacity: 0.6;
@@ -87,8 +88,9 @@
 
       background-color: var.$colorBlackThree;
 
-      transform: translate(-110%, 80px);
       transition: all 0.6s ease-in-out;
+      transform: translate(-110%, 80px);
+      will-change: transform;
 
       @media (max-width: var.$tablet-max-width) {
         transform: translate(-110%, 70px);
@@ -123,6 +125,7 @@
     color: var.$colorWhite;
 
     transition: all 0.4s ease-in-out;
+    will-change: opacity;
 
     &:hover, &:active {
       opacity: 0.6;
@@ -143,8 +146,9 @@
       width: 35px;
       height: 25px;
 
-      transition: all 0.4s ease-in-out;
       cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      will-change: opacity;
 
       &:hover, &:active {
         opacity: 0.4;
@@ -186,6 +190,7 @@
     border-radius: 1px;
 
     transition: all 0.4s ease-in-out;
+    will-change: transform, opacity;
 
     &::before, &::after {
       position: absolute;
@@ -198,6 +203,7 @@
       border-radius: 1px;
 
       transition: all 0.4s ease-in-out;
+      will-change: transform, opacity;
       content: "";
     }
 
@@ -205,12 +211,14 @@
       top: 0;
 
       transition: all 0.4s ease-in-out;
+      will-change: transform, opacity;
     }
 
     &::after {
       top: calc(100% - 2px);
 
       transition: all 0.4s ease-in-out;
+      will-change: transform, opacify;
     }
   }
 }

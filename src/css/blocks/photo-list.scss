@@ -24,11 +24,13 @@
     cursor: pointer;
 
     transition: all 0.4s ease-in-out;
+    will-change: transform, box-shadow;
 
     &:hover, &:active {
       box-shadow: var.$boxShadowCardHover;
       transform: scale(1.05);
     }
+
     @media (max-width: var.$tablet-max-width) {
       height: 350px;
     }

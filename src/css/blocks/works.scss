@@ -112,6 +112,7 @@
 
     border-radius: 5px;
     transition: all 0.4s ease-in-out;
+    will-change: filter;
 
     object-fit: contain;
 
@@ -139,6 +140,7 @@
     text-shadow: 0 5px 15px var.$colorBlack;
 
     transition: all 0.4s ease-in-out;
+    will-change: opacity;
 
     @media (max-width: var.$tablet-max-width) {
       z-index: 0;

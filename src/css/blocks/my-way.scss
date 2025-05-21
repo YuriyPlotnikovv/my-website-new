@@ -126,6 +126,7 @@
     text-decoration: underline;
 
     transition: all 0.4s ease-in-out;
+    will-change: opacity;
 
     &:hover, &:active {
       text-decoration: underline;

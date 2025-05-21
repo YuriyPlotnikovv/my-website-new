@@ -3,9 +3,9 @@
 .socials {
   &__list {
     display: flex;
-    gap: 10px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
 
   &__item-link {
@@ -16,6 +16,7 @@
     padding: 5px;
 
     transition: all 0.4s ease-in-out;
+    will-change: opacity;
 
     &:hover, &:active {
       opacity: 0.6;
