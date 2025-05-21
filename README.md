@@ -20,6 +20,10 @@ A new version of my website. In this version, everything is completely assembled
 
 ### About the project
 
+#### Development date:
+
+- January 2025
+
 #### Pages:
 
 - Main
@@ -32,7 +36,7 @@ A new version of my website. In this version, everything is completely assembled
 
 - Swiper and Lightgallery are integrated
 - VK Api integration (photos)
-- GitHub Api integration (projects)
+- GitHub Api integration (projects data)
 - English language (translations from variables), automatic language detection by url
 - Url rewrite (links are not the actual location of the pages on the server)
 - Data from JSON files
@@ -73,6 +77,10 @@ Website: https://yuriyplotnikovv.ru
 
 ### О проекте
 
+#### Дата разработки:
+
+- Январь 2025
+
 #### Страницы:
 
 - Главная
@@ -85,7 +93,7 @@ Website: https://yuriyplotnikovv.ru
 
 - Подключены Swiper и Lightgallery
 - Интеграция с VK Api (для получения фото)
-- Интеграция с GitHub Api (для получения проектов)
+- Интеграция с GitHub Api (для получения данных проектов)
 - Английский язык (переводы из переменных), определение языка на основе url страницы
 - Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)
 - Данные из JSON файлов
