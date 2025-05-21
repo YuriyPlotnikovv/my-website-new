@@ -1,27 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600">
-    <defs>
-        <filter id="colorShift" x="0" y="0" width="100%" height="100%">
-            <feColorMatrix in="SourceGraphic" type="hueRotate" values="0">
-                <animate attributeName="values" from="0" to="360" dur="8s" repeatCount="indefinite"/>
-            </feColorMatrix>
-        </filter>
-    </defs>
-
     <style>
         text {
         font-family: "Lucida Console";
         text-anchor: middle;
+        }
+        @keyframes hueRotate {
+        0% { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(360deg); }
         }
         @keyframes fadeInOut {
         0%, 100% { opacity: 0.75; }
         50% { opacity: 0.1; }
         }
         .fade {
-        animation-name: fadeInOut;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-        filter: url(#colorShift);
-        }
+        animation: hueRotate 8s linear infinite, fadeInOut 3s ease-in-out infinite;        }
         .fade:nth-of-type(7n) {
         animation-delay: 0s;
         animation-duration: 3s;
