@@ -40,6 +40,7 @@
     filter: var.$dropShadow;
     -webkit-filter: var.$dropShadow;
 
+    will-change: filter;
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
