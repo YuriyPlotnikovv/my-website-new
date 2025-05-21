@@ -1,9 +1,151 @@
-@keyframes cookieShow {
+@keyframes headerShow {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blockShow {
   0% {
-    bottom: -100%;
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
   100% {
-    bottom: 40px;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes introTextShow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes introMainBgShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+
+@keyframes introImageShow {
+  from {
+    transform: translateY(150%) rotate(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes introScrollShow {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes cardFlip {
+  0% {
+    transform: rotateY(180deg) rotateX(20deg) scale(1);
+  }
+  50% {
+    transform: rotateY(90deg) rotateX(10deg) scale(1.2);
+  }
+  100% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes itemShow {
+  from {
+    opacity: 0;
+    transform: translateY(150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes featuresShow {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  75% {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes elementOdd {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes elementEven {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  75% {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes footerShow {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateX(30px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

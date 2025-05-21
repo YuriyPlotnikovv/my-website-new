@@ -1,26 +1,26 @@
 [
-  {
-    "text-ru": "В августе 2022 года заинтересовался Frontend-разработкой и начал поиски подходящего обучения.",
-    "text-en": "In August 2022, I became interested in frontend development and started looking for suitable training."
-  },
-  {
-    "text-ru": "В ноябре 2022 года приобрел курсы в HTML Academy и начал полноценное обучение.",
-    "text-en": "In November 2022, I bought courses at the HTML Academy and began full-time training."
-  },
-  {
-    "text-ru": "В сентябре 2023 года закончил курс Frontend-разработчик от HTML Academy.",
-    "text-en": "In September 2023, I completed the Frontend Developer course at HTML Academy."
-  },
-  {
-    "text-ru": "В сентябре 2023 года начал второй курс - JavaScript-разработчик.",
-    "text-en": "In September 2023, I started the second course - JavaScript Developer."
-  },
-  {
-    "text-ru": "В ноябре 2023 года начал работать в компании TravelLine (разработчик IT-инструментов и сайтов для отелей) на должности Fronted-разработчик.",
-    "text-en": "In November 2023, I started working at TravelLine (a developer of IT tools and websites for hotels) as a Frontend Developer."
-  },
-  {
-    "text-ru": "В декабре 2024 года стал Старшим Frontend-Разработчиком в TravelLine.",
-    "text-en": "In December 2024, I became a Middle Frontend Developer at TravelLine."
-  }
+    {
+        "text-ru": "Работал около семи лет в ресторанной сфере в сетевых отелях - Marriott, Radisson, Sheraton и Park Inn.",
+        "date-ru": "до 2023",
+        "text-en": "I worked for about seven years in the restaurant industry in chain hotels such as Marriott, Radisson, Sheraton, and Park Inn.",
+        "date-en": "before 2023"
+    },
+    {
+        "text-ru": "Закончил курс Frontend-разработчик от <a class=\"my-way__item-text-link\" href=\"https://htmlacademy.ru/\" target=\"_blank\" rel=\"nofollow\">HTML Academy</a>.",
+        "date-ru": "сентябрь 2023",
+        "text-en": "Completed the Frontend Developer course at <a class=\"my-way__item-text-link\" href=\"https://htmlacademy.ru/\" target=\"_blank\" rel=\"nofollow\">HTML Academy</a>.",
+        "date-en": "september 2023"
+    },
+    {
+        "text-ru": "Начал работать в Web-отделе компании <a class=\"my-way__item-text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a> в должности Frontend-разработчик.",
+        "date-ru": "ноябрь 2023",
+        "text-en": "Started working in the Web department of <a class=\"my-way__item-text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a> as a Frontend Developer.",
+        "date-en": "november 2023"
+    },
+    {
+        "text-ru": "Стал старшим Frontend-разработчиком в Web-отделе компании <a class=\"my-way__item-text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a>.",
+        "date-ru": "декабрь 2024",
+        "text-en": "Became a Middle Frontend Developer in the Web department of <a class=\"my-way__item-text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a>.",
+        "date-en": "december 2024"
+    }
 ]

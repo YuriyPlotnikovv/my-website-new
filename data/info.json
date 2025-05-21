@@ -1,0 +1,56 @@
+{
+    "about-ru": "Я работаю старшим Frontend-разработчиком в команде Web-отдела компании <a class=\"info__text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a>. Наша задача — создавать функциональные и удобные сайты для отельеров, которые помогают им эффективно развивать свой бизнес.<br>Мне нравится решать сложные задачи и находить нестандартные подходы к выполнению уникальных требований. Я убеждён, что учиться никогда не поздно, поэтому постоянно стремлюсь открывать для себя новые технологии и инструменты.<br>Для меня профессия — это не только работа, но и хобби, поэтому меня часто можно застать за погружением в очередной интересный проект, где я с удовольствием экспериментирую и совершенствую свои навыки.",
+    "about-en": "I work as a Middle Frontend Developer in the Web Department team at <a class=\"info__text-link\" href=\"https://travelline.tech/\" target=\"_blank\" rel=\"nofollow\">TravelLine</a>. Our mission is to create functional and user-friendly websites for hoteliers that help them effectively grow their business.<br>I enjoy solving complex problems and finding creative approaches to meet unique requirements. I believe it’s never too late to learn, so I constantly strive to discover new technologies and tools.<br>For me, this profession is not just a job but also a hobby, so you can often find me deeply engaged in an interesting project where I enjoy experimenting and improving my skills.",
+    "facts": [
+        {
+            "name-ru": "Место жительства",
+            "name-en": "Place of residence",
+            "text-ru": "Красная Поляна, Сочи",
+            "text-en": "Krasnaya Polyana, Sochi"
+        },
+        {
+            "name-ru": "Когда я пришел в разработку",
+            "name-en": "When I started development",
+            "text-ru": "В конце 2023 года (после окончания курсов)",
+            "text-en": "At the end of 2023 (after completing the courses)"
+        },
+        {
+            "name-ru": "Образование",
+            "name-en": "Education",
+            "text-ru": "неоконченное высшее (Сервис, ИиМО, СГУ, 2026)",
+            "text-en": "Incomplete higher education (Service, IIMo, SGU, 2026)"
+        },
+        {
+            "name-ru": "Специализация",
+            "name-en": "Specialization",
+            "text-ru": "Вебсайты, frontend-разработка",
+            "text-en": "Websites, frontend development"
+        },
+        {
+            "name-ru": "Увлечения",
+            "name-en": "Hobbies",
+            "text-ru": "Занятия спортом, сноуборд, мотоциклы, чтение книг, игры на Xbox",
+            "text-en": "Sports, snowboarding, motorcycles, reading books, playing Xbox"
+        },
+        {
+            "name-ru": "Любимая цитата",
+            "name-en": "Favorite quote",
+            "text-ru": "Нет ничего невозможного - на невозможное нужно просто больше времени",
+            "text-en": "Nothing is impossible — the impossible just takes more time"
+        },
+        {
+            "name-ru": "Языки",
+            "name-en": "Languages",
+            "text-ru": "Русский (родной), Английский (продвинутый)",
+            "text-en": "Russian (native), English (advanced)"
+        },
+        {
+            "name-ru": "Личные качества",
+            "name-en": "Personal qualities",
+            "text-ru": "Ответственность, креативность, умение работать в команде",
+            "text-en": "Responsibility, creativity, teamwork skills"
+        }
+    ],
+    "into-ru": "В начале 2022 года мой друг, опытный frontend-разработчик, приехал в Красную Поляну покататься на сноуборде. Мы много времени провели вместе на склонах, наслаждались великолепной погодой.<br>В один из моментов отдыха я откровенно признался ему, что устал от своей работы в ресторанах — она перестала приносить радость и вдохновение, и мне хотелось попробовать что-то новое, найти себя в другой сфере.<br>На его вопрос, рассматривал ли я возможность перейти в frontend-разработку, я ответил, что вряд ли это для меня. У меня не было профильного образования, да и казалось, что у меня «не тот склад ума» для программирования. Но друг настоял: «Просто попробуй, посмотри, что это такое». Он предложил начать с простого — изучить основы и понять, насколько мне это интересно.<br>Я согласился, но оставил эту идею на потом — в долгий ящик. Спустя полгода, когда желание перемен стало сильнее, я снова вернулся к этой мысли и начал искать варианты обучения. Мне было важно найти что-то с возможностью попробовать бесплатно, чтобы понять, подходит ли мне эта сфера.<br>И тогда мне повезло: я наткнулся на обучающие тренажёры по frontend от <a class=\"info__text-link\" href=\"https://htmlacademy.ru/\" target=\"_blank\" rel=\"nofollow\">HTML Academy</a>. После нескольких занятий и пары тренажёров, всего через три дня я понял — это именно то, чем я хочу заниматься. Мое любопытство и интерес только росли, и я решил приобрести полноценный курс.<br>Так началось моё увлекательное погружение в мир frontend-разработки и веб-технологий.",
+    "into-en": "At the beginning of 2022, my friend, an experienced frontend developer, came to Krasnaya Polyana to go snowboarding. We spent a lot of time together on the slopes, enjoying the wonderful weather.<br>During one of our breaks, I honestly admitted to him that I was tired of my restaurant job — it no longer brought me joy or inspiration, and I wanted to try something new, to find myself in a different field.<br>When he asked if I had considered switching to frontend development, I replied that it probably wasn’t for me. I didn’t have a relevant education, and it seemed like I didn’t have the “right mindset” for programming. But my friend insisted: “Just try it, see what it’s about.” He suggested starting simple — learning the basics and seeing if I found it interesting.<br>I agreed but put the idea on the back burner. Six months later, when my desire for change grew stronger, I returned to the idea and started looking for learning options. It was important for me to find something with a free trial so I could understand if this field suited me.<br>Then I got lucky: I came across frontend training simulators from <a class=\"info__text-link\" href=\"https://htmlacademy.ru/\" target=\"_blank\" rel=\"nofollow\">HTML Academy</a>. After a few lessons and some exercises, within just three days, I realized this was exactly what I wanted to do. My curiosity and interest only grew, and I decided to purchase a full course.<br>That’s how my exciting journey into the world of frontend development and web technologies began."
+}

@@ -25,18 +25,38 @@
         "link": "https://www.php.net/"
     },
     {
-        "name": "Gulp",
-        "icon": "icon-gulp",
-        "link": "https://gulpjs.com/"
-    },
-    {
         "name": "Vue",
         "icon": "icon-vue",
         "link": "https://vuejs.org/"
     },
     {
+        "name": "React",
+        "icon": "icon-react",
+        "link": "https://react.dev/"
+    },
+    {
         "name": "Bitrix",
         "icon": "icon-bitrix",
         "link": "https://dev.1c-bitrix.ru/"
+    },
+    {
+        "name": "Gulp",
+        "icon": "icon-gulp",
+        "link": "https://gulpjs.com/"
+    },
+    {
+        "name": "Webpack",
+        "icon": "icon-webpack",
+        "link": "https://webpack.js.org/"
+    },
+    {
+        "name": "Git",
+        "icon": "icon-git",
+        "link": "https://git-scm.com/"
+    },
+    {
+        "name": "GitHub",
+        "icon": "icon-github-official",
+        "link": "https://github.com/"
     }
 ]

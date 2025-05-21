@@ -52,8 +52,14 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
         <link href="/public/css/vendor/swiper-bundle.css" rel="stylesheet">
         <link href="/public/css/vendor/lightgallery.min.css" rel="stylesheet">
     <?php endif; ?>
-
     <link href="<?= Tools::addTimestampToFile('/public/css/style.min.css') ?>" rel="stylesheet">
+
+    <?php if ($PAGE_TYPE === 'about'): ?>
+        <script src="/public/js/vendor/lightgallery.min.js" defer></script>
+        <script src="/public/js/vendor/lg-zoom.min.js" defer></script>
+        <script src="/public/js/vendor/swiper-bundle.js" defer></script>
+    <?php endif; ?>
+    <script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>" defer></script>
 </head>
 
 <body class="page__body">

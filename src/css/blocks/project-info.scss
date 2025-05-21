@@ -1,6 +1,8 @@
 @use "../global/variables" as var;
 
 .project-info {
+  z-index: 8;
+
   &__features {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -49,13 +51,33 @@
 
   &__features-description-item {
     list-style-type: circle;
+
+    opacity: 0;
+    transform: translateX(100%);
+
+    &.animate {
+      animation: featuresShow 0.5s ease-in-out forwards;
+    }
   }
 
   &__links-list {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 20px;
+  }
+
+  &__links-item {
+    opacity: 0;
+    transform: translateY(150%);
+
+    &.animate {
+      animation: itemShow 0.5s ease-in-out forwards;
+    }
+
+    &.pointing {
+      pointer-events: auto;
+    }
   }
 
   &__links-item-link {
@@ -66,9 +88,9 @@
     font-weight: 500;
     color: var.$colorWhite;
 
-    border-radius: 20px;
-    border-color: var.$colorBlackThree;
     box-shadow: var.$buttonShadow;
+    border-color: var.$colorBlackThree;
+    border-radius: 20px;
     transition: all 0.4s ease-in-out;
 
     &:hover, &:active {

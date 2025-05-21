@@ -1,34 +1,48 @@
 @use "../global/variables" as var;
 
 .photo-list {
+  z-index: 9;
+
   &__list {
     display: flex;
     justify-content: space-between;
   }
 
   &__item {
+    position: relative;
+
+    box-sizing: border-box;
     width: 250px;
     height: 300px;
     padding: 5px;
-    box-sizing: border-box;
 
+    opacity: 0;
     background-color: var.$colorWhite;
-    border-radius: 10px;
     box-shadow: var.$boxShadowCard;
 
-    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
     cursor: pointer;
+
+    transition: all 0.4s ease-in-out;
 
     &:hover, &:active {
       box-shadow: var.$boxShadowCardHover;
       transform: scale(1.05);
     }
-
     @media (max-width: var.$tablet-max-width) {
       height: 350px;
     }
+
     @media (max-width: var.$mobile-max-width) {
       height: 400px;
+    }
+
+    &.animate {
+      opacity: 1;
+    }
+
+    &.pointing {
+      pointer-events: auto;
     }
   }
 

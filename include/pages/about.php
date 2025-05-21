@@ -1,7 +1,7 @@
 <?php
 global $LANG, $MESS;
 
-$quotesList = Tools::randomSort(Tools::getData('quotes-list'));
+$info = Tools::getData('info');
 $photosList = Tools::randomSort(Tools::getData('photos-list'));
 $skillsList = Tools::getData('skills-list');
 $wayList = Tools::getData('way-list');
@@ -23,28 +23,6 @@ $wayList = Tools::getData('way-list');
         </svg>
 
         <?php Tools::includeFile('scroll-button') ?>
-    </div>
-</section>
-
-<section class="about-page__quotes-list section quotes-list">
-    <div class="section__wrapper quotes-list__wrapper slider">
-        <h2 class="section__title quotes-list__title"><?= $MESS['QUOTES_TITLE'] ?>:</h2>
-
-        <div class="slider__wrapper swiper-container" data-single data-pagination>
-            <ul class="quotes-list__list slider__list swiper-wrapper">
-                <?php foreach ($quotesList as $item):
-                    $text = $item['text-' . $LANG];
-                    ?>
-                    <li class="quotes-list__item slider__item swiper-slide">
-                        <p class="quotes-list__item-text">
-                            <?= $text ?>
-                        </p>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-
-            <div class="slider__pagination swiper-pagination"></div>
-        </div>
     </div>
 </section>
 
@@ -80,8 +58,10 @@ $wayList = Tools::getData('way-list');
 
                     $title = $item['text'] ?? '';
                     ?>
-                    <li class="photo-list__item slider__item swiper-slide" data-src="<?= htmlspecialchars($photoFullUrl, ENT_QUOTES) ?>">
-                        <img class="photo-list__item-image" src="<?= htmlspecialchars($photoUrl, ENT_QUOTES) ?>" alt="<?= htmlspecialchars($title, ENT_QUOTES) ?>" width="250" height="300" loading="lazy">
+                    <li class="photo-list__item slider__item swiper-slide"
+                        data-src="<?= htmlspecialchars($photoFullUrl, ENT_QUOTES) ?>">
+                        <img class="photo-list__item-image" src="<?= htmlspecialchars($photoUrl, ENT_QUOTES) ?>"
+                             alt="<?= htmlspecialchars($title, ENT_QUOTES) ?>" width="250" height="300" loading="lazy">
                     </li>
                 <?php endforeach; ?>
 
@@ -119,16 +99,69 @@ $wayList = Tools::getData('way-list');
     </div>
 </section>
 
+<section class="about-page__info section info">
+    <div class="section__wrapper info__wrapper">
+        <h2 class="section__title info__title"><?= $MESS['INFO_TITLE'] ?>:</h2>
+
+        <div class="info__text-wrapper">
+            <?php $text = explode('<br>', $info['about-' . $LANG]) ?>
+            <?php foreach ($text as $item): ?>
+                <p class="info__text">
+                    <?= $item ?>
+                </p>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<section class="about-page__info-facts section info-facts">
+    <div class="section__wrapper info-facts__wrapper">
+        <h2 class="section__title info-facts__title"><?= $MESS['INFO_FACTS_TITLE'] ?>:</h2>
+
+        <ul class="info-facts__list">
+            <?php foreach ($info['facts'] as $item):
+                $title = $item['name-' . $LANG];
+                $text = $item['text-' . $LANG];
+                ?>
+                <li class="info-facts__item">
+                    <h3 class="info-facts__item-title">
+                        <?= $title ?>
+                    </h3>
+
+                    <p class="info-facts__item-text">
+                        <?= $text ?>
+                    </p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</section>
+
+<section class="about-page__info-into section info-into">
+    <div class="section__wrapper info-into__wrapper">
+        <h2 class="section__title info-into__title"><?= $MESS['INFO_INTO_TITLE'] ?>:</h2>
+
+        <div class="info-into__text-wrapper">
+            <?php $text = explode('<br>', $info['into-' . $LANG]) ?>
+            <?php foreach ($text as $item): ?>
+                <p class="info-into__text">
+                    <?= $item ?>
+                </p>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
 <section class="about-page__my-way section my-way">
     <div class="section__wrapper my-way__wrapper">
         <h2 class="section__title my-way__title"><?= $MESS['WAY_TITLE'] ?>:</h2>
 
         <ol class="my-way__list">
-            <?php foreach ($wayList as $i => $item):
-                $number = ++$i;
+            <?php foreach ($wayList as $item):
                 $text = $item['text-' . $LANG];
+                $date = $item['date-' . $LANG];
                 ?>
-                <li class="my-way__item" data-number="<?= $number ?>">
+                <li class="my-way__item" data-date="<?= $date ?>">
                     <p class="my-way__item-text">
                         <?= $text ?>
                     </p>

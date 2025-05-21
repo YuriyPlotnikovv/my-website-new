@@ -2,10 +2,10 @@
 
 .page {
   &--fixed {
-    touch-action: none;
-    -webkit-overflow-scrolling: none;
     overflow: hidden;
     overscroll-behavior: none;
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
   }
 
   &__body {
@@ -13,8 +13,8 @@
 
     font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
     font-size: 18px;
-    line-height: 1.2;
     font-weight: 400;
+    line-height: 1.2;
   }
 
   &__header {
@@ -23,12 +23,18 @@
 
     width: 100%;
 
+    color: var.$colorWhite;
+
     background-color: var.$colorBlackTwo;
 
-    color: var.$colorWhite;
+    transform: translateY(-100%);
+
+    animation: headerShow 1s ease-in-out forwards;
   }
 
   &__main {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     margin-top: 80px;
@@ -46,7 +52,12 @@
 
     color: var.$colorBlackThree;
 
+    opacity: 0;
     background-color: var.$colorGraySeven;
+
     box-shadow: var.$boxShadowSection;
+    transform: translateY(-100%);
+
+    animation: footerShow 1s ease-in-out forwards;
   }
 }

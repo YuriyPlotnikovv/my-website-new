@@ -23,12 +23,5 @@ global $MESS, $PAGE_TYPE;
         </a>
     </div>
 </footer>
-
-<?php if ($PAGE_TYPE === 'about'): ?>
-    <script src="/public/js/vendor/lightgallery.min.js"></script>
-    <script src="/public/js/vendor/lg-zoom.min.js"></script>
-    <script src="/public/js/vendor/swiper-bundle.js"></script>
-<?php endif; ?>
-<script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
 @use "../global/variables" as var;
 
 .skills-list {
+  z-index: 8;
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     width: 100%;
     margin: 0 auto;
@@ -15,8 +17,19 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
     box-sizing: border-box;
+    padding: 10px 20px;
+
+    opacity: 0;
+    transform: translateY(150%);
+
+    &.animate {
+      animation: itemShow 0.5s ease-in-out forwards;
+    }
+
+    &.pointing {
+      pointer-events: auto;
+    }
   }
 
   &__item-link {
@@ -39,9 +52,5 @@
     box-sizing: border-box;
     width: 80px;
     height: 60px;
-  }
-
-  &__item-name {
-    font-style: italic;
   }
 }

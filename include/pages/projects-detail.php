@@ -9,6 +9,7 @@ $name = $project['title-' . $LANG];
 $image = $project['image'];
 $textFirst = $project['textFirst-' . $LANG];
 $textSecond = $project['textSecond-' . $LANG];
+$technologiesList = $project['technologies'];
 $featuresList = $project['features'];
 $deployLink = $project['deploy'];
 $githubLink = $project['repository'];
@@ -30,9 +31,37 @@ $githubLink = $project['repository'];
     </div>
 </section>
 
+
+<section class="projects-detail-page__project-technologies section project-technologies">
+    <div class="section__wrapper project-technologies__wrapper">
+        <h2 class="section__title project-technologies__title"><?= $MESS['PROJECTS_TECHNOLOGIES_TITLE'] ?>:</h2>
+
+        <ul class="project-technologies__list">
+            <?php foreach ($technologiesList as $item):
+                $name = $item['name'];
+                $icon = $item['icon'];
+                $link = $item['link'];
+                ?>
+                <li class="project-technologies__item">
+                    <a class="project-technologies__item-link" href="<?= $link ?>" title="<?= $name ?>" target="_blank">
+                        <svg class="project-technologies__item-icon" width="60" height="60"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="/public/img/sprite.svg#<?= $icon ?>"/>
+                        </svg>
+
+                        <div class="visually-hidden">
+                            <?= $name ?>
+                        </div>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</section>
+
 <section class="projects-detail-page__project-info section project-info">
     <div class="section__wrapper project-info__wrapper">
-        <h2 class="section__title project-info__title"><?= $MESS['PROJECTS_ABOUT_PROJECT_TITLE'] ?></h2>
+        <h2 class="section__title project-info__title"><?= $MESS['PROJECTS_ABOUT_PROJECT_TITLE'] ?>:</h2>
 
         <ul class="project-info__features">
             <?php foreach ($featuresList as $i => $item):

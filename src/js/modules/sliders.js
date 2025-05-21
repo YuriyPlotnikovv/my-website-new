@@ -14,21 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sliderOptions = {...defaultSliderOptions};
 
-    if (elem.hasAttribute('data-single')) {
-      sliderOptions.spaceBetween = 20;
-      sliderOptions.grabCursor = true;
-      sliderOptions.effect = 'fade';
-      sliderOptions.fadeEffect = {
-        crossFade: true,
-      };
-      sliderOptions.autoplay = {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      };
-      sliderOptions.autoHeight = true;
-    }
-
     if (elem.hasAttribute('data-slides')) {
       sliderOptions.on = {
         init: function () {
@@ -76,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
       };
       sliderOptions.autoplay = {
-        delay: 3000,
+        delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       };

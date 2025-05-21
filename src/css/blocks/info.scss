@@ -1,0 +1,49 @@
+@use "../global/variables" as var;
+
+.info {
+  z-index: 7;
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.2;
+    text-indent: 20px;
+
+    opacity: 0;
+
+    &:nth-of-type(odd) {
+      transform: translateX(-100%);
+    }
+
+    &:nth-of-type(even) {
+      transform: translateX(100%);
+    }
+
+    &.animate {
+      &:nth-of-type(odd) {
+        animation: elementOdd 1s ease-in-out forwards;
+      }
+
+      &:nth-of-type(even) {
+        animation: elementEven 1s ease-in-out forwards;
+      }
+    }
+  }
+
+  &__text-link {
+    text-decoration: underline;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      text-decoration: underline;
+
+      opacity: 0.6;
+    }
+  }
+}

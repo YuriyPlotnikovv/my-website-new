@@ -5,15 +5,23 @@
     background-color: var.$colorWhite;
   }
 
-  &__quotes-list {
+  &__photo-list {
     background-color: var.$colorGrayTwo;
   }
 
-  &__photo-list {
+  &__skills-list {
     background-color: var.$colorWhite;
   }
 
-  &__skills-list {
+  &__info {
+    background-color: var.$colorGrayTwo;
+  }
+
+  &__info-facts {
+    background-color: var.$colorWhite;
+  }
+
+  &__info-into {
     background-color: var.$colorGrayTwo;
   }
 

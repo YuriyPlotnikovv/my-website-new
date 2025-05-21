@@ -2,8 +2,18 @@
 
 .section {
   display: block;
+  overflow: hidden;
 
-  box-shadow: var.$boxShadowSection;
+  &:not(.intro) {
+    opacity: 0;
+    box-shadow: var.$boxShadowSection;
+
+    transform: translateY(-200px);
+  }
+
+  &.animate {
+    animation: blockShow 1s ease-in-out forwards;
+  }
 
   &__wrapper {
     position: relative;
@@ -11,19 +21,13 @@
 
     max-width: var.$desktop-mid-width;
     margin: 0 auto;
-    padding: 30px 100px 70px;
+    padding: 30px 30px 70px;
 
-    @media (max-width: var.$desktop-mid-width) {
-      padding: 30px 80px 70px;
-    }
-    @media (max-width: var.$tablet-max-width) {
-      padding: 30px 40px 70px;
-    }
     @media (max-width: var.$mobile-max-width) {
       padding: 20px 20px 40px;
     }
 
-    &.intro__wrapper--main, &.intro__wrapper--about {
+    &.intro__wrapper--main {
       padding-bottom: 0;
     }
   }
@@ -34,8 +38,8 @@
     margin: 0 auto 30px;
 
     font-size: 24px;
-    line-height: 1.2;
     font-weight: 500;
+    line-height: 1.2;
     color: var.$colorGray;
 
     user-select: none;
@@ -54,8 +58,8 @@
 
       background-color: var.$colorGrayFour;
 
-      content: "";
       transform: translateY(-50%);
+      content: "";
     }
 
     &::before {

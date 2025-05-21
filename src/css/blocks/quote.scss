@@ -1,17 +1,30 @@
 @use "../global/variables" as var;
 
 .quote {
+  z-index: 9;
+
   &__text {
     display: block;
+    box-sizing: border-box;
     width: 100%;
     max-width: 800px;
     height: auto;
     margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box;
 
     background-color: var.$colorWhite;
-    border-radius: 10px;
     box-shadow: var.$boxShadowCard;
+    border-radius: 10px;
+    opacity: 0;
+
+    transition: opacity 0.4s ease-in-out;
+
+    &.animate {
+      opacity: 1;
+    }
+
+    &.pointing {
+      pointer-events: auto;
+    }
   }
 }

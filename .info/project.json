@@ -9,6 +9,16 @@
     "deploy": "https://yuriyplotnikovv.ru",
     "features": [
         {
+            "name-ru": "Дата разработки",
+            "name-en": "Development date",
+            "description-ru": [
+                "Январь 2025"
+            ],
+            "description-en": [
+                "January 2025"
+            ]
+        },
+        {
             "name-ru": "Страницы",
             "name-en": "Pages",
             "description-ru": [
@@ -32,7 +42,7 @@
             "description-ru": [
                 "Подключены Swiper и Lightgallery",
                 "Интеграция с VK Api (для получения фото)",
-                "Интеграция с GitHub Api (для получения проектов)",
+                "Интеграция с GitHub Api (для получения данных проектов)",
                 "Английский язык (переводы из переменных), определение языка на основе url страницы",
                 "Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)",
                 "Данные из JSON файлов"
@@ -40,7 +50,7 @@
             "description-en": [
                 "Swiper and Lightgallery are integrated",
                 "VK Api integration (photos)",
-                "GitHub Api integration (projects)",
+                "GitHub Api integration (projects data)",
                 "English language (translations from variables), automatic language detection by url",
                 "Url rewrite (links are not the actual location of the pages on the server)",
                 "Data from JSON files"
@@ -61,6 +71,33 @@
                 "Form for sending a message to the mail",
                 "Filters and sorting of projects (there is nothing much to filter yet)"
             ]
+        }
+    ],
+    "technologies": [
+        {
+            "name": "HTML",
+            "icon": "icon-html",
+            "link": "https://html.spec.whatwg.org/multipage/"
+        },
+        {
+            "name": "SCSS",
+            "icon": "icon-scss",
+            "link": "https://sass-scss.ru/"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "icon-js",
+            "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+        },
+        {
+            "name": "PHP",
+            "icon": "icon-php",
+            "link": "https://www.php.net/"
+        },
+        {
+            "name": "Gulp",
+            "icon": "icon-gulp",
+            "link": "https://gulpjs.com/"
         }
     ]
 }

@@ -1,6 +1,8 @@
 @use "../global/variables" as var;
 
 .my-way {
+  z-index: 4;
+
   &__list {
     display: flex;
     flex-direction: column-reverse;
@@ -15,9 +17,15 @@
     box-sizing: border-box;
     padding: 10px;
 
+    opacity: 0;
     background-color: var.$colorGrayFive;
-    border-radius: 10px;
+
     box-shadow: var.$boxShadowCard;
+    border-radius: 10px;
+
+    @media (max-width: var.$mobile-mid-width) {
+      margin-top: 40px;
+    }
 
     &::before {
       position: absolute;
@@ -26,36 +34,85 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 30px;
-      height: 30px;
+      width: max-content;
+      height: 20px;
+      padding: 5px;
 
       font-size: 18px;
       font-weight: 500;
       text-align: center;
-      color: var.$colorWhite;
+      color: var.$colorBlackThree;
 
-      background-color: var.$colorBlackThree;
-      border-radius: 50%;
-      box-shadow: var.$boxShadowCard;
+      content: attr(data-date);
 
-      transform: translateY(-50%);
-
-      content: attr(data-number);
+      @media (max-width: var.$mobile-mid-width) {
+        top: -30px;
+      }
     }
 
     &:nth-of-type(odd) {
       margin-right: 25%;
 
+      transform: translateX(-100%);
+
+      @media (max-width: var.$mobile-max-width) {
+        margin-right: 150px;
+      }
+      @media (max-width: var.$mobile-mid-width) {
+        margin-right: unset;
+      }
+
       &::before {
-        right: -45px;
+        right: -30px;
+
+        transform: translate(100%, -50%);
+
+        @media (max-width: var.$mobile-max-width) {
+          right: -15px;
+        }
+        @media (max-width: var.$mobile-mid-width) {
+          right: unset;
+
+          transform: translate(0, -50%);
+        }
       }
     }
 
     &:nth-of-type(even) {
       margin-left: 25%;
 
+      transform: translateX(100%);
+
+      @media (max-width: var.$mobile-max-width) {
+        margin-left: 150px;
+      }
+      @media (max-width: var.$mobile-mid-width) {
+        margin-left: unset;
+      }
+
       &::before {
-        left: -45px;
+        left: -30px;
+
+        transform: translate(-100%, -50%);
+
+        @media (max-width: var.$mobile-max-width) {
+          left: -15px;
+        }
+        @media (max-width: var.$mobile-mid-width) {
+          left: unset;
+
+          transform: translate(0, -50%);
+        }
+      }
+    }
+
+    &.animate {
+      &:nth-of-type(odd) {
+        animation: elementOdd 1s ease-in-out forwards;
+      }
+
+      &:nth-of-type(even) {
+        animation: elementEven 1s ease-in-out forwards;
       }
     }
   }
@@ -63,5 +120,17 @@
   &__item-text {
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  &__item-text-link {
+    text-decoration: underline;
+
+    transition: all 0.4s ease-in-out;
+
+    &:hover, &:active {
+      text-decoration: underline;
+
+      opacity: 0.6;
+    }
   }
 }

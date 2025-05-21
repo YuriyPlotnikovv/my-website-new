@@ -1,0 +1,52 @@
+@use "../global/variables" as var;
+
+.info-facts {
+  z-index: 6;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    @media (max-width: var.$tablet-max-width) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 10px;
+
+    font-size: 26px;
+    font-weight: 500;
+    color: var.$colorBlackThree;
+
+    @media (max-width: var.$desktop-mid-width) {
+      font-size: 24px;
+    }
+    @media (max-width: var.$mobile-mid-width) {
+      font-size: 22px;
+    }
+  }
+
+  &__item-text {
+    margin-left: 40px;
+
+    font-size: 22px;
+    color: var.$colorGray;
+
+    opacity: 0;
+    transform: translateX(100%);
+
+    @media (max-width: var.$desktop-mid-width) {
+      font-size: 20px;
+    }
+    @media (max-width: var.$tablet-max-width) {
+      font-size: 18px;
+    }
+
+    &.animate {
+      animation: featuresShow 0.5s ease-in-out forwards;
+    }
+  }
+}

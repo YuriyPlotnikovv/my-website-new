@@ -2,6 +2,8 @@
 @use "sass:math";
 
 .not-found {
+  z-index: 10;
+
   display: grid;
   grid-template-columns: 3fr 2fr;
   align-items: center;

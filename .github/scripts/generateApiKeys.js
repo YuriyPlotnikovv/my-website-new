@@ -12,7 +12,7 @@ if (!ownerId || !albumId || !vkApiKey || !gitHubApiKey) {
   process.exit(1);
 }
 
-const content = `<?php\n\n$ownerId = '${ownerId}';\n$albumId = '${albumId}';\n$vkApiKey = '${vkApiKey}';\n\n$gitHubApiKey = '${gitHubApiKey}';\n`;
+const content = `<?php\n\n$ownerId = '${ownerId}';\n$albumId = '${albumId}';\n$vkApiKey = '${vkApiKey}';\n$gitHubApiKey = '${gitHubApiKey}';\n\n`;
 
 fs.writeFileSync(filePath, content, 'utf8');
 console.log('API keys have been generated.');
