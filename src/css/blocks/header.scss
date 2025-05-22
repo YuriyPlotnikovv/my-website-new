@@ -189,7 +189,6 @@
     border-radius: 1px;
 
     transition: all 0.4s ease-in-out;
-    will-change: transform, opacity;
 
     &::before, &::after {
       position: absolute;
@@ -203,6 +202,7 @@
 
       transition: all 0.4s ease-in-out;
       will-change: transform, opacity;
+
       content: "";
     }
 
@@ -210,14 +210,12 @@
       top: 0;
 
       transition: all 0.4s ease-in-out;
-      will-change: transform, opacity;
     }
 
     &::after {
       top: calc(100% - 2px);
 
       transition: all 0.4s ease-in-out;
-      will-change: transform, opacify;
     }
   }
 }
