@@ -137,7 +137,7 @@
     z-index: 0;
 
     display: block;
-    width: max-content;
+    width: auto;
     height: 100%;
     margin: 0 auto;
 
@@ -145,6 +145,8 @@
 
     transform: translateX(-50%);
     animation: introMainBgShow 1s ease-in-out forwards;
+
+    object-fit: cover;
   }
 
   &__image {

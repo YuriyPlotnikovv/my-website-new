@@ -15,9 +15,7 @@ $projectsList = Tools::getData('projects-list');
 
         <img class="intro__image intro__image--main" src="/public/img/page-main.webp" alt="" width="700" height="885">
 
-        <svg class="intro__background" viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="/public/img/sprite.svg#main-bg"/>
-        </svg>
+        <img class="intro__background" src="/public/img/page-main-bg.svg" alt="" width="960" height="600">
 
         <?php Tools::includeFile('scroll-button') ?>
     </div>
