@@ -45,9 +45,9 @@
         "link": "https://gulpjs.com/"
     },
     {
-        "name": "Webpack",
-        "icon": "icon-webpack",
-        "link": "https://webpack.js.org/"
+        "name": "TypeScript",
+        "icon": "icon-ts",
+        "link": "https://www.typescriptlang.org/"
     },
     {
         "name": "Git",
