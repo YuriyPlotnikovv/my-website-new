@@ -20,6 +20,11 @@
         "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
     },
     {
+        "name": "JQuery",
+        "icon": "icon-jquery",
+        "link": "https://jquery.com/"
+    },
+    {
         "name": "PHP",
         "icon": "icon-php",
         "link": "https://www.php.net/"
@@ -33,6 +38,11 @@
         "name": "React",
         "icon": "icon-react",
         "link": "https://react.dev/"
+    },
+    {
+        "name": "Redux",
+        "icon": "icon-redux",
+        "link": "https://react-redux.js.org/"
     },
     {
         "name": "Bitrix",
