@@ -15,6 +15,11 @@
         "link": "https://sass-scss.ru/"
     },
     {
+        "name": "LESS",
+        "icon": "icon-less",
+        "link": "https://lesscss.org/"
+    },
+    {
         "name": "JavaScript",
         "icon": "icon-js",
         "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
