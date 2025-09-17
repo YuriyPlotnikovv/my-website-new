@@ -37,7 +37,7 @@ class VkPhotoFetcher
      */
     public function getPhotos(): ?array
     {
-        $url = "https://api.vk.com/method/photos.get?owner_id={$this->ownerId}&album_id={$this->albumId}&access_token={$this->accessToken}&count={$this->count}&v=5.199";
+        $url = "https://api.vk.ru/method/photos.get?owner_id={$this->ownerId}&album_id={$this->albumId}&access_token={$this->accessToken}&count={$this->count}&v=5.199";
         $response = @file_get_contents($url);
 
         if ($response === false) {
