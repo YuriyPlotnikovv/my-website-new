@@ -68,10 +68,21 @@ class GitHubProjectsFetcher
             }
         }
 
-        usort($projects, function ($a, $b) {
-            $idA = $a['id'] ?? 0;
-            $idB = $b['id'] ?? 0;
-            return $idB <=> $idA;
+        usort($projects, static function ($a, $b) {
+            $dateA = '';
+            $dateB = '';
+
+            $dateTimeA = $a['date'] ? DateTime::createFromFormat('m.Y', $a['date']) : null;
+            if ($dateTimeA) {
+                $dateA = $dateTimeA->format('Y-m');
+            }
+
+            $dateTimeB = $b['date'] ? DateTime::createFromFormat('m.Y', $b['date']) : null;
+            if ($dateTimeB) {
+                $dateB = $dateTimeB->format('Y-m');
+            }
+
+            return $dateB <=> $dateA;
         });
 
         Tools::setCache(self::CACHE_FILE, $projects);
