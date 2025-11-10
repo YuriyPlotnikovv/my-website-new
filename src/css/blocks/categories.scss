@@ -1,0 +1,59 @@
+@use "../global/variables" as var;
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+
+  @media (max-width: var.$mobile-max-width) {
+    flex-direction: column;
+  }
+
+  &__label {
+    font-weight: 600;
+    color: var.$colorGray;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+
+  }
+
+  &__item-button {
+    display: flex;
+    place-items: center;
+    padding: 5px 10px;
+
+    font-family: var.$font-main;
+    font-size: 16px;
+    color: var.$colorBlackThree;
+
+    background-color: var.$colorWhite;
+    box-shadow: var.$boxShadowCard;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    @media (max-width: var.$mobile-max-width) {
+      font-size: 14px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: var.$colorGrayThree;
+      box-shadow: var.$boxShadowCardHover;
+    }
+
+    &--active {
+      background-color: var.$colorGrayThree;
+    }
+  }
+}

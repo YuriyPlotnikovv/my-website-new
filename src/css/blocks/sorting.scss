@@ -1,0 +1,109 @@
+@use "../global/variables" as var;
+
+.sorting {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 410px;
+
+  @media (max-width: var.$mobile-max-width) {
+    gap: 8px;
+  }
+}
+
+.sorting__label {
+  font-weight: 600;
+  color: var.$colorGray;
+}
+
+.sorting__current {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+
+  font-family: var.$font-main;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: var.$colorBlackThree;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  transition: color 0.4s ease-in-out;
+
+  @media (max-width: var.$mobile-max-width) {
+    font-size: 14px;
+  }
+}
+
+.sorting__current[aria-expanded="true"] {
+  .sorting__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.sorting__icon {
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  transition: transform 0.4s ease-in-out;
+}
+
+.sorting__list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  z-index: 100;
+
+  overflow: hidden;
+  width: 100%;
+
+  background-color: var.$colorGrayTwo;
+  box-shadow: var.$boxShadowCard;
+  border-radius: 4px;
+}
+
+.sorting__option {
+  padding: 10px;
+
+  font-size: 16px;
+  text-transform: lowercase;
+
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+
+  @media (max-width: var.$mobile-max-width) {
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:active {
+    background: var.$colorGrayThree;
+  }
+
+  &:focus {
+    background: var.$colorGrayThree;
+    outline: none;
+  }
+
+  &--active {
+    font-weight: 700;
+
+    background-color: var.$colorGrayThree;
+
+    pointer-events: none;
+
+    &:focus {
+      background-color: var.$colorGrayThree;
+      outline: none;
+    }
+  }
+}

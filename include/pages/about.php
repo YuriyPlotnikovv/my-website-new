@@ -3,7 +3,7 @@ global $LANG, $MESS;
 
 $info = Tools::getData('info');
 $photosList = Tools::randomSort(Tools::getData('photos-list'));
-$skillsList = Tools::getData('skills-list');
+$technologiesList = Tools::getData('skills-list');
 $wayList = Tools::getData('way-list');
 ?>
 
@@ -77,16 +77,16 @@ $wayList = Tools::getData('way-list');
         <h2 class="section__title skills-list__title"><?= $MESS['SKILLS_TITLE'] ?>:</h2>
 
         <ul class="skills-list__list">
-            <?php foreach ($skillsList as $item):
+            <?php foreach ($technologiesList as $item):
                 $name = $item['name'];
-                $icon = $item['icon'];
+                $code = $item['code'];
                 $link = $item['link'];
                 ?>
                 <li class="skills-list__item">
                     <a class="skills-list__item-link" href="<?= $link ?>" title="<?= $name ?>" target="_blank">
                         <svg class="skills-list__item-icon" width="60" height="60"
                              xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="/public/img/sprite.svg#<?= $icon ?>"/>
+                            <use xlink:href="/public/img/sprite.svg#icon-<?= $code ?>"/>
                         </svg>
 
                         <div class="visually-hidden">

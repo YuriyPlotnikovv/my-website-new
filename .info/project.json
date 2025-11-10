@@ -1,103 +1,71 @@
 {
-    "id": 8,
-    "title-ru": "Мой сайт v.2.0",
-    "title-en": "My Website v.2.0",
-    "textFirst-ru": "Личный проект на PHP",
-    "textFirst-en": "Personal project in PHP",
-    "textSecond-ru": "Новая версия моего сайта. В этой версии все собрано полностью с нуля на других технологиях, реализована сложная логика работы.",
-    "textSecond-en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented.",
-    "deploy": "https://yuriyplotnikovv.ru",
-    "features": [
-        {
-            "name-ru": "Дата разработки",
-            "name-en": "Development date",
-            "description-ru": [
-                "Январь 2025"
-            ],
-            "description-en": [
-                "January 2025"
-            ]
-        },
-        {
-            "name-ru": "Страницы",
-            "name-en": "Pages",
-            "description-ru": [
-                "Главная",
-                "Обо мне",
-                "Портфолио",
-                "Контакты",
-                "Детальные страницы проектов"
-            ],
-            "description-en": [
-                "Main",
-                "About Me",
-                "Projects",
-                "Contacts",
-                "Detailed project pages"
-            ]
-        },
-        {
-            "name-ru": "Функциональность",
-            "name-en": "Functionality",
-            "description-ru": [
-                "Подключены Swiper и Lightgallery",
-                "Интеграция с VK Api (для получения фото)",
-                "Интеграция с GitHub Api (для получения данных проектов)",
-                "Английский язык (переводы из переменных), определение языка на основе url страницы",
-                "Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)",
-                "Данные из JSON файлов"
-            ],
-            "description-en": [
-                "Swiper and Lightgallery are integrated",
-                "VK Api integration (photos)",
-                "GitHub Api integration (projects data)",
-                "English language (translations from variables), automatic language detection by url",
-                "Url rewrite (links are not the actual location of the pages on the server)",
-                "Data from JSON files"
-            ]
-        },
-        {
-            "name-ru": "Не реализовано",
-            "name-en": "Not Implemented",
-            "description-ru": [
-                "Страница с примерами реализации",
-                "Страница с полезными материалами",
-                "Форма отправки сообщения на почту",
-                "Фильтры и сортировка проектов (пока особо нечего фильтровать)"
-            ],
-            "description-en": [
-                "Page with implementation examples",
-                "Page with useful materials",
-                "Form for sending a message to the mail",
-                "Filters and sorting of projects (there is nothing much to filter yet)"
-            ]
-        }
-    ],
+    "date": "01.2025",
+    "complexity": "3",
+    "category": "personal",
+    "deploy": "https:\/\/yuriyplotnikovv.ru",
+    "title": {
+        "ru": "Мой сайт v.2.0",
+        "en": "My Website v.2.0"
+    },
+    "textFirst": {
+        "ru": "Личный проект на PHP",
+        "en": "Personal project in PHP"
+    },
+    "textSecond": {
+        "ru": "Новая версия моего сайта. В этой версии все собрано полностью с нуля на других технологиях, реализована сложная логика работы.",
+        "en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented."
+    },
+    "functionality": {
+        "ru": [
+            "Подключены Swiper и Lightgallery",
+            "Интеграция с VK Api (для получения фото)",
+            "Интеграция с GitHub Api (для получения данных проектов)",
+            "Английский язык (переводы из переменных), определение языка на основе url страницы",
+            "Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)",
+            "Данные из JSON файлов"
+        ],
+        "en": [
+            "Swiper and Lightgallery are integrated",
+            "VK Api integration (photos)",
+            "GitHub Api integration (projects data)",
+            "English language (translations from variables), automatic language detection by url",
+            "Url rewrite (links are not the actual location of the pages on the server)",
+            "Data from JSON files"
+        ]
+    },
     "technologies": [
-        {
-            "name": "HTML",
-            "icon": "icon-html",
-            "link": "https://html.spec.whatwg.org/multipage/"
-        },
-        {
-            "name": "SCSS",
-            "icon": "icon-scss",
-            "link": "https://sass-scss.ru/"
-        },
-        {
-            "name": "JavaScript",
-            "icon": "icon-js",
-            "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
-        },
-        {
-            "name": "PHP",
-            "icon": "icon-php",
-            "link": "https://www.php.net/"
-        },
-        {
-            "name": "Gulp",
-            "icon": "icon-gulp",
-            "link": "https://gulpjs.com/"
-        }
-    ]
+        "html",
+        "scss",
+        "javascript",
+        "php",
+        "gulp"
+    ],
+    "pages": {
+        "ru": [
+            "Главная",
+            "Обо мне",
+            "Портфолио",
+            "Контакты",
+            "Детальные страницы проектов"
+        ],
+        "en": [
+            "Main",
+            "About Me",
+            "Projects",
+            "Contacts",
+            "Detailed project pages"
+        ]
+    },
+    "notImplemented": {
+        "ru": [
+            "Страница с примерами реализации",
+            "Страница с полезными материалами",
+            "Форма отправки сообщения на почту"
+        ],
+        "en": [
+            "Page with implementation examples",
+            "Page with useful materials",
+            "Form for sending a message to the mail"
+        ]
+    }
 }

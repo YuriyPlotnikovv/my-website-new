@@ -3,89 +3,197 @@ global $LANG, $MESS;
 
 $url = $_SERVER['REQUEST_URI'];
 $projectsList = Tools::getData('projects-list');
+$technologiesList = Tools::getData('technologies-list');
 $project = Tools::getDetailData($url, $projectsList);
 
-$name = $project['title-' . $LANG];
-$image = $project['image'];
-$textFirst = $project['textFirst-' . $LANG];
-$textSecond = $project['textSecond-' . $LANG];
-$technologiesList = $project['technologies'];
-$featuresList = $project['features'];
-$deployLink = $project['deploy'];
-$githubLink = $project['repository'];
+$title = $project['title'] ? $project['title'][$LANG] : null;
+$image = $project['image'] ? '/data/img/projects/' . $project['image'] : null;
+$date = $project['date'] ?? null;
+$textFirst = $project['textFirst'] ? $project['textFirst'][$LANG] : null;
+$textSecond = $project['textSecond'] ? $project['textSecond'][$LANG] : null;
+$technologies = $project['technologies'] ?? null;
+$functionality = $project['functionality'] ? $project['functionality'][$LANG] : null;
+$pages = $project['pages'] ? $project['pages'][$LANG] : null;
+$notImplemented = $project['notImplemented'] ? $project['notImplemented'][$LANG] : null;
+$languages = $project['languages'] ?? null;
+$deployLink = $project['deploy'] ?? null;
+$githubLink = $project['repository'] ?? null;
 ?>
 
 <section class="projects-detail-page__intro section intro">
     <div class="section__wrapper intro__wrapper">
         <div class="intro__content">
-            <h1 class="intro__title"><?= $name ?></h1>
+            <? if ($title): ?>
+                <h1 class="intro__title">
+                    <?= $title ?>
+                </h1>
+            <? endif; ?>
 
-            <p class="intro__text intro__text--first"><?= $textFirst ?></p>
+            <? if ($textFirst): ?>
+                <p class="intro__text intro__text--first">
+                    <?= $textFirst ?>
+                </p>
+            <? endif; ?>
 
-            <p class="intro__text intro__text--second"><?= $textSecond ?></p>
+            <? if ($textSecond): ?>
+                <p class="intro__text intro__text--second">
+                    <?= $textSecond ?>
+                </p>
+            <? endif; ?>
         </div>
 
-        <img class="intro__image" src="<?= $image ?>" alt="">
+        <? if ($image): ?>
+            <img class="intro__image"
+                 src="<?= $image ?>"
+
+                <? if ($title): ?>
+                    alt="<?= $title ?>"
+                <? endif; ?>
+            >
+        <? endif; ?>
 
         <?php Tools::includeFile('scroll-button') ?>
     </div>
 </section>
 
+<? if ($technologies): ?>
+    <section class="projects-detail-page__project-technologies section project-technologies">
+        <div class="section__wrapper project-technologies__wrapper">
+            <h2 class="section__title project-technologies__title">
+                <?= $MESS['PROJECTS_TECHNOLOGIES_TITLE'] ?>:
+            </h2>
 
-<section class="projects-detail-page__project-technologies section project-technologies">
-    <div class="section__wrapper project-technologies__wrapper">
-        <h2 class="section__title project-technologies__title"><?= $MESS['PROJECTS_TECHNOLOGIES_TITLE'] ?>:</h2>
+            <ul class="project-technologies__list">
+                <?php foreach ($technologies as $item):
+                    $technology = array_find($technologiesList, static function ($technology) use ($item) {
+                        return $technology['code'] === $item;
+                    });
+                    if (!$technology) {
+                        continue;
+                    }
 
-        <ul class="project-technologies__list">
-            <?php foreach ($technologiesList as $item):
-                $name = $item['name'];
-                $icon = $item['icon'];
-                $link = $item['link'];
-                ?>
-                <li class="project-technologies__item">
-                    <a class="project-technologies__item-link" href="<?= $link ?>" title="<?= $name ?>" target="_blank">
-                        <svg class="project-technologies__item-icon" width="60" height="60"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="/public/img/sprite.svg#<?= $icon ?>"/>
-                        </svg>
+                    $code = $technology['code'];
+                    $name = $technology['name'];
+                    $link = $technology['link'];
+                    ?>
+                    <li class="project-technologies__item">
+                        <a class="project-technologies__item-link"
+                            <? if ($link): ?>
+                                href="<?= $link ?>"
+                            <? endif; ?>
 
-                        <div class="visually-hidden">
-                            <?= $name ?>
-                        </div>
-                    </a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
-</section>
+                            <? if ($name): ?>
+                                title="<?= $name ?>"
+                                aria-label="<?= $name ?>"
+                            <? endif; ?>
+
+                           target="_blank"
+                        >
+                            <svg class="project-technologies__item-icon"
+                                 width="60"
+                                 height="60"
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <use xlink:href="/public/img/sprite.svg#icon-<?= $code ?>"/>
+                            </svg>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </section>
+<? endif; ?>
 
 <section class="projects-detail-page__project-info section project-info">
     <div class="section__wrapper project-info__wrapper">
-        <h2 class="section__title project-info__title"><?= $MESS['PROJECTS_ABOUT_PROJECT_TITLE'] ?>:</h2>
+        <h2 class="section__title project-info__title">
+            <?= $MESS['PROJECTS_ABOUT_PROJECT_TITLE'] ?>:
+        </h2>
 
         <ul class="project-info__features">
-            <?php foreach ($featuresList as $i => $item):
-                $title = $item['name-' . $LANG];
-                $description = $item['description-' . $LANG];
-                ?>
+            <?php if ($date): ?>
                 <li class="project-info__features-item">
-                    <h3 class="project-info__features-title"><?= $title ?></h3>
+                    <h3 class="project-info__features-title">
+                        <?= $MESS['PROJECTS_DATE_TITLE'] ?>
+                    </h3>
 
                     <div class="project-info__features-description">
-                        <?php if (is_array($description)): ?>
-                            <ul class="project-info__features-description-list">
-                                <?php foreach ($description as $value): ?>
-                                    <li class="project-info__features-description-item">
-                                        <?= $value ?>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php else: ?>
-                            <?= $description ?>
-                        <?php endif; ?>
+                        <?= $date ?>
                     </div>
                 </li>
-            <?php endforeach; ?>
+            <?php endif; ?>
+
+            <?php if ($pages): ?>
+                <li class="project-info__features-item">
+                    <h3 class="project-info__features-title">
+                        <?= $MESS['PROJECTS_PAGES_TITLE'] ?>
+                    </h3>
+
+                    <div class="project-info__features-description">
+                        <ul class="project-info__features-description-list">
+                            <?php foreach ($pages as $item): ?>
+                                <li class="project-info__features-description-item">
+                                    <?= $item ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($functionality): ?>
+                <li class="project-info__features-item">
+                    <h3 class="project-info__features-title">
+                        <?= $MESS['PROJECTS_FUNCTIONALITY_TITLE'] ?>
+                    </h3>
+
+                    <div class="project-info__features-description">
+                        <ul class="project-info__features-description-list">
+                            <?php foreach ($functionality as $item): ?>
+                                <li class="project-info__features-description-item">
+                                    <?= $item ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($notImplemented): ?>
+                <li class="project-info__features-item">
+                    <h3 class="project-info__features-title">
+                        <?= $MESS['PROJECTS_NOT_IMPLEMENTED_TITLE'] ?>
+                    </h3>
+
+                    <div class="project-info__features-description">
+                        <ul class="project-info__features-description-list">
+                            <?php foreach ($notImplemented as $item): ?>
+                                <li class="project-info__features-description-item">
+                                    <?= $item ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php endif; ?>
+
+            <?php if ($languages): ?>
+                <li class="project-info__features-item">
+                    <h3 class="project-info__features-title">
+                        <?= $MESS['PROJECTS_LANGUAGES_TITLE'] ?>
+                    </h3>
+
+                    <div class="project-info__features-description">
+                        <ul class="project-info__features-description-list">
+                            <?php foreach ($languages as $item): ?>
+                                <li class="project-info__features-description-item">
+                                    <?= $item ?>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </li>
+            <?php endif; ?>
         </ul>
 
         <?php if ($deployLink || $githubLink): ?>

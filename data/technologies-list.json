@@ -25,11 +25,6 @@
         "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
     },
     {
-        "code": "jquery",
-        "name": "JQuery",
-        "link": "https://jquery.com/"
-    },
-    {
         "code": "php",
         "name": "PHP",
         "link": "https://www.php.net/"
@@ -63,15 +58,5 @@
         "code": "typescript",
         "name": "TypeScript",
         "link": "https://www.typescriptlang.org/"
-    },
-    {
-        "code": "git",
-        "name": "Git",
-        "link": "https://git-scm.com/"
-    },
-    {
-        "code": "github",
-        "name": "GitHub",
-        "link": "https://github.com/"
     }
 ]

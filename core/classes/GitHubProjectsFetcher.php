@@ -61,7 +61,7 @@ class GitHubProjectsFetcher
 
                 $languagesInfo = $this->fetchLanguages($repo['name']);
                 if ($languagesInfo !== null) {
-                    $projectData['features'][] = $languagesInfo;
+                    $projectData['languages'] = $languagesInfo;
                 }
 
                 $projects[] = $projectData;
@@ -155,12 +155,7 @@ class GitHubProjectsFetcher
             $languagesPercent[] = "{$lang} - {$percent}%";
         }
 
-        return [
-            'name-ru' => 'Языки',
-            'name-en' => 'Languages',
-            'description-ru' => $languagesPercent,
-            'description-en' => $languagesPercent,
-        ];
+        return $languagesPercent;
     }
 
     /**
@@ -182,7 +177,7 @@ class GitHubProjectsFetcher
 
         $localPath = $localDir . $filename;
         if (file_exists($localPath)) {
-            return self::LOCAL_IMAGE_DIR . $filename;
+            return $filename;
         }
 
         $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
@@ -203,7 +198,7 @@ class GitHubProjectsFetcher
             return null;
         }
 
-        return self::LOCAL_IMAGE_DIR . $filename;
+        return $filename;
     }
 
     /**

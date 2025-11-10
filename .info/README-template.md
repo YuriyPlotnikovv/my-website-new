@@ -20,7 +20,14 @@ Project: {{deploy}}
 
 ### About the project
 
-{{features-en}}
+#### Functionality
+{{functionality-en}}
+
+#### Pages
+{{pages-en}}
+
+#### Not Implemented
+{{notImplemented-en}}
 
 ---
 
@@ -32,8 +39,8 @@ This project is licensed under the [GNU Affero General Public License v3 (AGPLv3
 
 ### Contacts
 
-Author: Yuriy Plotnikov  
-Website: https://yuriyplotnikovv.ru  
+Author: Yuriy Plotnikov
+Website: https://yuriyplotnikovv.ru
 
 ---
 
@@ -51,7 +58,14 @@ Website: https://yuriyplotnikovv.ru
 
 ### О проекте
 
-{{features-ru}}
+#### Функциональность
+{{functionality-ru}}
+
+#### Страницы
+{{pages-ru}}
+
+#### Не реализовано
+{{notImplemented-ru}}
 
 ---
 
@@ -63,5 +77,5 @@ Website: https://yuriyplotnikovv.ru
 
 ### Контакты
 
-Автор: Yuriy Plotnikov  
-Сайт: https://yuriyplotnikovv.ru  
+Автор: Yuriy Plotnikov
+Сайт: https://yuriyplotnikovv.ru

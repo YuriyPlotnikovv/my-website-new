@@ -1,0 +1,1102 @@
+[
+    {
+        "image": "CockpitBackupManager-preview.webp",
+        "date": "10.2025",
+        "complexity": "3",
+        "category": "commercial",
+        "deploy": "",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/CockpitBackupManager",
+        "name": "cockpit-backup-manager",
+        "title": {
+            "ru": "Cockpit Backup Manager",
+            "en": "Cockpit Backup Manager"
+        },
+        "textFirst": {
+            "ru": "Модуль резервного копирования для CMS Cockpit",
+            "en": "A backup module for Cockpit CMS"
+        },
+        "textSecond": {
+            "ru": "Предназначен для создания, управления и восстановления резервных копий системы и данных.",
+            "en": "Designed for creating, managing, and restoring system and data backups."
+        },
+        "functionality": {
+            "ru": [
+                "Гибкое резервное копирование: создание `.tar.gz` архивов, включающих ядро Cockpit CMS, файлы сайта и базу данных (Mongolite\/MongoDB)",
+                "Возможность указывать пути (файлы или директории) для исключения из резервной копии через настройки модуля",
+                "Управление резервными копиями: просмотр списка, скачивание и удаление архивов через админ-панель",
+                "Восстановление из резервной копии: через админ-панель (для рабочего сервера) и с помощью специального скрипта restore.php (для нового или пустого сервера)"
+            ],
+            "en": [
+                "Flexible backup: creation of `.tar.gz` archives, including Cockpit CMS core, website files, and database (Mongolite\/MongoDB)",
+                "Ability to specify paths (files or directories) to exclude from the backup via module settings",
+                "Backup management: viewing a list of, downloading, and deleting archives via the admin panel",
+                "Restoration from backup: via the admin panel (for a working server) and using a special restore.php script (for a new or empty server)"
+            ]
+        },
+        "languages": [
+            "PHP - 99.6%",
+            "Hack - 0.4%"
+        ],
+        "technologies": [
+            "php",
+            "html",
+            "javascript",
+            "vue"
+        ],
+        "pages": {
+            "ru": [],
+            "en": []
+        },
+        "notImplemented": {
+            "ru": [],
+            "en": []
+        }
+    },
+    {
+        "image": "escape-room-preview.webp",
+        "date": "08.2025",
+        "complexity": "3",
+        "category": "training",
+        "deploy": "https:\/\/escape-room-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/escape-room",
+        "name": "escape-room",
+        "title": {
+            "ru": "Escape Room",
+            "en": "Escape Room"
+        },
+        "textFirst": {
+            "ru": "Сложный проект на ReactJS и TypeScript",
+            "en": "Hard project on ReactJS ans TypeScript"
+        },
+        "textSecond": {
+            "ru": "Экзаменационный учебный проект, разработан в рамках курса JavaScript-разработчик от HTML Academy. Проект на разработку сложной клиентской логики с помощью ReactJS и TypeScript.",
+            "en": "Exam training project, developed as part of the JavaScript Developer course from HTML Academy. The project focuses on implementing complex client-side logic using ReactJS and TypeScript."
+        },
+        "functionality": {
+            "ru": [
+                "Интеграция с сервером",
+                "Авторизация пользователя",
+                "Интерактивная карта Leaflet",
+                "Бронирование и отмена квестов"
+            ],
+            "en": [
+                "Server integration",
+                "User authorization",
+                "Interactive Leaflet map",
+                "Quest booking and cancellation"
+            ]
+        },
+        "languages": [
+            "TypeScript - 98.1%",
+            "HTML - 1.9%"
+        ],
+        "technologies": [
+            "react",
+            "redux",
+            "html",
+            "css",
+            "typescript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Контакты",
+                "Логин",
+                "Мои бронирования",
+                "Детальная квеста",
+                "Бронирование квеста"
+            ],
+            "en": [
+                "Home",
+                "Contacts",
+                "Login",
+                "My bookings",
+                "Quest details",
+                "Quest booking"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "Adaptability to different devices"
+            ]
+        }
+    },
+    {
+        "image": "drink-to-go-preview.webp",
+        "date": "07.2025",
+        "complexity": "1",
+        "category": "training",
+        "deploy": "https:\/\/drink-to-go-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/drink-to-go",
+        "name": "drink-to-go",
+        "title": {
+            "ru": "Drink2Go",
+            "en": "Drink2Go"
+        },
+        "textFirst": {
+            "ru": "Экзаменационный проект на HTML, CSS и JS",
+            "en": "Exam project using HTML, CSS, and JS"
+        },
+        "textSecond": {
+            "ru": "Экзаменационный учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на реализацию страницы сайта согласно макету.",
+            "en": "Exam training project developed as part of the 'Frontend Developer' course by HTML Academy. The project implements a website page according to the provided design."
+        },
+        "functionality": {
+            "ru": [
+                "Адаптив под телефон, планшет и десктоп",
+                "Слайдер Swiper",
+                "Интерактивная карта Leaflet",
+                "Кастомные элементы формы и селект",
+                "Сборка и оптимизация через Gulp"
+            ],
+            "en": [
+                "Responsive layout for mobile, tablet, and desktop",
+                "Swiper slider",
+                "Interactive Leaflet map",
+                "Custom form elements and select",
+                "Build and optimization with Gulp"
+            ]
+        },
+        "languages": [
+            "HTML - 43%",
+            "SCSS - 39.6%",
+            "JavaScript - 17.3%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Внутренние страницы",
+                "Обработка данных и взаимодействие с пользователем",
+                "Получение ассортимента с сервера"
+            ],
+            "en": [
+                "Inner pages",
+                "Data processing and user interaction",
+                "Fetching products from server"
+            ]
+        }
+    },
+    {
+        "image": "six-cities-preview.webp",
+        "date": "07.2025",
+        "complexity": "2",
+        "category": "training",
+        "deploy": "https:\/\/six-cities-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/six-cities",
+        "name": "six-cities",
+        "title": {
+            "ru": "Six cities",
+            "en": "Six cities"
+        },
+        "textFirst": {
+            "ru": "Сложный проект на ReactJS и TypeScript",
+            "en": "Hard project on ReactJS ans TypeScript"
+        },
+        "textSecond": {
+            "ru": "Шестой учебный проект, разработан в рамках курса JavaScript-разработчик от HTML Academy. Проект на разработку сложной клиентской логики с помощью ReactJS и TypeScript.",
+            "en": "The sixth training project, developed as part of the JavaScript Developer course from HTML Academy. The project focuses on implementing complex client-side logic using ReactJS and TypeScript."
+        },
+        "functionality": {
+            "ru": [
+                "Интеграция с сервером",
+                "Авторизация пользователя",
+                "Интерактивная карта Leaflet",
+                "Добавление комментариев",
+                "Список избранного"
+            ],
+            "en": [
+                "Server integration",
+                "User authentication",
+                "Interactive Leaflet map",
+                "Adding comments",
+                "Favorites list"
+            ]
+        },
+        "languages": [
+            "TypeScript - 99.1%",
+            "HTML - 0.9%"
+        ],
+        "technologies": [
+            "react",
+            "redux",
+            "html",
+            "css",
+            "typescript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Логин",
+                "Избранное",
+                "Детальная номера"
+            ],
+            "en": [
+                "Main",
+                "Login",
+                "Favorites",
+                "Room detailed"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "Adaptability to different devices"
+            ]
+        }
+    },
+    {
+        "image": "tarkovSquadHelper-front-preview.webp",
+        "date": "04.2025",
+        "complexity": "2",
+        "category": "personal",
+        "deploy": "",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/tarkovSquadHelper-front",
+        "name": "tarkovSquadHelper-front",
+        "title": {
+            "ru": "Tarkov Squad Helper",
+            "en": "Tarkov Squad Helper"
+        },
+        "textFirst": {
+            "ru": "Совместный проект на JS",
+            "en": "A collaborative project in JS"
+        },
+        "textSecond": {
+            "ru": "Приложение предоставляет дополнительную функциональность для игроков Tarkov: создание и управление комнатами с редактируемыми списками предметов для каждого участника. На данный момент сервер отключен, так как схожий функционал завезли в саму игру.",
+            "en": "The application provides additional functionality for Tarkov players: creating and managing rooms with editable item lists for each participant. At the moment, the server is disabled, as similar functionality has been added to the game itself."
+        },
+        "functionality": {
+            "ru": [
+                "Создание и вход в комнату",
+                "Поиск и добавление предметов",
+                "Управление списком предметов",
+                "Смена темы интерфейса",
+                "До 5ти игроков в комнате",
+                "Приглашение игрока по ссылке"
+            ],
+            "en": [
+                "Create and enter rooms",
+                "Search and add items",
+                "Manage item lists",
+                "Switch interface theme",
+                "Up to 5 players per room",
+                "Invite players via link"
+            ]
+        },
+        "languages": [
+            "JavaScript - 40%",
+            "SCSS - 36.5%",
+            "HTML - 23.5%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "gulp",
+            "vue"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Общий список комнат",
+                "Английский язык интерфейса",
+                "Личный кабинет игрока"
+            ],
+            "en": [
+                "Global room list",
+                "English interface language",
+                "Player personal account"
+            ]
+        }
+    },
+    {
+        "image": "snowfall-generator-preview.webp",
+        "date": "04.2025",
+        "complexity": "2",
+        "category": "personal",
+        "deploy": "https:\/\/snowfall-generator.ru\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/snowfall-generator",
+        "name": "snowfall-generator",
+        "title": {
+            "ru": "Генератор снегопада",
+            "en": "Snowfall Generator"
+        },
+        "textFirst": {
+            "ru": "Личный проект на PHP и JS",
+            "en": "Personal project in PHP and JS"
+        },
+        "textSecond": {
+            "ru": "Сайт с выбором настроек и Node.js сервер для генерации кастомного скрипта падающего снега на сайт. Скрипт генерируется с учётом заданных параметров и упаковывается в ZIP-архив вместе с лицензией и инструкцией.",
+            "en": "Website with settings selection and Node.js server for generating a custom falling snow script for the site. The script is generated according to specified parameters and packaged into a ZIP archive with a license and instructions."
+        },
+        "functionality": {
+            "ru": [
+                "Отдельный сервер для генерации",
+                "Английский язык (переводы из переменных), определение языка на основе url страницы",
+                "Настройки внешнего вида, размера и поведения снежинок",
+                "Динамическое отображение выбранных параметров снегопада",
+                "Изоляция внутренней разметки и стилей снегопада",
+                "Генерация и минификация скрипта для установки на сайт"
+            ],
+            "en": [
+                "Separate server for generation",
+                "English language (translations from variables), language detection based on page URL",
+                "Settings for appearance, size and behavior of snowflakes",
+                "Dynamic display of selected snowfall parameters",
+                "Isolation of internal markup and styles of snowfall",
+                "Generation and minification of script for installation on the site"
+            ]
+        },
+        "languages": [
+            "PHP - 44%",
+            "JavaScript - 37.2%",
+            "SCSS - 18.8%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "vue",
+            "php",
+            "gulp"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Выбор 2х видов снежинок",
+                "Кастомные стили для input"
+            ],
+            "en": [
+                "Choice of 2 types of snowflakes",
+                "Custom styles for input"
+            ]
+        }
+    },
+    {
+        "image": "weather-forecast-preview.webp",
+        "date": "02.2025",
+        "complexity": "3",
+        "category": "personal",
+        "deploy": "https:\/\/weather-forecast.yuriyplotnikovv.ru\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/weather-forecast",
+        "name": "weather-forecast",
+        "title": {
+            "ru": "Прогноз погоды",
+            "en": "Weather forecast"
+        },
+        "textFirst": {
+            "ru": "Личный проект на PHP и JS",
+            "en": "Personal project in PHP and JS"
+        },
+        "textSecond": {
+            "ru": "Сайт с прогнозом погоды. Показывается текущая погода, прогноз на сутки и прогноз на неделю. Местоположение определяется по ip или по геолокации.",
+            "en": "A website with a weather forecast. It shows the current weather, the forecast for the day and the forecast for the week. The location is determined by ip or geolocation."
+        },
+        "functionality": {
+            "ru": [
+                "Подключен Swiper",
+                "Интеграция с Api: met.no (погода), openstreetmap.org (адрес), ipdata.co (координаты по ip), timezonedb.com (временной регион)",
+                "Английский язык (переводы из переменных), определение языка на основе предпочтений в браузере",
+                "Кешированные данные из JSON файлов"
+            ],
+            "en": [
+                "Swiper is connected",
+                "Integration with APIs: met.no (weather), openstreetmap.org (address), ipdata.co (coordinates by IP), timezonedb.com (time zone)",
+                "English language (translations from variables), language detection based on browser preferences",
+                "Cached data from JSON files"
+            ]
+        },
+        "languages": [
+            "PHP - 44%",
+            "JavaScript - 31.3%",
+            "SCSS - 24.7%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "php",
+            "gulp"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Карта погоды"
+            ],
+            "en": [
+                "Weather map"
+            ]
+        }
+    },
+    {
+        "image": "my-website-new-preview.webp",
+        "date": "01.2025",
+        "complexity": "3",
+        "category": "personal",
+        "deploy": "https:\/\/yuriyplotnikovv.ru",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/my-website-new",
+        "name": "my-website-new",
+        "title": {
+            "ru": "Мой сайт v.2.0",
+            "en": "My Website v.2.0"
+        },
+        "textFirst": {
+            "ru": "Личный проект на PHP",
+            "en": "Personal project in PHP"
+        },
+        "textSecond": {
+            "ru": "Новая версия моего сайта. В этой версии все собрано полностью с нуля на других технологиях, реализована сложная логика работы.",
+            "en": "A new version of my website. In this version, everything is completely assembled from scratch using other technologies, and a complex logic of operation is implemented."
+        },
+        "functionality": {
+            "ru": [
+                "Подключены Swiper и Lightgallery",
+                "Интеграция с VK Api (для получения фото)",
+                "Интеграция с GitHub Api (для получения данных проектов)",
+                "Английский язык (переводы из переменных), определение языка на основе url страницы",
+                "Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)",
+                "Данные из JSON файлов"
+            ],
+            "en": [
+                "Swiper and Lightgallery are integrated",
+                "VK Api integration (photos)",
+                "GitHub Api integration (projects data)",
+                "English language (translations from variables), automatic language detection by url",
+                "Url rewrite (links are not the actual location of the pages on the server)",
+                "Data from JSON files"
+            ]
+        },
+        "languages": [
+            "PHP - 52.7%",
+            "SCSS - 34.5%",
+            "JavaScript - 12.6%",
+            "Hack - 0.1%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "php",
+            "gulp"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Обо мне",
+                "Портфолио",
+                "Контакты",
+                "Детальные страницы проектов"
+            ],
+            "en": [
+                "Main",
+                "About Me",
+                "Projects",
+                "Contacts",
+                "Detailed project pages"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Страница с примерами реализации",
+                "Страница с полезными материалами",
+                "Форма отправки сообщения на почту",
+                "Фильтры и сортировка проектов (пока особо нечего фильтровать)"
+            ],
+            "en": [
+                "Page with implementation examples",
+                "Page with useful materials",
+                "Form for sending a message to the mail",
+                "Filters and sorting of projects (there is nothing much to filter yet)"
+            ]
+        }
+    },
+    {
+        "image": "ny-countdown-preview.webp",
+        "date": "01.2025",
+        "complexity": "1",
+        "category": "personal",
+        "deploy": "https:\/\/countdown-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/ny-countdown",
+        "name": "ny-countdown",
+        "title": {
+            "ru": "Счётчик до Нового Года",
+            "en": "New Year Countdown"
+        },
+        "textFirst": {
+            "ru": "Личный проект для развлечения",
+            "en": "Personal project for fun"
+        },
+        "textSecond": {
+            "ru": "Проект с обратным отсчётом до Нового года, анимацией снега и веселой музыкой для поднятия Новогоднего настроения.",
+            "en": "A project with a countdown to the New Year, snow animation and fun music to cheer up the New Year mood."
+        },
+        "functionality": {
+            "ru": [
+                "Счётчик и календарь выполнены на чистом JS",
+                "Включение и выключение музыки",
+                "Снегопад",
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "The counter and calendar are made in pure JS",
+                "Turning music on and off",
+                "Snowfall",
+                "Adaptability to different devices"
+            ]
+        },
+        "languages": [
+            "JavaScript - 45.5%",
+            "HTML - 30.6%",
+            "SCSS - 23.9%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "gulp"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Гирлянда",
+                "Шар предсказаний",
+                "Потоковое воспроизведение музыки"
+            ],
+            "en": [
+                "Garland",
+                "Music streaming"
+            ]
+        }
+    },
+    {
+        "image": "angelavladi-preview.webp",
+        "date": "04.2024",
+        "complexity": "3",
+        "category": "commercial",
+        "deploy": "https:\/\/angelavladi.ru\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/angelavladi",
+        "name": "angelavladi",
+        "title": {
+            "ru": "AngelaVladi",
+            "en": "AngelaVladi"
+        },
+        "textFirst": {
+            "ru": "Проект на 1C-Bitrix и PHP",
+            "en": "Project on 1C-Bitrix"
+        },
+        "textSecond": {
+            "ru": "Проект каталога дизайнерской одежды без онлайн покупок, но с оформлением заявок. Полностью с нуля написанный дизайн, структура и вся логика работы.",
+            "en": "A design clothing catalog project without online shopping, but with order requests. A completely written design, project structure and the logic of the work."
+        },
+        "functionality": {
+            "ru": [
+                "Библиотеки Swiper и Lightgallery",
+                "Настроен адаптивный ресайз фото и сборка в тег picture",
+                "Формы обратной связи и отзывов с сохранением в админку",
+                "ReCaptcha Google",
+                "Карты Яндекс",
+                "Полностью все данные редактируются из админки"
+            ],
+            "en": [
+                "Swiper and Lightgallery libraries",
+                "Adaptive photo resizing configured and assembled into a picture tag",
+                "Feedback and review forms with saving to the admin panel",
+                "Google ReCaptcha",
+                "Yandex maps",
+                "All data can be fully edited from the admin panel"
+            ]
+        },
+        "languages": [
+            "PHP - 77.9%",
+            "SCSS - 16.8%",
+            "JavaScript - 5.3%"
+        ],
+        "technologies": [
+            "html",
+            "scss",
+            "javascript",
+            "php",
+            "gulp",
+            "vue",
+            "bitrix"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Каталог",
+                "Коллекции",
+                "Как заказать",
+                "О нас",
+                "Отзывы",
+                "Контакты",
+                "Детальные страницы товаров"
+            ],
+            "en": [
+                "Home",
+                "Catalog",
+                "Collections",
+                "How to Order",
+                "About Us",
+                "Reviews",
+                "Contacts",
+                "Detailed product pages"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Кастомное свойство типа цвет (для товаров)"
+            ],
+            "en": [
+                "Custom property of type color (for products)"
+            ]
+        }
+    },
+    {
+        "image": "cinematic-preview.webp",
+        "date": "12.2024",
+        "complexity": "2",
+        "category": "training",
+        "deploy": "https:\/\/cinematic-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/cinematic",
+        "name": "cinematic",
+        "title": {
+            "ru": "Cinematic",
+            "en": "Cinematic"
+        },
+        "textFirst": {
+            "ru": "Проект на JS и MVP",
+            "en": "Project on JS and MVP"
+        },
+        "textSecond": {
+            "ru": "Пятый учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект направлен на изучение работы фреймворков под капотом: реализация паттерна MVP с разделением зон ответственности частей приложения.",
+            "en": "The fifth training project was developed as part of the Frontend Developer course from the HTML Academy. The project is aimed at studying the work of frameworks under the hood: the implementation of the MVP pattern with the separation of responsibilities of parts of the application."
+        },
+        "functionality": {
+            "ru": [
+                "Данные хранятся на сервере, приходят через fetch-запросы",
+                "Фильтрация и сортировка фильмов",
+                "Добавление в списки",
+                "Комментарии к фильмам",
+                "Динамическое обновление данных на странице и сервере"
+            ],
+            "en": [
+                "Data is stored on the server, it comes through fetch requests",
+                "Filtering and sorting movies",
+                "Adding to lists",
+                "Comments on movies",
+                "Dynamic updating of data on the page and server"
+            ]
+        },
+        "languages": [
+            "HTML - 47.5%",
+            "JavaScript - 34%",
+            "CSS - 18.5%"
+        ],
+        "technologies": [
+            "html",
+            "css",
+            "javascript",
+            "webpack"
+        ],
+        "pages": {
+            "ru": [
+                "Главная"
+            ],
+            "en": [
+                "Main"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "Adaptability to different devices"
+            ]
+        }
+    },
+    {
+        "image": "my-website-preview.webp",
+        "date": "10.2023",
+        "complexity": "2",
+        "category": "personal",
+        "deploy": "https:\/\/yuriyplotnikovv-first-version.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/my-website",
+        "name": "my-website",
+        "title": {
+            "ru": "My website v.1.0",
+            "en": "My website v.1.0"
+        },
+        "textFirst": {
+            "ru": "Проект на ReactJs",
+            "en": "Project on ReactJs"
+        },
+        "textSecond": {
+            "ru": "Проект моего личного сайта. Создавался для резюме как SPA-приложение, чтобы показать навыки и знания.",
+            "en": "The project of my personal website. It was created for a resume as a SPA application to show skills and knowledge."
+        },
+        "functionality": {
+            "ru": [
+                "Подключен слайдер",
+                "Данные передаются из data-файлов",
+                "Элементы отрисовываются по единым шаблонам"
+            ],
+            "en": [
+                "Slider connected",
+                "Data is transferred from data files",
+                "Elements are drawn using the same templates"
+            ]
+        },
+        "languages": [
+            "JavaScript - 97.7%",
+            "CSS - 1.4%",
+            "HTML - 0.9%"
+        ],
+        "technologies": [
+            "react",
+            "javascript",
+            "css"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Обо мне",
+                "Портфолио",
+                "Контакты",
+                "Детальные страницы проектов"
+            ],
+            "en": [
+                "Main",
+                "About Me",
+                "Projects",
+                "Contacts",
+                "Detailed project pages"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Адаптивность под разные устройства",
+                "Анимации",
+                "Форма отправки сообщения на почту"
+            ],
+            "en": [
+                "Adaptability to different devices",
+                "Animations",
+                "Message sending form"
+            ]
+        }
+    },
+    {
+        "image": "farmer-products-preview.webp",
+        "date": "08.2023",
+        "complexity": "1",
+        "category": "training",
+        "deploy": "https:\/\/farmer-products-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/farmer-products",
+        "name": "farmer-products",
+        "title": {
+            "ru": "Farmer Products",
+            "en": "Farmer Products"
+        },
+        "textFirst": {
+            "ru": "Простой проект на ReactJS",
+            "en": "Simple project on ReactJS"
+        },
+        "textSecond": {
+            "ru": "Четвертый учебный проект, разработан в рамках курса JavaScript-разработчик от HTML Academy. Проект на изучение возможностей и синтаксиса библиотеки ReactJS.",
+            "en": "The fourth training project was developed as part of the JavaScript Developer course from the HTML Academy. A project to explore the capabilities and syntax of the ReactJS."
+        },
+        "functionality": {
+            "ru": [
+                "Слайдер в каталоге",
+                "Привязка слайдера к чекбоксам выбора продукта",
+                "Табы в описании продукта",
+                "Оформленный заказ выводится в Alert на сайте (для наглядности)"
+            ],
+            "en": [
+                "Slider in catalog",
+                "Slider linked to product selection checkboxes",
+                "Tabs in product description",
+                "The completed order is displayed in an Alert on the website (for clarity)"
+            ]
+        },
+        "languages": [
+            "JavaScript - 98.6%",
+            "HTML - 1.4%"
+        ],
+        "technologies": [
+            "react",
+            "css",
+            "javascript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Каталог"
+            ],
+            "en": [
+                "Main",
+                "Catalog"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Полноценное оформление заказа с отправкой на сервер",
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "Full order processing with server submission",
+                "Adaptability to different devices"
+            ]
+        }
+    },
+    {
+        "image": "keksogram-preview.webp",
+        "date": "06.2023",
+        "complexity": "2",
+        "category": "training",
+        "deploy": "https:\/\/keksogram-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/keksogram",
+        "name": "keksogram",
+        "title": {
+            "ru": "Keksogram",
+            "en": "Keksogram"
+        },
+        "textFirst": {
+            "ru": "Проект на JavaScript",
+            "en": "Project on JavaScript"
+        },
+        "textSecond": {
+            "ru": "Третий учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение возможностей JavaScript на практике.",
+            "en": "The third training project was developed as part of the Frontend Developer course from the HTML Academy. A project to explore the possibilities of JavaScript in practice."
+        },
+        "functionality": {
+            "ru": [
+                "Подключены валидатор и слайдер",
+                "Загрузка данных с сервера",
+                "Фильтры изображения",
+                "Сортировка отображения на сайте",
+                "Попап статуса загрузки",
+                "Динамическая подгрузка комментариев и данных фотографий"
+            ],
+            "en": [
+                "Validator and slider connected",
+                "public loading from server",
+                "Image filters",
+                "Sorting display on site",
+                "Upload status popup",
+                "Dynamic loading of comments and photo public"
+            ]
+        },
+        "languages": [
+            "JavaScript - 72.4%",
+            "CSS - 19.2%",
+            "HTML - 8.4%"
+        ],
+        "technologies": [
+            "html",
+            "css",
+            "javascript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Модальное окно загрузки фотографий"
+            ],
+            "en": [
+                "Main",
+                "Photo Upload Modal"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Добавление комментария к фотографиям",
+                "Отображение загруженного изображения на сайте"
+            ],
+            "en": [
+                "Adding comments to photos",
+                "Displaying uploaded image on the site"
+            ]
+        }
+    },
+    {
+        "image": "cat-energy-preview.webp",
+        "date": "05.2023",
+        "complexity": "1",
+        "category": "training",
+        "deploy": "https:\/\/cat-energy-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/cat-energy",
+        "name": "cat-energy",
+        "title": {
+            "ru": "Cat Energy",
+            "en": "Cat Energy"
+        },
+        "textFirst": {
+            "ru": "Проект с препроцессором Less",
+            "en": "Project with Less preprocessor"
+        },
+        "textSecond": {
+            "ru": "Второй учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Проект на изучение работы с препроцессорами, и реализацию адаптивности сайта для разных устройств.",
+            "en": "The second training project was developed as part of the Frontend Developer course from the HTML Academy. A project to study how to work with preprocessors, and implement site adaptability for different devices."
+        },
+        "functionality": {
+            "ru": [
+                "Адаптив под телефон, планшет и десктоп",
+                "Подключены интерактивные карты от Яндекса",
+                "Отправка формы заявки на подбор программы",
+                "Сборка и оптимизация через Gulp"
+            ],
+            "en": [
+                "Responsive design for phone, tablet, and desktop",
+                "Yandex interactive maps connected",
+                "Program selection form submission",
+                "Build and optimization via Gulp"
+            ]
+        },
+        "languages": [
+            "Less - 56.3%",
+            "HTML - 39.5%",
+            "JavaScript - 4.2%"
+        ],
+        "technologies": [
+            "html",
+            "less",
+            "javascript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Каталог",
+                "Подбор программы"
+            ],
+            "en": [
+                "Main",
+                "Catalog",
+                "Program Selection"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Слайдер на главной странице",
+                "Корзина",
+                "Получение ассортимента продукции с сервера"
+            ],
+            "en": [
+                "Slider on the main page",
+                "Shopping cart",
+                "Getting the product range from the server"
+            ]
+        }
+    },
+    {
+        "image": "sedona-preview.webp",
+        "date": "11.2022",
+        "complexity": "1",
+        "category": "training",
+        "deploy": "https:\/\/sedona-training.netlify.app\/",
+        "repository": "https:\/\/github.com\/YuriyPlotnikovv\/sedona",
+        "name": "sedona",
+        "title": {
+            "ru": "Sedona",
+            "en": "Sedona"
+        },
+        "textFirst": {
+            "ru": "Проект на вёрстку",
+            "en": "Layout project"
+        },
+        "textSecond": {
+            "ru": "Первый учебный проект, разработан в рамках курса Frontend-разработчик от HTML Academy. Простой проект по изучению базовой разметки и стилизации, без логики взаимодействия с пользователем.",
+            "en": "The first training project developed as part of the Frontend Developer course from the HTML Academy. A simple project to study basic markup and styling, without the logic of user interaction."
+        },
+        "functionality": {
+            "ru": [
+                "Ручная оптимизация всех фотографий"
+            ],
+            "en": [
+                "Manual optimization of all photos"
+            ]
+        },
+        "languages": [
+            "HTML - 56.4%",
+            "CSS - 41.6%",
+            "JavaScript - 2%"
+        ],
+        "technologies": [
+            "html",
+            "css",
+            "javascript"
+        ],
+        "pages": {
+            "ru": [
+                "Главная",
+                "Каталог",
+                "Модальное окно"
+            ],
+            "en": [
+                "Main",
+                "Catalog",
+                "Modal window"
+            ]
+        },
+        "notImplemented": {
+            "ru": [
+                "Страница «О Седоне»",
+                "Слайдер в каталоге",
+                "Сортировка и вид карточек в каталоге",
+                "Динамическая загрузка карточек",
+                "Адаптивность под разные устройства"
+            ],
+            "en": [
+                "The «About Sedona» page",
+                "Slider in the catalog",
+                "Sorting and type of cards in the catalog",
+                "Dynamic loading of cards",
+                "Adaptability to different devices"
+            ]
+        }
+    }
+]
