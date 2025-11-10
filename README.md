@@ -1,6 +1,6 @@
 # My Website v.2.0
 
-<img src=".info/poster.webp" alt="Poster" width="600" />
+
 
 [🇬🇧 English](#english) | [🇷🇺 Русский](#русский)
 
@@ -20,20 +20,7 @@ A new version of my website. In this version, everything is completely assembled
 
 ### About the project
 
-#### Development date:
-
-- January 2025
-
-#### Pages:
-
-- Main
-- About Me
-- Projects
-- Contacts
-- Detailed project pages
-
-#### Functionality:
-
+#### Functionality
 - Swiper and Lightgallery are integrated
 - VK Api integration (photos)
 - GitHub Api integration (projects data)
@@ -41,12 +28,17 @@ A new version of my website. In this version, everything is completely assembled
 - Url rewrite (links are not the actual location of the pages on the server)
 - Data from JSON files
 
-#### Not Implemented:
+#### Pages
+- Main
+- About Me
+- Projects
+- Contacts
+- Detailed project pages
 
+#### Not Implemented
 - Page with implementation examples
 - Page with useful materials
 - Form for sending a message to the mail
-- Filters and sorting of projects (there is nothing much to filter yet)
 
 ---
 
@@ -58,8 +50,8 @@ This project is licensed under the [GNU Affero General Public License v3 (AGPLv3
 
 ### Contacts
 
-Author: Yuriy Plotnikov  
-Website: https://yuriyplotnikovv.ru  
+Author: Yuriy Plotnikov
+Website: https://yuriyplotnikovv.ru
 
 ---
 
@@ -77,20 +69,7 @@ Website: https://yuriyplotnikovv.ru
 
 ### О проекте
 
-#### Дата разработки:
-
-- Январь 2025
-
-#### Страницы:
-
-- Главная
-- Обо мне
-- Портфолио
-- Контакты
-- Детальные страницы проектов
-
-#### Функциональность:
-
+#### Функциональность
 - Подключены Swiper и Lightgallery
 - Интеграция с VK Api (для получения фото)
 - Интеграция с GitHub Api (для получения данных проектов)
@@ -98,12 +77,17 @@ Website: https://yuriyplotnikovv.ru
 - Переопределение адресов страниц (ссылки не являются фактическим расположением страниц на сервере)
 - Данные из JSON файлов
 
-#### Не реализовано:
+#### Страницы
+- Главная
+- Обо мне
+- Портфолио
+- Контакты
+- Детальные страницы проектов
 
+#### Не реализовано
 - Страница с примерами реализации
 - Страница с полезными материалами
 - Форма отправки сообщения на почту
-- Фильтры и сортировка проектов (пока особо нечего фильтровать)
 
 ---
 
@@ -115,5 +99,5 @@ Website: https://yuriyplotnikovv.ru
 
 ### Контакты
 
-Автор: Yuriy Plotnikov  
-Сайт: https://yuriyplotnikovv.ru  
+Автор: Yuriy Plotnikov
+Сайт: https://yuriyplotnikovv.ru
