@@ -4,9 +4,13 @@ global $MESS;
 
 <section class="page__not-found not-found">
     <div class="not-found__text-wrapper">
-        <h1 class="not-found__title">404</h1>
+        <h1 class="not-found__title">
+            404
+        </h1>
 
-        <p class="not-found__text"><?= $MESS['NOT_FOUND'] ?></p>
+        <p class="not-found__text">
+            <?= $MESS['NOT_FOUND'] ?>
+        </p>
     </div>
 
     <div class="not-found__window-wrapper">

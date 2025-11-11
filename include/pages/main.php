@@ -2,7 +2,7 @@
 global $LANG, $MESS, $PATH;
 
 $quote = Tools::getRandomElement('quotes-list');
-$text = $quote ? $quote['text-' . $LANG] : null;
+$text = $quote ? $quote[$LANG] : null;
 $projectsList = Tools::getData('projects-list');
 ?>
 
@@ -66,7 +66,6 @@ $projectsList = Tools::getData('projects-list');
                             <? if ($link): ?>
                                 href="<?= $link ?>"
                             <? endif; ?>
-
                             <? if ($title): ?>
                                 title="<?= $title ?>"
                             <? endif; ?>
@@ -74,11 +73,9 @@ $projectsList = Tools::getData('projects-list');
                             <? if ($image): ?>
                                 <img class="works__item-image"
                                      src="<?= $image ?>"
-
                                     <? if ($title): ?>
                                         alt="<?= $title ?>"
                                     <? endif; ?>
-
                                      loading="lazy"
                                 >
                             <? endif; ?>

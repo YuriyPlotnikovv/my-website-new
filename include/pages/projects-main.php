@@ -95,6 +95,10 @@ $technologiesList = Tools::getData('technologies-list');
                         <ul class="technologies__list">
                             <? foreach ($technologiesList as $technology):
                                 $code = $technology['code'];
+                                if (!$code) {
+                                    continue;
+                                }
+
                                 $name = $technology['name'];
                                 ?>
                                 <li class="technologies__item">
@@ -170,15 +174,12 @@ $technologiesList = Tools::getData('technologies-list');
                         <? if ($date): ?>
                             data-date="<?= $date ?>"
                         <? endif; ?>
-
                         <? if ($complexity): ?>
                             data-complexity="<?= $complexity ?>"
                         <? endif; ?>
-
                         <? if ($category): ?>
                             data-category="<?= $category ?>"
                         <? endif; ?>
-
                         <? if (!empty($technologies)): ?>
                             data-technologies="<?= $technologies ?>"
                         <? endif; ?>
@@ -187,7 +188,6 @@ $technologiesList = Tools::getData('technologies-list');
                             <? if ($link): ?>
                                 href="<?= $link ?>"
                             <? endif; ?>
-
                             <? if ($title): ?>
                                 title="<?= $title ?>"
                             <? endif; ?>
@@ -195,11 +195,9 @@ $technologiesList = Tools::getData('technologies-list');
                             <? if ($image): ?>
                                 <img class="works__item-image"
                                      src="<?= $image ?>"
-
                                     <? if ($title): ?>
                                         alt="<?= $title ?>"
                                     <? endif; ?>
-
                                      loading="lazy"
                                 >
                             <? endif; ?>

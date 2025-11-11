@@ -27,13 +27,9 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
     <?= Tools::getOpenGraphMetaTags($pageTitle, $pageDescription); ?>
     <?= Tools::getSchemaOrgTags($pageTitle, $pageDescription) ?>
 
-    <link rel="preload" href="/public/fonts/ProximaNova-Bold.woff2" as="font"
+    <link rel="preload" href="/public/fonts/Montserrat-Variable.woff2" as="font"
           type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/public/fonts/ProximaNova-Light.woff2" as="font"
-          type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/public/fonts/ProximaNova-LightIt.woff2" as="font"
-          type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/public/fonts/ProximaNovaCond-Black.woff2" as="font"
+    <link rel="preload" href="/public/fonts/Montserrat-Italic-Variable.woff2" as="font"
           type="font/woff2" crossorigin="anonymous">
     <link rel="prefetch" href="/public/css/vendor/swiper-bundle.css" as="style">
     <link rel="prefetch" href="/public/css/vendor/lightgallery.min.css" as="style">
@@ -89,7 +85,9 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
         <?php Tools::includeFile('lang-switcher'); ?>
 
         <button class="header__menu-button" type="button">
-            <span class="visually-hidden"><?= $MESS['MENU'] ?></span>
+            <span class="visually-hidden">
+                <?= $MESS['MENU'] ?>
+            </span>
 
             <span class="header__menu-button-icon"></span>
         </button>

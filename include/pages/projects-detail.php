@@ -45,7 +45,6 @@ $githubLink = $project['repository'] ?? null;
         <? if ($image): ?>
             <img class="intro__image"
                  src="<?= $image ?>"
-
                 <? if ($title): ?>
                     alt="<?= $title ?>"
                 <? endif; ?>
@@ -73,6 +72,10 @@ $githubLink = $project['repository'] ?? null;
                     }
 
                     $code = $technology['code'];
+                    if (!$code) {
+                        continue;
+                    }
+
                     $name = $technology['name'];
                     $link = $technology['link'];
                     ?>
@@ -81,12 +84,10 @@ $githubLink = $project['repository'] ?? null;
                             <? if ($link): ?>
                                 href="<?= $link ?>"
                             <? endif; ?>
-
                             <? if ($name): ?>
                                 title="<?= $name ?>"
                                 aria-label="<?= $name ?>"
                             <? endif; ?>
-
                            target="_blank"
                         >
                             <svg class="project-technologies__item-icon"
