@@ -16,6 +16,13 @@
 
     opacity: 0;
 
+    @media (max-width: var.$desktop-mid-width) {
+      font-size: 18px;
+    }
+    @media (max-width: var.$tablet-max-width) {
+      font-size: 16px;
+    }
+
     &:nth-of-type(odd) {
       transform: translateX(-100%);
     }
