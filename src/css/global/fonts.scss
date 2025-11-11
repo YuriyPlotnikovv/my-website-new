@@ -1,39 +1,19 @@
 @font-face {
-  font-family: "ProximaNova";
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("/public/fonts/Montserrat-Variable.woff2") format("woff2"),
+    url("/public/fonts/Montserrat-Variable.woff") format("woff");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
-  src: local("Proxima Nova"),
-    url("/public/fonts/ProximaNova-Light.woff2") format("woff2"),
-    url("/public/fonts/ProximaNova-Light.woff") format("woff2");
 }
 
 @font-face {
-  font-family: "ProximaNova";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: local("Proxima Nova"),
-    url("/public/fonts/ProximaNova-Bold.woff2") format("woff2"),
-    url("/public/fonts/ProximaNova-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "ProximaNova";
-  font-weight: 400;
+  font-family: "Montserrat";
+  src: local("Montserrat"),
+    url("/public/fonts/Montserrat-Italic-Variable.woff2") format("woff2"),
+    url("/public/fonts/Montserrat-Italic-Variable.woff") format("woff");
+  font-weight: 100 900;
   font-style: italic;
   font-display: swap;
-  src: local("Proxima Nova"),
-    url("/public/fonts/ProximaNova-LightIt.woff2") format("woff2"),
-    url("/public/fonts/ProximaNova-LightIt.woff") format("woff");
-}
-
-@font-face {
-  font-family: "ProximaNova";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: local("Proxima Nova"),
-    url("/public/fonts/ProximaNovaCond-Black.woff2") format("woff2"),
-    url("/public/fonts/ProximaNovaCond-Black.woff") format("woff");
 }

@@ -11,10 +11,17 @@
   &__body {
     height: 100%;
 
-    font-family: "ProximaNova", "Helvetica", "Arial", sans-serif;
+    font-family: var.$font-main;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
+
+    @media (max-width: var.$tablet-max-width) {
+      font-size: 16px;
+    }
+    @media (max-width: var.$mobile-max-width) {
+      font-size: 14px;
+    }
   }
 
   &__header {

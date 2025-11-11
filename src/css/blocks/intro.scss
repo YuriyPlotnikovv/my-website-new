@@ -73,8 +73,8 @@
   &__title {
     margin-bottom: 50px;
 
-    font-size: 102px;
-    font-weight: 700;
+    font-size: 92px;
+    font-weight: 900;
     line-height: 1;
     color: var.$colorBlackThree;
 
@@ -82,15 +82,15 @@
 
     @media (max-width: var.$desktop-mid-width) {
       margin-bottom: 40px;
-      font-size: 90px;
+      font-size: 80px;
     }
     @media (max-width: var.$tablet-max-width) {
       margin-bottom: 20px;
-      font-size: 72px;
+      font-size: 62px;
     }
     @media (max-width: var.$mobile-max-width) {
       margin-bottom: 20px;
-      font-size: 48px;
+      font-size: 38px;
     }
   }
 
@@ -100,30 +100,30 @@
     &--first {
       margin-bottom: 15px;
 
-      font-size: 34px;
-      font-weight: 500;
+      font-size: 28px;
+      font-weight: 700;
       line-height: 1.3;
       color: var.$colorGray;
 
       @media (max-width: var.$desktop-mid-width) {
-        font-size: 28px;
+        font-size: 24px;
       }
       @media (max-width: var.$mobile-mid-width) {
-        font-size: 22px;
+        font-size: 18px;
       }
     }
 
     &--second {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 400;
       line-height: 1.3;
       color: var.$colorBlackThree;
 
       @media (max-width: var.$desktop-mid-width) {
-        font-size: 20px;
+        font-size: 18px;
       }
       @media (max-width: var.$tablet-max-width) {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
