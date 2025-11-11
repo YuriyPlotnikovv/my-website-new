@@ -46,7 +46,16 @@ document.addEventListener('DOMContentLoaded', () => {
         projectsToDisplay.sort((a, b) => parseInt(b.dataset.complexity) - parseInt(a.dataset.complexity));
         break;
       case 'complexity-to-high':
-        projectsToDisplay.sort((a, b) => parseInt(a.dataset.complexity) - parseInt(b.dataset.complexity));
+        projectsToDisplay.sort((a, b) => {
+          const complexityA = parseInt(a.dataset.complexity);
+          const complexityB = parseInt(b.dataset.complexity);
+
+          if (complexityA === complexityB) {
+            return new Date(a.dataset.date) - new Date(b.dataset.date);
+          }
+
+          return complexityA - complexityB;
+        });
         break;
     }
 
