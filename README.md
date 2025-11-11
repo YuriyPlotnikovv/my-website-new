@@ -1,6 +1,6 @@
 # My Website v.2.0
 
-
+<img src=".info/poster.webp" alt="Poster" width="600" />
 
 [🇬🇧 English](#english) | [🇷🇺 Русский](#русский)
 
