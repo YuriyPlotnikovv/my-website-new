@@ -59,7 +59,7 @@ use core\Tools;
 
     <?php if ($PAGE_TYPE === 'contacts'): ?>
         <script src="/public/js/vendor/vue.min.js" defer></script>
-        <script src="/public/js/vendor/yandexCaptcha.min.js" async defer></script>
+        <script src="https://smartcaptcha.yandexcloud.net/captcha.js" async defer></script>
     <?php endif; ?>
 
     <script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>" defer></script>
