@@ -1,6 +1,8 @@
 <?php
 global $MESS, $PAGE_TYPE, $PATH, $LANG;
+
 use core\Tools;
+
 ?>
 
 <!DOCTYPE html>
@@ -58,6 +60,7 @@ use core\Tools;
     <?php endif; ?>
 
     <?php if ($PAGE_TYPE === 'contacts'): ?>
+        <?php Tools::includeFile('captcha'); ?>
         <script src="/public/js/vendor/vue.min.js" defer></script>
         <script src="https://smartcaptcha.yandexcloud.net/captcha.js" async defer></script>
     <?php endif; ?>
