@@ -1,7 +1,6 @@
 <?php
 
 namespace core;
-require_once __DIR__ . '/../apiKeys.php';
 
 class YandexCaptcha
 {

@@ -3,9 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 global $LANG, $MESS;
 global $captchaPublicApiKey;
-global $captchaPrivateApiKey;
-use core\YandexCaptcha;
-
+file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/errors.php', print_r($captchaPublicApiKey, true), FILE_APPEND);
 $messages = [
     'FORM_STATE_SUCCESS' => $MESS['FORM_STATE_SUCCESS'],
     'FORM_STATE_SAVE_ERROR' => $MESS['FORM_STATE_SAVE_ERROR'],
@@ -172,6 +170,6 @@ $messages = [
 </section>
 
 <script>
-    window.captchaPublicKey = '<?= new YandexCaptcha($captchaPublicApiKey, $captchaPrivateApiKey)->getPublicKey() ?>'
+    window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
     window.MESSAGES = <?= json_encode($messages, JSON_UNESCAPED_UNICODE) ?>;
 </script>
