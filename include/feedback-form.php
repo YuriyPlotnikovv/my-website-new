@@ -4,8 +4,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 global $LANG, $MESS;
 global $captchaPublicApiKey;
 
-$publicKey = $captchaPublicApiKey;
-var_dump('После apiKeys.php:', $publicKey);
 $messages = [
     'FORM_STATE_SUCCESS' => $MESS['FORM_STATE_SUCCESS'],
     'FORM_STATE_SAVE_ERROR' => $MESS['FORM_STATE_SAVE_ERROR'],
@@ -15,6 +13,10 @@ $messages = [
     'ERROR_MESSAGE_TOO_SHORT' => $MESS['ERROR_MESSAGE_TOO_SHORT'],
     'ERROR_MESSAGE_TOO_LONG' => $MESS['ERROR_MESSAGE_TOO_LONG'],
 ];
+$filePath = $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
+echo "File path: " . $filePath . "<br>";
+echo "File exists: " . (file_exists($filePath) ? 'Yes' : 'No') . "<br>";
+echo "File is readable: " . (is_readable($filePath) ? 'Yes' : 'No') . "<br>";
 ?>
 
 <section class="contacts-page__feedback section feedback">
@@ -172,7 +174,6 @@ $messages = [
 </section>
 
 <script>
-    <? var_dump('После apiKeys.php:', $publicKey);?>
-    window.captchaPublicKey = '<?= $publicKey ?>'
+    window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
     window.MESSAGES = <?= json_encode($messages, JSON_UNESCAPED_UNICODE) ?>;
 </script>
