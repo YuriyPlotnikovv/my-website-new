@@ -1,7 +1,5 @@
 <?php
-require_once __DIR__ . '/../core/apiKeys.php';
 global $LANG, $MESS;
-global $captchaPublicApiKey;
 
 $messages = [
     'FORM_STATE_SUCCESS' => $MESS['FORM_STATE_SUCCESS'],
@@ -169,6 +167,5 @@ $messages = [
 </section>
 
 <script>
-    window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
     window.MESSAGES = <?= json_encode($messages, JSON_UNESCAPED_UNICODE) ?>;
 </script>

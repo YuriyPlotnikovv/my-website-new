@@ -2,6 +2,8 @@
 
 use core\Tools;
 
+require_once __DIR__ . '/../core/apiKeys.php';
+global $captchaPublicApiKey;
 global $MESS, $PAGE_TYPE, $PATH, $LANG;
 ?>
 
@@ -60,6 +62,9 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
     <?php endif; ?>
 
     <?php if ($PAGE_TYPE === 'contacts'): ?>
+        <script>
+            window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
+        </script>
         <script src="/public/js/vendor/vue.min.js" defer></script>
         <script src="https://smartcaptcha.yandexcloud.net/captcha.js" async defer></script>
     <?php endif; ?>
