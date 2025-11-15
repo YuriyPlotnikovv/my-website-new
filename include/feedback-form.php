@@ -1,6 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 global $LANG, $MESS;
 global $captchaPublicApiKey;
 
