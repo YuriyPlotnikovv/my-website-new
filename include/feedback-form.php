@@ -5,6 +5,7 @@ global $LANG, $MESS;
 global $captchaPublicApiKey;
 
 $publicKey = $captchaPublicApiKey;
+var_dump('После apiKeys.php:', $publicKey);
 $messages = [
     'FORM_STATE_SUCCESS' => $MESS['FORM_STATE_SUCCESS'],
     'FORM_STATE_SAVE_ERROR' => $MESS['FORM_STATE_SAVE_ERROR'],
@@ -171,6 +172,7 @@ $messages = [
 </section>
 
 <script>
+    <? var_dump('После apiKeys.php:', $publicKey);?>
     window.captchaPublicKey = '<?= $publicKey ?>'
     window.MESSAGES = <?= json_encode($messages, JSON_UNESCAPED_UNICODE) ?>;
 </script>
