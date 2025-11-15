@@ -1,8 +1,9 @@
 <?php
 
 spl_autoload_register(static function (string $class) {
+
     $prefixes = [
-        'core\\' => __DIR__ . '/core/classes/',
+        'core\\' => $_SERVER['DOCUMENT_ROOT'] . '/core/classes/',
     ];
 
     foreach ($prefixes as $prefix => $baseDir) {
