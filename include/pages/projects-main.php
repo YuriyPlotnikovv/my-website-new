@@ -1,5 +1,7 @@
 <?php
 use core\Tools;
+use DateTime;
+
 global $LANG, $MESS, $PATH;
 
 $projectsList = Tools::getData('projects-list');

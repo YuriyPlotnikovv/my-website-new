@@ -77,6 +77,4 @@ $socialsList = Tools::getData('socials-list');
     </section>
 <?php endif; ?>
 
-<? if (isset($_GET['dev_mode'])): ?>
-    <?php Tools::includeFile('feedback-form') ?>
-<? endif; ?>
+<?php Tools::includeFile('feedback-form') ?>

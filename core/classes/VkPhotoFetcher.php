@@ -63,6 +63,7 @@ class VkPhotoFetcher
 
         if (isset($data['response']['items'])) {
             Tools::setCache(self::CACHE_FILE, $data['response']['items']);
+            Tools::logError('Успешно выполнен импорт фото');
             return $data['response']['items'];
         }
 

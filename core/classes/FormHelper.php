@@ -124,10 +124,10 @@ class FormHelper
 
     private function sendMail(): bool
     {
-        $to = 'test-i4ryh82ap@srv1.mail-tester.com';
+        $to = 'yuriy.plotnikovv@yandex.ru';
         $subject = 'Сообщение с формы обратной связи на сайте yuriyplotnikovv.ru';
 
-        $headers = "Content-Type: text/html; charset=utf-8\r\n";
+        $headers = "Content-Type: text/plain; charset=utf-8\r\n";
         $headers .= "From: noreply@yuriyplotnikovv.ru\r\n";
         $headers .= "Reply-To: {$this->data['EMAIL']}\r\n";
 
