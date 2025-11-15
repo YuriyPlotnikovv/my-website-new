@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/apiKeys.php';
-require_once __DIR__ . '/classes/Tools.php';
-require_once __DIR__ . '/classes/VkPhotoFetcher.php';
-require_once __DIR__ . '/classes/GitHubProjectsFetcher.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
+use core\VkPhotoFetcher;
+use core\GitHubProjectsFetcher;
 
 global $ownerId;
 global $albumId;

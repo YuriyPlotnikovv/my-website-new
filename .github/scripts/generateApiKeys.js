@@ -6,13 +6,15 @@ const ownerId = process.env.OWNER_ID;
 const albumId = process.env.ALBUM_ID;
 const vkApiKey = process.env.VK_API_KEY;
 const gitHubApiKey = process.env.GIT_API_KEY;
+const captchaPublicApiKey = process.env.CAPTCHA_PUBLIC_API_KEY;
+const captchaPrivateApiKey = process.env.CAPTCHA_PRIVATE_API_KEY;
 
 if (!ownerId || !albumId || !vkApiKey || !gitHubApiKey) {
   console.error('API keys are not set.');
   process.exit(1);
 }
 
-const content = `<?php\n\n$ownerId = '${ownerId}';\n$albumId = '${albumId}';\n$vkApiKey = '${vkApiKey}';\n$gitHubApiKey = '${gitHubApiKey}';\n\n`;
+const content = `<?php\n\n$ownerId = '${ownerId}';\n$albumId = '${albumId}';\n$vkApiKey = '${vkApiKey}';\n$gitHubApiKey = '${gitHubApiKey}';\n$captchaPublicApiKey = '${captchaPublicApiKey}';\n$captchaPrivateApiKey = '${captchaPrivateApiKey}';\n\n`;
 
 fs.writeFileSync(filePath, content, 'utf8');
 console.log('API keys have been generated.');

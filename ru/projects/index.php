@@ -3,7 +3,9 @@ global $MESS;
 $pageTitle = $MESS['PROJECTS'] . ' - ' . $MESS['PAGE_TITLE'];
 $pageDescription = $MESS['PROJECTS_PAGE_DESCRIPTION'];
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php'; ?>
+require_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php';
+use core\Tools;
+?>
 
 <?php Tools::includeFile('/pages/projects-main'); ?>
 

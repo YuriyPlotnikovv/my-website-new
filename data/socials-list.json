@@ -1,0 +1,22 @@
+[
+  {
+    "link": "https://github.com/YuriyPlotnikovv/",
+    "title": "GitHub",
+    "icon": "github-logo"
+  },
+  {
+    "link": "https://habr.com/ru/users/YuriyPlotnikovv/",
+    "title": "Habr",
+    "icon": "habr"
+  },
+  {
+    "link": "https://instagram.com/yuriy.plotnikovv/",
+    "title": "Instagram",
+    "icon": "instagram"
+  },
+  {
+    "link": "https://vk.ru/yuriy.plotnikovv/",
+    "title": "VK",
+    "icon": "vk"
+  }
+]

@@ -1,40 +1,38 @@
 <?php
 global $LANG, $MESS;
-$contactsList = Tools::getData('contacts-list');
+use core\Tools;
+
+$socials = Tools::getData('socials-list');
 ?>
 
-<? if ($contactsList): ?>
+<?php if ($socials): ?>
     <ul class="socials__list">
-        <?php foreach ($contactsList as $contact):
-            if ($contact['isContact']) {
-                continue;
-            }
-
-            $link = $contact['link'];
+        <?php foreach ($socials as $social):
+            $link = $social['link'];
             if (!$link) {
                 continue;
             }
 
-            $icon = $contact['icon'];
-            $title = $contact['title'];
+            $icon = $social['icon'];
+            $title = $social['title'];
             ?>
             <li class="socials__item">
                 <a class="socials__item-link link"
                    href="<?= $link ?>"
                    target="_blank"
-                    <? if ($title): ?>
+                    <?php if ($title): ?>
                         title="<?= $title ?>"
                         aria-label="<?= $title ?>"
-                    <? endif; ?>
+                    <?php endif; ?>
                 >
-                    <? if ($icon): ?>
+                    <?php if ($icon): ?>
                         <svg class="socials__item-icon" viewBox="0 0 50 50" width="50" height="50"
                              xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="/public/img/sprite.svg#icon-<?= $icon ?>"/>
                         </svg>
-                    <? endif; ?>
+                    <?php endif; ?>
                 </a>
             </li>
         <?php endforeach; ?>
     </ul>
-<? endif; ?>
+<?php endif; ?>

@@ -1,0 +1,88 @@
+@use "../global/variables" as var;
+
+.form {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+
+    @media (max-width: var.$mobile-max-width) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &--textarea {
+      grid-column: span 2;
+    }
+
+    &--agreement {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+    }
+  }
+
+  &__label-required {
+    color: var.$colorRed;
+  }
+
+  &__input {
+    padding: 10px;
+
+    font-size: 16px;
+
+    border: 1px solid var.$colorBlackThree;
+    border-radius: 5px;
+
+    &--checkbox {
+      width: 20px;
+      height: 20px;
+
+      accent-color: var.$colorBlackThree;
+    }
+
+    &--invalid {
+      border-color: var.$colorRed;
+    }
+  }
+
+  &__error {
+    grid-column: span 2;
+    height: 20px;
+
+    color: var.$colorRed;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__file-link {
+    text-decoration: underline;
+
+    transition: text-decoration 0.4s ease-in-out;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  &__result {
+    text-align: center;
+  }
+}

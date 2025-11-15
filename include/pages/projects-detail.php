@@ -1,5 +1,6 @@
 <?php
 global $LANG, $MESS;
+use core\Tools;
 
 $url = $_SERVER['REQUEST_URI'];
 $projectsList = Tools::getData('projects-list');
@@ -23,39 +24,39 @@ $githubLink = $project['repository'] ?? null;
 <section class="projects-detail-page__intro section intro">
     <div class="section__wrapper intro__wrapper">
         <div class="intro__content">
-            <? if ($title): ?>
+            <?php if ($title): ?>
                 <h1 class="intro__title">
                     <?= $title ?>
                 </h1>
-            <? endif; ?>
+            <?php endif; ?>
 
-            <? if ($textFirst): ?>
+            <?php if ($textFirst): ?>
                 <p class="intro__text intro__text--first">
                     <?= $textFirst ?>
                 </p>
-            <? endif; ?>
+            <?php endif; ?>
 
-            <? if ($textSecond): ?>
+            <?php if ($textSecond): ?>
                 <p class="intro__text intro__text--second">
                     <?= $textSecond ?>
                 </p>
-            <? endif; ?>
+            <?php endif; ?>
         </div>
 
-        <? if ($image): ?>
+        <?php if ($image): ?>
             <img class="intro__image"
                  src="<?= $image ?>"
-                <? if ($title): ?>
+                <?php if ($title): ?>
                     alt="<?= $title ?>"
-                <? endif; ?>
+                <?php endif; ?>
             >
-        <? endif; ?>
+        <?php endif; ?>
 
         <?php Tools::includeFile('scroll-button') ?>
     </div>
 </section>
 
-<? if ($technologies): ?>
+<?php if ($technologies): ?>
     <section class="projects-detail-page__project-technologies section project-technologies">
         <div class="section__wrapper project-technologies__wrapper">
             <h2 class="section__title project-technologies__title">
@@ -81,13 +82,13 @@ $githubLink = $project['repository'] ?? null;
                     ?>
                     <li class="project-technologies__item">
                         <a class="project-technologies__item-link"
-                            <? if ($link): ?>
+                            <?php if ($link): ?>
                                 href="<?= $link ?>"
-                            <? endif; ?>
-                            <? if ($name): ?>
+                            <?php endif; ?>
+                            <?php if ($name): ?>
                                 title="<?= $name ?>"
                                 aria-label="<?= $name ?>"
-                            <? endif; ?>
+                            <?php endif; ?>
                            target="_blank"
                         >
                             <svg class="project-technologies__item-icon"
@@ -103,7 +104,7 @@ $githubLink = $project['repository'] ?? null;
             </ul>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
 <section class="projects-detail-page__project-info section project-info">
     <div class="section__wrapper project-info__wrapper">
@@ -201,7 +202,7 @@ $githubLink = $project['repository'] ?? null;
             <ul class="project-info__links-list">
                 <?php if ($deployLink): ?>
                     <li class="project-info__links-item">
-                        <a class="project-info__links-item-link" href="<?= $deployLink ?>" target="_blank">
+                        <a class="project-info__links-item-link button button--shadow" href="<?= $deployLink ?>" target="_blank">
                             <?= $MESS['PROJECTS_DEPLOY_TITLE'] ?>
                         </a>
                     </li>
@@ -209,7 +210,7 @@ $githubLink = $project['repository'] ?? null;
 
                 <?php if ($githubLink): ?>
                     <li class="project-info__links-item">
-                        <a class="project-info__links-item-link" href="<?= $githubLink ?>" target="_blank">
+                        <a class="project-info__links-item-link button button--shadow" href="<?= $githubLink ?>" target="_blank">
                             <?= $MESS['PROJECTS_GITHUB_TITLE'] ?>
                         </a>
                     </li>

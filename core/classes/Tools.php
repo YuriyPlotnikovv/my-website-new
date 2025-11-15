@@ -1,4 +1,5 @@
 <?php
+namespace core;
 
 /**
  * Class Tools
@@ -35,9 +36,9 @@ class Tools
         if (file_exists($_SERVER['DOCUMENT_ROOT'] . $filePath)) {
             $timestamp = filemtime($_SERVER['DOCUMENT_ROOT'] . $filePath);
             return $filePath . '?v=' . $timestamp;
-        } else {
-            return $filePath;
         }
+
+        return $filePath;
     }
 
     /**
@@ -161,7 +162,7 @@ class Tools
      */
     public static function getCurrentUrl(): string
     {
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
         $host = $_SERVER['HTTP_HOST'];
         $requestUri = $_SERVER['REQUEST_URI'];
 
@@ -176,7 +177,7 @@ class Tools
     public static function getHrefLang(): string
     {
         $url = self::getCurrentUrl();
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
         $host = $_SERVER['HTTP_HOST'];
         $server = $protocol . $host;
 

@@ -4,8 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const ACTIVE_TECHNOLOGY_FILTER_CLASS = 'technologies__item-button--active';
 
   const projectsContainer = document.querySelector('.works__list');
-  const allProjectsInitialOrder = Array.from(projectsContainer.children);
+  if (!projectsContainer) {
+    return;
+  }
   const filtersWrapper = document.querySelector('.works__filters');
+  if (!filtersWrapper) {
+    return;
+  }
+  const allProjectsInitialOrder = Array.from(projectsContainer.children);
   const categoryFiltersContainer = filtersWrapper.querySelector('.works__filters-categories');
   const technologyFiltersContainer = filtersWrapper.querySelector('.works__filters-technologies');
   const sortContainer = filtersWrapper.querySelector('.sorting');

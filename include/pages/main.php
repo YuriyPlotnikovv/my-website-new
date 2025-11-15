@@ -1,5 +1,6 @@
 <?php
 global $LANG, $MESS, $PATH;
+use core\Tools;
 
 $quote = Tools::getRandomElement('quotes-list');
 $text = $quote ? $quote[$LANG] : null;
@@ -30,7 +31,7 @@ $projectsList = Tools::getData('projects-list');
     </div>
 </section>
 
-<? if ($text): ?>
+<?php if ($text): ?>
     <section class="main-page__quote section quote">
         <div class="section__wrapper quote__wrapper">
             <h2 class="section__title quote__title">
@@ -42,9 +43,9 @@ $projectsList = Tools::getData('projects-list');
             </p>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if ($projectsList): ?>
+<?php if ($projectsList): ?>
     <section class="main-page__works section works">
         <div class="section__wrapper works__wrapper">
             <h2 class="section__title works__title">
@@ -63,42 +64,42 @@ $projectsList = Tools::getData('projects-list');
                     ?>
                     <li class="works__item">
                         <a class="works__item-link link"
-                            <? if ($link): ?>
+                            <?php if ($link): ?>
                                 href="<?= $link ?>"
-                            <? endif; ?>
-                            <? if ($title): ?>
+                            <?php endif; ?>
+                            <?php if ($title): ?>
                                 title="<?= $title ?>"
-                            <? endif; ?>
+                            <?php endif; ?>
                         >
-                            <? if ($image): ?>
+                            <?php if ($image): ?>
                                 <img class="works__item-image"
                                      src="<?= $image ?>"
-                                    <? if ($title): ?>
+                                    <?php if ($title): ?>
                                         alt="<?= $title ?>"
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                      loading="lazy"
                                 >
-                            <? endif; ?>
+                            <?php endif; ?>
 
-                            <? if ($title || $text): ?>
+                            <?php if ($title || $text): ?>
                                 <div class="works__item-content">
-                                    <? if ($title): ?>
+                                    <?php if ($title): ?>
                                         <h3 class="works__item-title">
                                             <?= $title ?>
                                         </h3>
-                                    <? endif; ?>
+                                    <?php endif; ?>
 
-                                    <? if ($text): ?>
+                                    <?php if ($text): ?>
                                         <p class="works__item-text">
                                             <?= $text ?>
                                         </p>
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                 </div>
-                            <? endif; ?>
+                            <?php endif; ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>

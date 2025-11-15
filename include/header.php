@@ -1,5 +1,6 @@
 <?php
 global $MESS, $PAGE_TYPE, $PATH, $LANG;
+use core\Tools;
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +56,12 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
         <script src="/public/js/vendor/lg-zoom.min.js" defer></script>
         <script src="/public/js/vendor/swiper-bundle.js" defer></script>
     <?php endif; ?>
+
+    <?php if ($PAGE_TYPE === 'contacts'): ?>
+        <script src="/public/js/vendor/vue.min.js" defer></script>
+        <script src="/public/js/vendor/yandexCaptcha.min.js" async defer></script>
+    <?php endif; ?>
+
     <script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>" defer></script>
 </head>
 

@@ -1,5 +1,6 @@
 <?php
 global $LANG, $MESS;
+use core\Tools;
 
 $info = Tools::getData('info');
 $photosList = Tools::randomSort(Tools::getData('photos-list'));
@@ -32,7 +33,7 @@ $wayList = Tools::getData('way-list');
     </div>
 </section>
 
-<? if ($photosList): ?>
+<?php if ($photosList): ?>
     <section class="about-page__photo-list section photo-list">
         <div class="section__wrapper photo-list__wrapper slider">
             <h2 class="section__title photo-list__title">
@@ -88,9 +89,9 @@ $wayList = Tools::getData('way-list');
             </div>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if ($technologiesList): ?>
+<?php if ($technologiesList): ?>
     <section class="about-page__skills-list section skills-list">
         <div class="section__wrapper skills-list__wrapper">
             <h2 class="section__title skills-list__title">
@@ -109,13 +110,13 @@ $wayList = Tools::getData('way-list');
                     ?>
                     <li class="skills-list__item">
                         <a class="skills-list__item-link"
-                            <? if ($link): ?>
+                            <?php if ($link): ?>
                                 href="<?= $link ?>"
-                            <? endif; ?>
-                            <? if ($name): ?>
+                            <?php endif; ?>
+                            <?php if ($name): ?>
                                 title="<?= $name ?>"
                                 aria-label="<?= $name ?>"
-                            <? endif; ?>
+                            <?php endif; ?>
                            target="_blank"
                         >
                             <svg class="skills-list__item-icon" width="60" height="60"
@@ -128,9 +129,9 @@ $wayList = Tools::getData('way-list');
             </ul>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if ($info['about'][$LANG]): ?>
+<?php if ($info['about'][$LANG]): ?>
     <section class="about-page__info section info">
         <div class="section__wrapper info__wrapper">
             <h2 class="section__title info__title">
@@ -139,19 +140,19 @@ $wayList = Tools::getData('way-list');
 
             <div class="info__text-wrapper">
                 <?php $text = explode('<br>', $info['about'][$LANG]); ?>
-                <? if ($text): ?>
+                <?php if ($text): ?>
                     <?php foreach ($text as $item): ?>
                         <p class="info__text">
                             <?= $item ?>
                         </p>
                     <?php endforeach; ?>
-                <? endif; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if (count($info['facts']) > 0): ?>
+<?php if (count($info['facts']) > 0): ?>
     <section class="about-page__info-facts section info-facts">
         <div class="section__wrapper info-facts__wrapper">
             <h2 class="section__title info-facts__title">
@@ -176,9 +177,9 @@ $wayList = Tools::getData('way-list');
             </ul>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if ($info['into'][$LANG]): ?>
+<?php if ($info['into'][$LANG]): ?>
     <section class="about-page__info-into section info-into">
         <div class="section__wrapper info-into__wrapper">
             <h2 class="section__title info-into__title">
@@ -187,19 +188,19 @@ $wayList = Tools::getData('way-list');
 
             <div class="info-into__text-wrapper">
                 <?php $text = explode('<br>', $info['into'][$LANG]); ?>
-                <? if ($text): ?>
+                <?php if ($text): ?>
                     <?php foreach ($text as $item): ?>
                         <p class="info-into__text">
                             <?= $item ?>
                         </p>
                     <?php endforeach; ?>
-                <? endif; ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>
 
-<? if ($wayList): ?>
+<?php if ($wayList): ?>
     <section class="about-page__my-way section my-way">
         <div class="section__wrapper my-way__wrapper">
             <h2 class="section__title my-way__title">
@@ -216,9 +217,9 @@ $wayList = Tools::getData('way-list');
                     $date = $item['date'][$LANG] ?? null;
                     ?>
                     <li class="my-way__item"
-                        <? if ($date): ?>
+                        <?php if ($date): ?>
                             data-date="<?= $date ?>"
-                        <? endif; ?>
+                        <?php endif; ?>
                     >
                         <p class="my-way__item-text">
                             <?= $text ?>
@@ -228,4 +229,4 @@ $wayList = Tools::getData('way-list');
             </ol>
         </div>
     </section>
-<? endif; ?>
+<?php endif; ?>

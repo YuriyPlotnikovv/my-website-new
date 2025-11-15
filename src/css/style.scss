@@ -3,14 +3,11 @@
 @use "./global/settings";
 @use "./global/animations";
 
-@use "./pages/about-page";
-@use "./pages/contacs-page";
-@use "./pages/main-page";
-@use "./pages/projects-detail-page";
-@use "./pages/projects-page";
+@use "./blocks/button";
 @use "./blocks/categories";
 @use "./blocks/contacts";
 @use "./blocks/footer";
+@use "./blocks/form";
 @use "./blocks/header";
 @use "./blocks/info-facts";
 @use "./blocks/info-into";
@@ -33,3 +30,8 @@
 @use "./blocks/sorting";
 @use "./blocks/technologies";
 @use "./blocks/works";
+@use "./pages/about-page";
+@use "./pages/contacs-page";
+@use "./pages/main-page";
+@use "./pages/projects-detail-page";
+@use "./pages/projects-page";

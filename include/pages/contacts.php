@@ -1,6 +1,8 @@
 <?php
 global $LANG, $MESS;
-$contactsList = Tools::getData('contacts-list');
+use core\Tools;
+
+$socialsList = Tools::getData('socials-list');
 ?>
 
 <section class="contacts-page__intro section intro">
@@ -28,7 +30,7 @@ $contactsList = Tools::getData('contacts-list');
     </div>
 </section>
 
-<? if ($contactsList): ?>
+<?php if ($socialsList): ?>
     <section class="contacts-page__socials section contacts">
         <div class="section__wrapper contacts__wrapper">
             <h2 class="section__title contacts__title">
@@ -36,90 +38,41 @@ $contactsList = Tools::getData('contacts-list');
             </h2>
 
             <ul class="contacts__list">
-                <?php foreach ($contactsList as $item):
-                    if ($item['isContact']) {
-                        continue;
-                    }
-
-                    $link = $item['link'];
+                <?php foreach ($socialsList as $social):
+                    $link = $social['link'];
                     if (!$link) {
                         continue;
                     }
 
-                    $icon = $item['icon'];
-                    $title = $item['title'];
+                    $icon = $social['icon'];
+                    $title = $social['title'];
                     ?>
                     <li class="contacts__item">
                         <a class="contacts__item-link link"
                            href="<?= $link ?>"
                            target="_blank"
-                            <? if ($title): ?>
+                            <?php if ($title): ?>
                                 title="<?= $title ?>"
-                            <? endif; ?>
+                            <?php endif; ?>
                         >
-                            <? if ($icon): ?>
+                            <?php if ($icon): ?>
                                 <svg class="contacts__item-icon" viewBox="0 0 50 50" width="50" height="50"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <use xlink:href="/public/img/sprite.svg#icon-<?= $icon ?>"/>
                                 </svg>
-                            <? endif; ?>
+                            <?php endif; ?>
 
-                            <? if ($title): ?>
+                            <?php if ($title): ?>
                                 <span class="contacts__item-title">
                                     <?= $title ?>
                                 </span>
-                            <? endif; ?>
+                            <?php endif; ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </div>
     </section>
+<?php endif; ?>
 
-    <section class="contacts-page__contacts section contacts">
-        <div class="section__wrapper contacts__wrapper">
-            <h2 class="section__title contacts__title">
-                <?= $MESS['CONTACTS_LINKS_TITLE'] ?>:
-            </h2>
-
-            <ul class="contacts__list">
-                <?php foreach ($contactsList as $item):
-                    if ($item['isContact']) {
-                        continue;
-                    }
-
-                    $link = $item['link'];
-                    if (!$link) {
-                        continue;
-                    }
-
-                    $icon = $item['icon'];
-                    $title = $item['title'];
-                    ?>
-                    <li class="contacts__item">
-                        <a class="contacts__item-link link"
-                           href="<?= $link ?>"
-                           target="_blank"
-                            <? if ($title): ?>
-                                title="<?= $title ?>"
-                            <? endif; ?>
-                        >
-                            <? if ($icon): ?>
-                                <svg class="contacts__item-icon" viewBox="0 0 50 50" width="50" height="50"
-                                     xmlns="http://www.w3.org/2000/svg">
-                                    <use xlink:href="/public/img/sprite.svg#icon-<?= $icon ?>"/>
-                                </svg>
-                            <? endif; ?>
-
-                            <? if ($title): ?>
-                                <span class="contacts__item-title">
-                                    <?= $title ?>
-                                </span>
-                            <? endif; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </div>
-    </section>
-<? endif; ?>
+<?php Tools::includeFile('feedback-form') ?>

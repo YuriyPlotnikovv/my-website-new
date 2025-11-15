@@ -3,3 +3,5 @@ $ownerId = '';
 $albumId = '';
 $vkApiKey = '';
 $gitHubApiKey = '';
+$captchaPublicApiKey = '';
+$captchaPrivateApiKey = '';

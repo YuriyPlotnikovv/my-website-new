@@ -1,5 +1,6 @@
 <?php
 global $LANG, $MESS, $PATH;
+use core\Tools;
 
 $projectsList = Tools::getData('projects-list');
 $technologiesList = Tools::getData('technologies-list');
@@ -36,7 +37,7 @@ $technologiesList = Tools::getData('technologies-list');
             <?= $MESS['PROJECTS_PROJECTS_TITLE'] ?>:
         </h2>
 
-        <? if ($projectsList): ?>
+        <?php if ($projectsList): ?>
             <div class="works__filters">
                 <div class="works__filters-categories categories">
                     <span class="categories__label">
@@ -86,14 +87,14 @@ $technologiesList = Tools::getData('technologies-list');
                     </ul>
                 </div>
 
-                <? if ($technologiesList): ?>
+                <?php if ($technologiesList): ?>
                     <div class="works__filters-technologies technologies">
                         <span class="technologies__label">
                             <?= $MESS['PROJECTS_FILTERS_TECHNOLOGIES'] ?>:
                         </span>
 
                         <ul class="technologies__list">
-                            <? foreach ($technologiesList as $technology):
+                            <?php foreach ($technologiesList as $technology):
                                 $code = $technology['code'];
                                 if (!$code) {
                                     continue;
@@ -110,10 +111,10 @@ $technologiesList = Tools::getData('technologies-list');
                                         <?= $name ?>
                                     </button>
                                 </li>
-                            <? endforeach; ?>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
-                <? endif; ?>
+                <?php endif; ?>
 
                 <div class="works__filters-sorting sorting">
                     <span class="sorting__label">
@@ -171,56 +172,56 @@ $technologiesList = Tools::getData('technologies-list');
                     }
                     ?>
                     <li class="works__item"
-                        <? if ($date): ?>
+                        <?php if ($date): ?>
                             data-date="<?= $date ?>"
-                        <? endif; ?>
-                        <? if ($complexity): ?>
+                        <?php endif; ?>
+                        <?php if ($complexity): ?>
                             data-complexity="<?= $complexity ?>"
-                        <? endif; ?>
-                        <? if ($category): ?>
+                        <?php endif; ?>
+                        <?php if ($category): ?>
                             data-category="<?= $category ?>"
-                        <? endif; ?>
-                        <? if (!empty($technologies)): ?>
+                        <?php endif; ?>
+                        <?php if (!empty($technologies)): ?>
                             data-technologies="<?= $technologies ?>"
-                        <? endif; ?>
+                        <?php endif; ?>
                     >
                         <a class="works__item-link link"
-                            <? if ($link): ?>
+                            <?php if ($link): ?>
                                 href="<?= $link ?>"
-                            <? endif; ?>
-                            <? if ($title): ?>
+                            <?php endif; ?>
+                            <?php if ($title): ?>
                                 title="<?= $title ?>"
-                            <? endif; ?>
+                            <?php endif; ?>
                         >
-                            <? if ($image): ?>
+                            <?php if ($image): ?>
                                 <img class="works__item-image"
                                      src="<?= $image ?>"
-                                    <? if ($title): ?>
+                                    <?php if ($title): ?>
                                         alt="<?= $title ?>"
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                      loading="lazy"
                                 >
-                            <? endif; ?>
+                            <?php endif; ?>
 
-                            <? if ($title || $text): ?>
+                            <?php if ($title || $text): ?>
                                 <div class="works__item-content">
-                                    <? if ($title): ?>
+                                    <?php if ($title): ?>
                                         <h3 class="works__item-title">
                                             <?= $title ?>
                                         </h3>
-                                    <? endif; ?>
+                                    <?php endif; ?>
 
-                                    <? if ($text): ?>
+                                    <?php if ($text): ?>
                                         <p class="works__item-text">
                                             <?= $text ?>
                                         </p>
-                                    <? endif; ?>
+                                    <?php endif; ?>
                                 </div>
-                            <? endif; ?>
+                            <?php endif; ?>
                         </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
-        <? endif; ?>
+        <?php endif; ?>
     </div>
 </section>

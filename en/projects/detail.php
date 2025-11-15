@@ -1,5 +1,7 @@
 <?php
 global $MESS, $LANG;
+use core\Tools;
+
 $url = $_SERVER['REQUEST_URI'];
 $projectsList = Tools::getData('projects-list');
 $project = Tools::getDetailData($url, $projectsList);
