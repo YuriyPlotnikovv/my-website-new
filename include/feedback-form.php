@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 global $LANG, $MESS;
 global $captchaPublicApiKey;
-file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/errors.php', print_r($captchaPublicApiKey, true), FILE_APPEND);
+file_put_contents($_SERVER['DOCUMENT_ROOT'] . '/errors.php', print_r(file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php'), true), FILE_APPEND);
 $messages = [
     'FORM_STATE_SUCCESS' => $MESS['FORM_STATE_SUCCESS'],
     'FORM_STATE_SAVE_ERROR' => $MESS['FORM_STATE_SAVE_ERROR'],
