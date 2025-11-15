@@ -1,24 +1,30 @@
 <?php
+
 namespace core;
 require_once __DIR__ . '/../apiKeys.php';
 
 class YandexCaptcha
 {
-    private const string PUBLIC_KEY = '';
-    private const string SECRET_KEY = '';
     private const string STATUS_OK = 'ok';
-
+    private string $publicKey;
+    private string $secretKey;
     private string $url = 'https://smartcaptcha.yandexcloud.net/validate';
+
+    public function __construct(string $publicKey, string $secretKey)
+    {
+        $this->publicKey = $publicKey;
+        $this->secretKey = $secretKey;
+    }
 
     public function getPublicKey(): string
     {
-        return self::PUBLIC_KEY;
+        return $this->publicKey;
     }
 
     public function verify($response): bool
     {
         $captchaParams = [
-            'secret' => self::SECRET_KEY,
+            'secret' => $this->secretKey,
             'token' => $response,
             'ip' => $_SERVER['REMOTE_ADDR'],
         ];

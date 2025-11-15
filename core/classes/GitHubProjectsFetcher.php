@@ -1,4 +1,5 @@
 <?php
+
 namespace core;
 
 /**
@@ -8,9 +9,6 @@ namespace core;
  */
 class GitHubProjectsFetcher
 {
-    private string $username;
-    private ?string $accessToken;
-
     private const CACHE_FILE = '/data/projects-list.json';
     private const LOCAL_IMAGE_DIR = '/data/img/projects/';
     private const METADATA_FOLDER = '.info';
@@ -18,6 +16,8 @@ class GitHubProjectsFetcher
     private const DEFAULT_IMAGE_FILE = 'poster.webp';
     private const HTTP_TIMEOUT = 10;
     private const USER_AGENT = 'PHP-GithubProjectsFetcher';
+    private string $username;
+    private ?string $accessToken;
 
     /**
      * GithubProjectsFetcher constructor.
@@ -110,110 +110,6 @@ class GitHubProjectsFetcher
     }
 
     /**
-     * Получает содержимое файла project.json из репозитория.
-     *
-     * @param string $repoName Название репозитория
-     * @return array|null
-     */
-    private function fetchProjectData(string $repoName): ?array
-    {
-        $filePath = self::METADATA_FOLDER . '/' . self::PROJECT_FILE;
-        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
-        $response = $this->makeRequest($url);
-
-        if ($response === null || !isset($response['content'])) {
-            Tools::logError("Файл {$filePath} не найден в репозитории {$repoName}");
-            return null;
-        }
-
-        $content = base64_decode($response['content']);
-        if ($content === false) {
-            Tools::logError("Не удалось декодировать содержимое {$filePath} из репозитория {$repoName}");
-            return null;
-        }
-
-        $data = json_decode($content, true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            Tools::logError("Ошибка парсинга JSON в репозитории {$repoName}: " . json_last_error_msg());
-            return null;
-        }
-
-        return $data;
-    }
-
-    /**
-     * Получает список языков из репозитория.
-     *
-     * @param string $repoName
-     * @return array|null
-     */
-    private function fetchLanguages(string $repoName): ?array
-    {
-        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/languages";
-        $response = $this->makeRequest($url);
-
-        if ($response === null || !is_array($response) || empty($response)) {
-            return null;
-        }
-
-        $totalBytes = array_sum($response);
-        if ($totalBytes === 0) {
-            return null;
-        }
-
-        $languagesPercent = [];
-        foreach ($response as $lang => $bytes) {
-            $percent = round(($bytes / $totalBytes) * 100, 1);
-            $languagesPercent[] = "{$lang} - {$percent}%";
-        }
-
-        return $languagesPercent;
-    }
-
-    /**
-     * Скачивает и сохраняет файл из репозитория GitHub.
-     *
-     * @param string $repoName Название репозитория
-     * @param string $filePath Путь к файлу в репозитории
-     * @return string|null
-     */
-    private function fetchAndCacheFile(string $repoName, string $filePath): ?string
-    {
-        $filename = $repoName . '-preview.webp';
-
-        $localDir =  __DIR__ . '/../../' . self::LOCAL_IMAGE_DIR;
-        if (!is_dir($localDir) && !mkdir($localDir, 0755, true) && !is_dir($localDir)) {
-            Tools::logError("Не удалось создать директорию {$localDir}");
-            return null;
-        }
-
-        $localPath = $localDir . $filename;
-        if (file_exists($localPath)) {
-            return $filename;
-        }
-
-        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
-        $response = $this->makeRequest($url);
-        if ($response === null || !isset($response['content'])) {
-            Tools::logError("Файл {$filePath} не найден в репозитории {$repoName}");
-            return null;
-        }
-
-        $content = base64_decode($response['content']);
-        if ($content === false) {
-            Tools::logError("Ошибка декодирования файла {$filePath} из репозитория {$repoName}");
-            return null;
-        }
-
-        if (file_put_contents($localPath, $content) === false) {
-            Tools::logError("Ошибка записи файла в кеш: {$localPath}");
-            return null;
-        }
-
-        return $filename;
-    }
-
-    /**
      * Выполняет HTTP-запрос к GitHub с необходимыми заголовками.
      *
      * @param string $url URL для запроса
@@ -266,5 +162,109 @@ class GitHubProjectsFetcher
         }
 
         return $data;
+    }
+
+    /**
+     * Получает содержимое файла project.json из репозитория.
+     *
+     * @param string $repoName Название репозитория
+     * @return array|null
+     */
+    private function fetchProjectData(string $repoName): ?array
+    {
+        $filePath = self::METADATA_FOLDER . '/' . self::PROJECT_FILE;
+        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
+        $response = $this->makeRequest($url);
+
+        if ($response === null || !isset($response['content'])) {
+            Tools::logError("Файл {$filePath} не найден в репозитории {$repoName}");
+            return null;
+        }
+
+        $content = base64_decode($response['content']);
+        if ($content === false) {
+            Tools::logError("Не удалось декодировать содержимое {$filePath} из репозитория {$repoName}");
+            return null;
+        }
+
+        $data = json_decode($content, true);
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            Tools::logError("Ошибка парсинга JSON в репозитории {$repoName}: " . json_last_error_msg());
+            return null;
+        }
+
+        return $data;
+    }
+
+    /**
+     * Скачивает и сохраняет файл из репозитория GitHub.
+     *
+     * @param string $repoName Название репозитория
+     * @param string $filePath Путь к файлу в репозитории
+     * @return string|null
+     */
+    private function fetchAndCacheFile(string $repoName, string $filePath): ?string
+    {
+        $filename = $repoName . '-preview.webp';
+
+        $localDir = __DIR__ . '/../../' . self::LOCAL_IMAGE_DIR;
+        if (!is_dir($localDir) && !mkdir($localDir, 0755, true) && !is_dir($localDir)) {
+            Tools::logError("Не удалось создать директорию {$localDir}");
+            return null;
+        }
+
+        $localPath = $localDir . $filename;
+        if (file_exists($localPath)) {
+            return $filename;
+        }
+
+        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
+        $response = $this->makeRequest($url);
+        if ($response === null || !isset($response['content'])) {
+            Tools::logError("Файл {$filePath} не найден в репозитории {$repoName}");
+            return null;
+        }
+
+        $content = base64_decode($response['content']);
+        if ($content === false) {
+            Tools::logError("Ошибка декодирования файла {$filePath} из репозитория {$repoName}");
+            return null;
+        }
+
+        if (file_put_contents($localPath, $content) === false) {
+            Tools::logError("Ошибка записи файла в кеш: {$localPath}");
+            return null;
+        }
+
+        return $filename;
+    }
+
+    /**
+     * Получает список языков из репозитория.
+     *
+     * @param string $repoName
+     * @return array|null
+     */
+    private function fetchLanguages(string $repoName): ?array
+    {
+        $url = "https://api.github.com/repos/{$this->username}/{$repoName}/languages";
+        $response = $this->makeRequest($url);
+
+        if ($response === null || !is_array($response) || empty($response)) {
+            return null;
+        }
+
+        $totalBytes = array_sum($response);
+        if ($totalBytes === 0) {
+            return null;
+        }
+
+        $languagesPercent = [];
+        foreach ($response as $lang => $bytes) {
+            $percent = round(($bytes / $totalBytes) * 100, 1);
+            $languagesPercent[] = "{$lang} - {$percent}%";
+        }
+
+        return $languagesPercent;
     }
 }

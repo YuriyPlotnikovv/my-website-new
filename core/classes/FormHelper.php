@@ -1,6 +1,8 @@
 <?php
+
 namespace core;
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
+require_once __DIR__ . '/../apiKeys.php';
 
 use core\YandexCaptcha;
 
@@ -33,6 +35,9 @@ class FormHelper
 
     private function verifyCaptcha(): void
     {
+        global $captchaPublicApiKey;
+        global $captchaPrivateApiKey;
+
         if (!$this->useCaptcha) {
             $this->isCaptchaPassed = true;
             return;
@@ -44,7 +49,7 @@ class FormHelper
             return;
         }
 
-        $captcha = new YandexCaptcha();
+        $captcha = new YandexCaptcha($captchaPublicApiKey, $captchaPrivateApiKey);
         $this->isCaptchaPassed = $captcha->verify($token);
     }
 

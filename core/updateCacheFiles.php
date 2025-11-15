@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/apiKeys.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
+
 use core\VkPhotoFetcher;
 use core\GitHubProjectsFetcher;
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace core;
 
 /**
@@ -8,12 +9,11 @@ namespace core;
  */
 class VkPhotoFetcher
 {
+    private const CACHE_FILE = '/data/photos-list.json';
     private string|int $ownerId;
     private string $albumId;
     private string $accessToken;
     private int $count;
-
-    private const CACHE_FILE = '/data/photos-list.json';
 
     /**
      * VkPhotoFetcher constructor.

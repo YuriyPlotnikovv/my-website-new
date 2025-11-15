@@ -1,4 +1,5 @@
 <?php
+
 namespace core;
 
 /**
@@ -39,30 +40,6 @@ class Tools
         }
 
         return $filePath;
-    }
-
-    /**
-     * Получает и декодирует JSON-данные из файла в папке /data.
-     *
-     * @param string $fileName Имя файла без расширения .json
-     * @return mixed|null
-     */
-    public static function getData(string $fileName): mixed
-    {
-        $filePath = $_SERVER['DOCUMENT_ROOT'] . '/data/' . $fileName . '.json';
-        if (!file_exists($filePath)) {
-            error_log('File not found: ' . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
-            return null;
-        }
-
-        $jsonContent = file_get_contents($filePath);
-        $data = json_decode($jsonContent, true);
-
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            error_log('JSON decode error: ' . json_last_error_msg(), 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
-            return null;
-        }
-        return $data;
     }
 
     /**
@@ -112,6 +89,30 @@ class Tools
     }
 
     /**
+     * Получает и декодирует JSON-данные из файла в папке /data.
+     *
+     * @param string $fileName Имя файла без расширения .json
+     * @return mixed|null
+     */
+    public static function getData(string $fileName): mixed
+    {
+        $filePath = $_SERVER['DOCUMENT_ROOT'] . '/data/' . $fileName . '.json';
+        if (!file_exists($filePath)) {
+            error_log('File not found: ' . $filePath, 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+            return null;
+        }
+
+        $jsonContent = file_get_contents($filePath);
+        $data = json_decode($jsonContent, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            error_log('JSON decode error: ' . json_last_error_msg(), 3, $_SERVER['DOCUMENT_ROOT'] . '/errors.log');
+            return null;
+        }
+        return $data;
+    }
+
+    /**
      * Перемешивает массив случайным образом и возвращает новый массив.
      *
      * @param array $array Входной массив
@@ -156,20 +157,6 @@ class Tools
     }
 
     /**
-     * Возвращает текущий URL страницы.
-     *
-     * @return string
-     */
-    public static function getCurrentUrl(): string
-    {
-        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
-        $host = $_SERVER['HTTP_HOST'];
-        $requestUri = $_SERVER['REQUEST_URI'];
-
-        return $protocol . $host . $requestUri;
-    }
-
-    /**
      * Формирует теги Hreflang для SEO.
      *
      * @return string
@@ -198,10 +185,24 @@ class Tools
         $hrefLangTags = [
             '<link rel="alternate" hreflang="x-default" href="' . htmlspecialchars($server) . '/" />',
             '<link rel="alternate" hreflang="ru" href="' . htmlspecialchars($server . $newPath) . '" />',
-            '<link rel="alternate" hreflang="en" href="' . htmlspecialchars($server . '/en' . $newPath) . '" />'
+            '<link rel="alternate" hreflang="en" href="' . htmlspecialchars($server . '/en' . $newPath) . '" />',
         ];
 
         return implode("\n", $hrefLangTags) . "\n";
+    }
+
+    /**
+     * Возвращает текущий URL страницы.
+     *
+     * @return string
+     */
+    public static function getCurrentUrl(): string
+    {
+        $protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+        $host = $_SERVER['HTTP_HOST'];
+        $requestUri = $_SERVER['REQUEST_URI'];
+
+        return $protocol . $host . $requestUri;
     }
 
     /**

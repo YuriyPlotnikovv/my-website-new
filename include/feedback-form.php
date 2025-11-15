@@ -1,6 +1,8 @@
 <?php
+require_once __DIR__ . '/../apiKeys.php';
 global $LANG, $MESS;
-
+global $captchaPublicApiKey;
+global $captchaPrivateApiKey;
 use core\YandexCaptcha;
 
 $messages = [
@@ -169,6 +171,6 @@ $messages = [
 </section>
 
 <script>
-    window.captchaPublicKey = '<?= new YandexCaptcha()->getPublicKey() ?>'
+    window.captchaPublicKey = '<?= new YandexCaptcha($captchaPublicApiKey, $captchaPrivateApiKey)->getPublicKey() ?>'
     window.MESSAGES = <?= json_encode($messages, JSON_UNESCAPED_UNICODE) ?>;
 </script>
