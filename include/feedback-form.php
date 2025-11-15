@@ -1,6 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
 global $LANG, $MESS;
 global $captchaPublicApiKey;
 
@@ -13,10 +13,6 @@ $messages = [
     'ERROR_MESSAGE_TOO_SHORT' => $MESS['ERROR_MESSAGE_TOO_SHORT'],
     'ERROR_MESSAGE_TOO_LONG' => $MESS['ERROR_MESSAGE_TOO_LONG'],
 ];
-$filePath = $_SERVER['DOCUMENT_ROOT'] . '/core/apiKeys.php';
-echo "File path: " . $filePath . "<br>";
-echo "File exists: " . (file_exists($filePath) ? 'Yes' : 'No') . "<br>";
-echo "File is readable: " . (is_readable($filePath) ? 'Yes' : 'No') . "<br>";
 ?>
 
 <section class="contacts-page__feedback section feedback">
