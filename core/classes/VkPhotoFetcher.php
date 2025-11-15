@@ -2,6 +2,8 @@
 
 namespace core;
 
+use core\Tools;
+
 /**
  * Class VkPhotoFetcher
  *

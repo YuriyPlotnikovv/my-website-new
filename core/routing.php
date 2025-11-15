@@ -18,7 +18,8 @@ $pageTypes = [
   ],
 ];
 
-$currentUrl = $_SERVER['REQUEST_URI'];
+$currentUrlWithQuery = $_SERVER['REQUEST_URI'];
+$currentUrl = parse_url($currentUrlWithQuery, PHP_URL_PATH);
 
 global $PAGE_TYPE;
 $PAGE_TYPE = null;
