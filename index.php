@@ -5,7 +5,8 @@ global $LANG;
 $allowed_languages = ['en', 'ru'];
 
 $uri = $_SERVER['REQUEST_URI'];
-$trimmedUri = trim($uri, '/');
+$path = parse_url($uri, PHP_URL_PATH);
+$trimmedUri = trim($path, '/');
 $segments = $trimmedUri === '' ? [] : explode('/', $trimmedUri);
 
 if (isset($segments[0]) && preg_match('/^[a-zA-Z]{2}$/', $segments[0]) && in_array($segments[0], $allowed_languages)) {
