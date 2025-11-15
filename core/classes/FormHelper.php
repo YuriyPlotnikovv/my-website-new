@@ -1,8 +1,8 @@
 <?php
 
 namespace core;
-require_once __DIR__ . '/../autoload.php';
 require_once __DIR__ . '/../apiKeys.php';
+require_once __DIR__ . '/YandexCaptcha.php';
 
 use core\YandexCaptcha;
 
@@ -14,12 +14,10 @@ class FormHelper
     public const STATE_SUCCESS = 'SUCCESS';
 
     private ?array $data;
-    private bool $useCaptcha;
     private bool $isCaptchaPassed = false;
 
-    public function __construct(bool $useCaptcha = true)
+    public function __construct()
     {
-        $this->useCaptcha = $useCaptcha;
         $this->data = $this->getData();
         $this->verifyCaptcha();
     }
@@ -38,11 +36,6 @@ class FormHelper
         global $captchaPublicApiKey;
         global $captchaPrivateApiKey;
 
-        if (!$this->useCaptcha) {
-            $this->isCaptchaPassed = true;
-            return;
-        }
-
         $token = $this->data['CAPTCHARESPONSE'] ?? '';
         if (empty($token)) {
             $this->isCaptchaPassed = false;
@@ -60,7 +53,7 @@ class FormHelper
             return;
         }
 
-        if ($this->useCaptcha && !$this->isCaptchaPassed) {
+        if (!$this->isCaptchaPassed) {
             $this->respond(false, self::STATE_CAPTCHA_ERROR);
             return;
         }
@@ -131,11 +124,12 @@ class FormHelper
 
     private function sendMail(): bool
     {
-        $to = 'yuriy.plotnikovv@yandex.ru';
+        $to = 'test-i4ryh82ap@srv1.mail-tester.com';
         $subject = 'Сообщение с формы обратной связи на сайте yuriyplotnikovv.ru';
-        $headers = "From: {$this->data['EMAIL']}\r\n";
+
+        $headers = "Content-Type: text/html; charset=utf-8\r\n";
+        $headers .= "From: noreply@yuriyplotnikovv.ru\r\n";
         $headers .= "Reply-To: {$this->data['EMAIL']}\r\n";
-        $headers .= "Content-Type: text/plain; charset=utf-8\r\n";
 
         $body = "Имя: {$this->data['NAME']}\n";
         $body .= "E‑mail: {$this->data['EMAIL']}\n\n";
