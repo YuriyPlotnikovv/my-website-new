@@ -1,6 +1,8 @@
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
+<?php
+
 use core\Tools;
+
+require_once $_SERVER['DOCUMENT_ROOT'] . '/include/header.php';
 ?>
 
 <?php Tools::includeFile('/pages/main'); ?>

@@ -1,6 +1,6 @@
 <?php
-global $MESS;
 use core\Tools;
+global $MESS;
 
 $pageTitle = $MESS['PROJECTS'] . ' - ' . $MESS['PAGE_TITLE'];
 $pageDescription = $MESS['PROJECTS_PAGE_DESCRIPTION'];

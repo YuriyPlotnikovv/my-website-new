@@ -1,7 +1,7 @@
 <?php
 
 namespace core;
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
+require_once __DIR__ . '/../autoload.php';
 require_once __DIR__ . '/../apiKeys.php';
 
 use core\YandexCaptcha;

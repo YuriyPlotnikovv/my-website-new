@@ -1,6 +1,8 @@
 <?php
-global $MESS, $PAGE_TYPE;
+
 use core\Tools;
+
+global $MESS, $PAGE_TYPE;
 ?>
 
 </main>

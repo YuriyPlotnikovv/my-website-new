@@ -1,6 +1,8 @@
 <?php
-global $LANG;
+
 use core\Tools;
+
+global $LANG;
 
 $currentUrl = $_SERVER['REQUEST_URI'];
 $name = $LANG === 'ru' ? 'en' : 'ru';

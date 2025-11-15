@@ -1,6 +1,8 @@
 <?php
-global $LANG, $MESS, $PATH;
+
 use core\Tools;
+
+global $LANG, $MESS, $PATH;
 
 $quote = Tools::getRandomElement('quotes-list');
 $text = $quote ? $quote[$LANG] : null;

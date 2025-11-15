@@ -1,6 +1,8 @@
 <?php
-global $LANG, $MESS;
+
 use core\Tools;
+
+global $LANG, $MESS;
 
 $socials = Tools::getData('socials-list');
 ?>

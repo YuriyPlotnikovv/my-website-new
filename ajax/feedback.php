@@ -1,7 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/core/autoload.php';
 
 use core\FormHelper;
+
+require_once __DIR__ . '/../core/autoload.php';
 
 $form = new FormHelper(true);
 $form->help();

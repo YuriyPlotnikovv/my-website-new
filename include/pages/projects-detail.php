@@ -1,6 +1,8 @@
 <?php
-global $LANG, $MESS;
+
 use core\Tools;
+
+global $LANG, $MESS;
 
 $url = $_SERVER['REQUEST_URI'];
 $projectsList = Tools::getData('projects-list');
@@ -202,7 +204,8 @@ $githubLink = $project['repository'] ?? null;
             <ul class="project-info__links-list">
                 <?php if ($deployLink): ?>
                     <li class="project-info__links-item">
-                        <a class="project-info__links-item-link button button--shadow" href="<?= $deployLink ?>" target="_blank">
+                        <a class="project-info__links-item-link button button--shadow" href="<?= $deployLink ?>"
+                           target="_blank">
                             <?= $MESS['PROJECTS_DEPLOY_TITLE'] ?>
                         </a>
                     </li>
@@ -210,7 +213,8 @@ $githubLink = $project['repository'] ?? null;
 
                 <?php if ($githubLink): ?>
                     <li class="project-info__links-item">
-                        <a class="project-info__links-item-link button button--shadow" href="<?= $githubLink ?>" target="_blank">
+                        <a class="project-info__links-item-link button button--shadow" href="<?= $githubLink ?>"
+                           target="_blank">
                             <?= $MESS['PROJECTS_GITHUB_TITLE'] ?>
                         </a>
                     </li>

@@ -1,6 +1,8 @@
 <?php
-global $LANG, $MESS;
+
 use core\Tools;
+
+global $LANG, $MESS;
 
 $info = Tools::getData('info');
 $photosList = Tools::randomSort(Tools::getData('photos-list'));

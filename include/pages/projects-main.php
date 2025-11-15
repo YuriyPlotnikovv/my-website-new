@@ -1,6 +1,6 @@
 <?php
-global $LANG, $MESS, $PATH;
 use core\Tools;
+global $LANG, $MESS, $PATH;
 
 $projectsList = Tools::getData('projects-list');
 $technologiesList = Tools::getData('technologies-list');

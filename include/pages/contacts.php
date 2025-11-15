@@ -1,6 +1,8 @@
 <?php
-global $LANG, $MESS;
+
 use core\Tools;
+
+global $LANG, $MESS;
 
 $socialsList = Tools::getData('socials-list');
 ?>
@@ -75,4 +77,6 @@ $socialsList = Tools::getData('socials-list');
     </section>
 <?php endif; ?>
 
-<?php Tools::includeFile('feedback-form') ?>
+<? if (isset($_GET['dev_mode'])): ?>
+    <?php Tools::includeFile('feedback-form') ?>
+<? endif; ?>
