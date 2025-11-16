@@ -96,12 +96,6 @@
     @media (max-width: var.$tablet-max-width) {
       align-self: center;
     }
-
-    &[disabled] {
-      opacity: 0.6;
-
-      pointer-events: none;
-    }
   }
 
   &__result {

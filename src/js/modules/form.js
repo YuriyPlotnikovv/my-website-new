@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialize = (element) => {
     const app = Vue.createApp({
       setup() {
-        const {ref, reactive, onMounted, computed} = Vue;
+        const {ref, reactive, onMounted} = Vue;
 
         const form = reactive({
           name: '',
@@ -138,10 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           return allFieldsValid;
         };
-
-        const isFormInvalid = computed(() => {
-          return Object.values(errorMap).some(errorMsg => !!errorMsg);
-        });
 
         const captchaId = ref(null);
 
@@ -297,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
           checkCaptcha,
           handleBlur,
           handleInput,
-          isFormInvalid,
         };
       },
     });

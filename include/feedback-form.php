@@ -137,7 +137,7 @@ $messages = [
 
                         <button class="form__button button button--shadow"
                                 type="submit"
-                                :disabled="isFormInvalid || submittingForm"
+                                :disabled="submittingForm"
                         >
                             <?= $MESS['FORM_SUBMIT'] ?>
                         </button>
