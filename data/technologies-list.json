@@ -50,6 +50,11 @@
         "link": "https://react-redux.js.org/"
     },
     {
+        "code": "next",
+        "name": "Next.js",
+        "link": "https://nextjs.org/"
+    },
+    {
         "code": "bitrix",
         "name": "Bitrix",
         "link": "https://dev.1c-bitrix.ru/"
