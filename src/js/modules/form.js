@@ -191,9 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const allFieldsValid = validateAllFields();
 
           if (!allFieldsValid) {
-            submitted.value = false;
-            error.value = true;
-            state.value = FORM_STATE.VALIDATION_ERROR;
             return;
           }
 
@@ -201,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
             submittingForm.value = true;
             window.smartCaptcha.execute(captchaId.value);
           } else {
-            console.warn('SmartCaptcha not yet initialized or captchaId is null.');
             submitted.value = false;
             error.value = true;
             state.value = FORM_STATE.CAPTCHA_ERROR;

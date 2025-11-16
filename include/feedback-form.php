@@ -98,7 +98,7 @@ $messages = [
                                       @input="handleInput"
                                       cols="30"
                                       rows="5"
-                                      minlength="50"
+                                      minlength="10"
                                       maxlength="500"
                                       placeholder="<?= $MESS['FORM_PLACEHOLDER_MESSAGE'] ?>"
                                       aria-describedby="message-error"
