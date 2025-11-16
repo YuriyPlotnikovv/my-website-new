@@ -70,7 +70,7 @@ return [
     'FORM_STATE_VALIDATION_ERROR' => 'Ошибка валидации данных.',
     'FORM_STATE_SAVE_ERROR' => 'При отправке произошла ошибка. Попробуйте позже.',
     'ERROR_REQUIRED' => 'Это поле обязательно к заполнению.',
-    'ERROR_NAME_TOO_SHORT' => 'Имя должно быть минимум {min} символов.',
+    'ERROR_NAME_TOO_SHORT' => 'Имя должно быть минимум {min} символа.',
     'ERROR_EMAIL' => 'Введите корректный e‑mail.',
     'ERROR_MESSAGE_TOO_SHORT' => 'Сообщение должно быть минимум {min} символов.',
     'ERROR_MESSAGE_TOO_LONG' => 'Сообщение не может превышать {max} символов.',

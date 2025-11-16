@@ -128,9 +128,12 @@ class FormHelper
         $subject = 'Сообщение с формы обратной связи';
         $senderName = 'Админ сайта yuriyplotnikovv.ru';
 
-        $headers = "Content-Type: text/plain; charset=utf-8\r\n";
-        $headers .= "From: \"{$senderName}\" <noreply@yuriyplotnikovv.ru>\r\n";
-        $headers .= "Reply-To: {$this->data['EMAIL']}\r\n";
+        $headers = [
+            'From' => $senderName . '<noreply@yuriyplotnikovv.ru>',
+            'Reply-To' => $this->data['EMAIL'],
+            'Content-Type' => 'text/plain; charset=utf-8',
+            'X-Mailer' => 'PHP/' . PHP_VERSION,
+        ];
 
         $body = "Сообщение с формы обратной связи на сайте yuriyplotnikovv.ru:\n\n";
         $body .= "Имя: {$this->data['NAME']}\n";
