@@ -63,7 +63,7 @@ return [
     'FORM_PLACEHOLDER_EMAIL' => 'Enter Your email',
     'FORM_LABEL_MESSAGE' => 'Message',
     'FORM_PLACEHOLDER_MESSAGE' => 'Enter Your message',
-    'FORM_LABEL_AGREEMENT' => 'I agree to the processing of personal data in accordance with the terms and conditions <a class="form__file-link" href="/GDPR.pdf" target="_blank">Personal Data Processing Policies</a>',
+    'FORM_LABEL_AGREEMENT' => 'I agree to the processing of personal data in accordance with the terms and conditions <a class="form__file-link" href="/GDPR_EN.pdf" target="_blank">Personal Data Processing Policies</a>',
     'FORM_SUBMIT' => 'Submit',
     'FORM_STATE_SUCCESS' => 'Your message has been sent!',
     'FORM_STATE_CAPTCHA_ERROR' => 'Error Yandex Smart Captcha validation.',

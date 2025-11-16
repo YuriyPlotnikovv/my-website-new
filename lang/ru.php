@@ -63,7 +63,7 @@ return [
     'FORM_PLACEHOLDER_EMAIL' => 'Укажите Вашу почту',
     'FORM_LABEL_MESSAGE' => 'Сообщение',
     'FORM_PLACEHOLDER_MESSAGE' => 'Введите Ваше сообщение',
-    'FORM_LABEL_AGREEMENT' => 'Я согласен на обработку персональных данных в соответствии с условиями <a class="form__file-link" href="/GDPR.pdf" target="_blank">Политики обработки персональных данных</a>',
+    'FORM_LABEL_AGREEMENT' => 'Я согласен на обработку персональных данных в соответствии с условиями <a class="form__file-link" href="/GDPR_RU.pdf" target="_blank">Политики обработки персональных данных</a>',
     'FORM_SUBMIT' => 'Отправить',
     'FORM_STATE_SUCCESS' => 'Ваше сообщение успешно отправлено!',
     'FORM_STATE_CAPTCHA_ERROR' => 'Ошибка валидации Yandex Smart Captcha.',

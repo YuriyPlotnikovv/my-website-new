@@ -2,9 +2,7 @@
 
 .form {
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
   }
 
   &__row {
@@ -12,10 +10,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     width: 100%;
+    margin-bottom: 10px;
 
     @media (max-width: var.$mobile-max-width) {
       display: flex;
       flex-direction: column;
+      gap: 10px;
     }
   }
 
@@ -69,6 +69,11 @@
     display: flex;
     justify-content: space-between;
     gap: 30px;
+
+    @media (max-width: var.$tablet-max-width) {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 
   &__file-link {
@@ -79,6 +84,14 @@
     &:hover,
     &:active {
       text-decoration: none;
+    }
+  }
+
+  &__button {
+    align-self: start;
+
+    @media (max-width: var.$tablet-max-width) {
+      align-self: center;
     }
   }
 
