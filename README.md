@@ -38,7 +38,6 @@ A new version of my website. In this version, everything is completely assembled
 #### Not Implemented
 - Page with implementation examples
 - Page with useful materials
-- Form for sending a message to the mail
 
 ---
 
@@ -87,7 +86,6 @@ Website: https://yuriyplotnikovv.ru
 #### Не реализовано
 - Страница с примерами реализации
 - Страница с полезными материалами
-- Форма отправки сообщения на почту
 
 ---
 
