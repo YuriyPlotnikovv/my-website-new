@@ -90,7 +90,7 @@ class FormHelper
         }
 
         $name = trim(strip_tags($name));
-        if (mb_strlen($name) < 2) {
+        if (mb_strlen($name) < 3) {
             return false;
         }
 
@@ -102,7 +102,7 @@ class FormHelper
         $message = $this->data['MESSAGE'] ?? '';
         $message = trim(strip_tags($message));
         $len = mb_strlen($message);
-        if ($len < 50 || $len > 500) {
+        if ($len < 10 || $len > 500) {
             return false;
         }
 
