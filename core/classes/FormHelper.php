@@ -125,14 +125,16 @@ class FormHelper
     private function sendMail(): bool
     {
         $to = 'yuriy.plotnikovv@yandex.ru';
-        $subject = 'Сообщение с формы обратной связи';
-        $senderName = 'Админ сайта yuriyplotnikovv.ru';
+        $subject = mb_encode_mimeheader('Сообщение с формы обратной связи', 'UTF-8', 'B');
+        $senderName = mb_encode_mimeheader('Админ сайта yuriyplotnikovv.ru', 'UTF-8', 'B');
 
         $headers = [
             'From' => $senderName . '<noreply@yuriyplotnikovv.ru>',
             'Reply-To' => $this->data['EMAIL'],
             'Content-Type' => 'text/plain; charset=utf-8',
+            'X-Sender' => $senderName . '<noreply@yuriyplotnikovv.ru>',
             'X-Mailer' => 'PHP/' . PHP_VERSION,
+            'X-Priority' => '1',
         ];
 
         $body = "Сообщение с формы обратной связи на сайте yuriyplotnikovv.ru:\n\n";
