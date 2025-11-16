@@ -25,6 +25,11 @@
         "link": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
     },
     {
+        "code": "typescript",
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/"
+    },
+    {
         "code": "jquery",
         "name": "JQuery",
         "link": "https://jquery.com/"
@@ -60,9 +65,9 @@
         "link": "https://gulpjs.com/"
     },
     {
-        "code": "typescript",
-        "name": "TypeScript",
-        "link": "https://www.typescriptlang.org/"
+        "code": "vite",
+        "name": "Vite",
+        "link": "https://vite.dev/"
     },
     {
         "code": "git",
