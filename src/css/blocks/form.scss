@@ -20,9 +20,12 @@
   }
 
   &__field {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-bottom: 40px;
 
     &--textarea {
       grid-column: span 2;
@@ -59,8 +62,8 @@
   }
 
   &__error {
-    grid-column: span 2;
-    height: 20px;
+    position: absolute;
+    top: calc(100% - 35px);
 
     color: var.$colorRed;
   }

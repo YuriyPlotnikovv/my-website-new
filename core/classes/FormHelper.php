@@ -130,7 +130,6 @@ class FormHelper
 
         $headers = [
             'From' => $senderName . '<noreply@yuriyplotnikovv.ru>',
-            'Reply-To' => $this->data['EMAIL'],
             'Content-Type' => 'text/plain; charset=utf-8',
             'X-Sender' => $senderName . '<noreply@yuriyplotnikovv.ru>',
             'X-Mailer' => 'PHP/' . PHP_VERSION,
