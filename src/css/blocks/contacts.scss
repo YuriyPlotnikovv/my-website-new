@@ -51,8 +51,7 @@
     box-sizing: border-box;
     width: 60px;
     height: 60px;
-    fill: var.$colorBlackThree;
-    stroke: var.$colorBlackThree;
+    color: var.$colorBlackThree;
 
     @media (max-width: var.$mobile-max-width) {
       width: 40px;
