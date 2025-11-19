@@ -59,6 +59,12 @@
 
     fill: var.$colorWhite;
 
+    @media (max-width: var.$desktop-mid-width - 220) {
+      display: none;
+    }
+    @media (max-width: var.$mobile-max-width) {
+      display: block;
+    }
     @media (max-width: var.$mobile-mid-width) {
       display: none;
     }
