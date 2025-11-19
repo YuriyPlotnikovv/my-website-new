@@ -55,8 +55,6 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
     <?php endif; ?>
     <link href="<?= Tools::addTimestampToFile('/public/css/style.min.css') ?>" rel="stylesheet">
 
-    <script src="/snowfall.min.js" async></script>
-
     <?php if ($PAGE_TYPE === 'about'): ?>
         <script src="/public/js/vendor/lightgallery.min.js" defer></script>
         <script src="/public/js/vendor/lg-zoom.min.js" defer></script>

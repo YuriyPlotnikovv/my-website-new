@@ -34,5 +34,7 @@ global $MESS, $PAGE_TYPE;
         </a>
     </div>
 </footer>
+
+<script src="/snowfall.min.js"></script>
 </body>
 </html>
