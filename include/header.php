@@ -66,7 +66,7 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
             window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
         </script>
         <script src="/public/js/vendor/vue.min.js" defer></script>
-        <script src="https://smartcaptcha.yandexcloud.net/captcha.js" async defer></script>
+        <script src="https://smartcaptcha.cloud.yandex.ru/captcha.js?render=onload&onload=onloadFunction" defer></script>
     <?php endif; ?>
 
     <script src="<?= Tools::addTimestampToFile('/public/js/script.min.js') ?>" defer></script>

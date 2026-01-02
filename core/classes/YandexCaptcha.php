@@ -7,7 +7,7 @@ class YandexCaptcha
     private const string STATUS_OK = 'ok';
     private string $publicKey;
     private string $secretKey;
-    private string $url = 'https://smartcaptcha.yandexcloud.net/validate';
+    private string $url = 'https://smartcaptcha.cloud.yandex.ru/validate';
 
     public function __construct(string $publicKey, string $secretKey)
     {
