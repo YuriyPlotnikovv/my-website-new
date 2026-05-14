@@ -40,6 +40,21 @@
         "link": "https://vuejs.org/"
     },
     {
+        "code": "pinia",
+        "name": "Pinia",
+        "link": "https://pinia.vuejs.org/"
+    },
+    {
+        "code": "nuxt",
+        "name": "Nuxt",
+        "link": "https://nuxt.com/"
+    },
+    {
+        "code": "nuxt-ui",
+        "name": "Nuxt UI",
+        "link": "https://ui.nuxt.com/"
+    },
+    {
         "code": "react",
         "name": "React",
         "link": "https://react.dev/"
@@ -56,8 +71,13 @@
     },
     {
         "code": "bitrix",
-        "name": "Bitrix",
+        "name": "Bitrix CMS",
         "link": "https://dev.1c-bitrix.ru/"
+    },
+    {
+        "code": "cockpit",
+        "name": "Cockpit CMS",
+        "link": "https://getcockpit.com/"
     },
     {
         "code": "gulp",
