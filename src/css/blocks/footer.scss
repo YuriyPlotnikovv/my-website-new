@@ -22,8 +22,25 @@
     }
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 14px;
+  }
+
   &__copyright {
     user-select: none;
+  }
+
+  &__policy {
+    transition: all 0.4s ease-in-out;
+    will-change: opacity;
+
+    &:hover, &:active {
+      opacity: 0.6;
+    }
   }
 
   &__icons {

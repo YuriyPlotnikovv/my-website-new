@@ -2,16 +2,22 @@
 
 use core\Tools;
 
-global $MESS, $PAGE_TYPE;
+global $MESS, $LANG, $PAGE_TYPE;
 ?>
 
 </main>
 
 <footer class="page__footer footer">
     <div class="footer__wrapper">
-        <span class="footer__copyright">
-            © 2023 - <?= date('Y') ?> <?= $MESS['FOOTER_AUTHOR'] ?>
-        </span>
+        <div class="footer__info">
+            <span class="footer__copyright">
+                © 2023 - <?= date('Y') ?> <?= $MESS['FOOTER_AUTHOR'] ?>
+            </span>
+
+            <a class="footer__policy link" href="/docs/policy_<?= strtolower($LANG) ?>">
+                <?= $MESS['FOOTER_POLICY'] ?>
+            </a>
+        </div>
 
         <nav class="footer__navigation navigation">
             <?php Tools::includeFile('navigation'); ?>
@@ -34,6 +40,8 @@ global $MESS, $PAGE_TYPE;
         </a>
     </div>
 </footer>
+
+<?php Tools::includeFile('cookie'); ?>
 
 <? /* <script src="/snowfall.min.js"></script> */ ?>
 </body>

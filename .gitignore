@@ -22,7 +22,6 @@ package-lock.json
 cache/
 cgi-bin/
 doc/
-docs/
 logs/
 photos/
 plugins/

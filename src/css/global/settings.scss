@@ -25,6 +25,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   min-width: var.$mobile-min-width;
   height: 100%;
 
