@@ -14,7 +14,7 @@ global $MESS, $LANG, $PAGE_TYPE;
                 © 2023 - <?= date('Y') ?> <?= $MESS['FOOTER_AUTHOR'] ?>
             </span>
 
-            <a class="footer__policy link" href="/docs/policy_<?= strtolower($LANG) ?>.pdf">
+            <a class="footer__policy link" href="/docs/policy_<?= strtolower($LANG) ?>.pdf" target="_blank">
                 <?= $MESS['FOOTER_POLICY'] ?>
             </a>
         </div>
