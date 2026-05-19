@@ -210,29 +210,36 @@ class GitHubProjectsFetcher
     private function fetchAndCacheFile(string $repoName, string $filePath): ?string
     {
         $filename = $repoName . '-preview.webp';
-
         $localDir = __DIR__ . '/../../' . self::LOCAL_IMAGE_DIR;
+
         if (!is_dir($localDir) && !mkdir($localDir, 0755, true) && !is_dir($localDir)) {
             Tools::logError("Не удалось создать директорию {$localDir}");
             return null;
         }
 
         $localPath = $localDir . $filename;
-        if (file_exists($localPath)) {
-            return $filename;
-        }
-
         $url = "https://api.github.com/repos/{$this->username}/{$repoName}/contents/{$filePath}";
         $response = $this->makeRequest($url);
+
         if ($response === null || !isset($response['content'])) {
             Tools::logError("Файл {$filePath} не найден в репозитории {$repoName}");
             return null;
         }
 
         $content = base64_decode($response['content']);
+
         if ($content === false) {
             Tools::logError("Ошибка декодирования файла {$filePath} из репозитория {$repoName}");
             return null;
+        }
+
+        if (file_exists($localPath)) {
+            $oldHash = md5_file($localPath);
+            $newHash = md5($content);
+
+            if ($oldHash === $newHash) {
+                return $filename;
+            }
         }
 
         if (file_put_contents($localPath, $content) === false) {
