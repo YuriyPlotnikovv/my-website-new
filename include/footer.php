@@ -43,6 +43,6 @@ global $MESS, $LANG, $PAGE_TYPE;
 
 <?php Tools::includeFile('cookie'); ?>
 
-<? /* <script src="/snowfall.min.js"></script> */ ?>
+<script src="/snowfall.min.js" defer></script>
 </body>
 </html>
