@@ -136,7 +136,7 @@ class FormHelper
 
             if ($userName !== '') {
                 $encodedName = mb_encode_mimeheader($userName, 'UTF-8', 'B');
-                $replyTo = "{$encodedName} <$userEmail>";
+                $replyTo = "$encodedName <$userEmail>";
             } else {
                 $replyTo = $userEmail;
             }
