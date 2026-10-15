@@ -126,12 +126,27 @@ class FormHelper
     {
         $to = 'yuriy.plotnikovv@yandex.ru';
         $subject = mb_encode_mimeheader('Сообщение с формы обратной связи', 'UTF-8', 'B');
-        $senderName = mb_encode_mimeheader('Админ сайта yuriyplotnikovv.ru', 'UTF-8', 'B');
+        $senderName = mb_encode_mimeheader('Yuriyplotnikovv.ru', 'UTF-8', 'B');
+
+        $replyTo = 'noreply@yuriyplotnikovv.ru';
+
+        $userEmail = filter_var(trim($this->data['EMAIL'] ?? ''), FILTER_VALIDATE_EMAIL);
+        if ($userEmail) {
+            $userName = trim($this->data['NAME'] ?? '');
+
+            if ($userName !== '') {
+                $encodedName = mb_encode_mimeheader($userName, 'UTF-8', 'B');
+                $replyTo = "$encodedName <$userEmail>";
+            } else {
+                $replyTo = $userEmail;
+            }
+        }
 
         $headers = [
-            'From' => $senderName . '<noreply@yuriyplotnikovv.ru>',
+            'From' => $senderName . ' <noreply@yuriyplotnikovv.ru>',
+            'Reply-To' => $replyTo,
             'Content-Type' => 'text/plain; charset=utf-8',
-            'X-Sender' => $senderName . '<noreply@yuriyplotnikovv.ru>',
+            'X-Sender' => $senderName . ' <noreply@yuriyplotnikovv.ru>',
             'X-Mailer' => 'PHP/' . PHP_VERSION,
             'X-Priority' => '1',
         ];
