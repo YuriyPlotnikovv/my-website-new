@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sliders = document.querySelectorAll('.slider');
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const defaultSliderOptions = {
     speed: 1500,
     watchOverflow: true,
@@ -32,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
           });
 
           elem.addEventListener('lgBeforeOpen', () => {
-            swiper.autoplay.stop();
+            swiper.autoplay?.stop();
           });
 
           elem.addEventListener('lgBeforeClose', () => {
             swiper.slideTo(lg.index, 1500);
-            swiper.autoplay.start();
+            swiper.autoplay?.start();
           });
         },
       };
@@ -60,11 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
           slidesPerView: 5,
         },
       };
-      sliderOptions.autoplay = {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      };
+      if (!prefersReducedMotion) {
+        sliderOptions.autoplay = {
+          delay: 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        };
+      }
     }
 
     if (elem.hasAttribute('data-pagination')) {

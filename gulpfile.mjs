@@ -1,25 +1,28 @@
-const gulp = require('gulp');
-const fs = require('fs');
-const path = require('path');
-const plumber = require('gulp-plumber');
-const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-dart-sass');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const csso = require('postcss-csso');
-const rename = require('gulp-rename');
-const terser = require('gulp-terser');
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
-const cheerio = require('gulp-cheerio');
-const del = require('del');
-const concat = require('gulp-concat');
-const cleanCSS = require('gulp-clean-css');
-const babel = require('gulp-babel');
-const cached = require('gulp-cached');
-const remember = require('gulp-remember');
-const notify = require('gulp-notify');
+import gulp from 'gulp';
+import fs from 'fs';
+import path from 'path';
+import plumber from 'gulp-plumber';
+import sourcemaps from 'gulp-sourcemaps';
+import sass from 'gulp-dart-sass';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
+import terser from 'gulp-terser';
+import imagemin from 'gulp-imagemin';
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminOptipng from 'imagemin-optipng';
+import imageminSvgo from 'imagemin-svgo';
+import webp from 'gulp-webp';
+import svgstore from 'gulp-svgstore';
+import cheerio from 'gulp-cheerio';
+import {deleteAsync as del} from 'del';
+import concat from 'gulp-concat';
+import cleanCSS from 'gulp-clean-css';
+import babel from 'gulp-babel';
+import cached from 'gulp-cached';
+import remember from 'gulp-remember';
+import notify from 'gulp-notify';
 
 const paths = {
   styles: {
@@ -66,56 +69,37 @@ const paths = {
 const generateStyleFile = (done) => {
   const styleFilePath = 'src/css/style.scss';
 
-  let content = paths.styles.global.map(filePath => `@use "${filePath}";`).join('\n') + '\n\n';
-
-  fs.readdir(paths.styles.blocks, (err, files) => {
-    if (err) {
-      console.error('Error reading blocks directory:', err);
-      return done(err);
-    }
-
-    files.filter(file => path.extname(file) === '.scss').forEach(file => {
-      const blockName = path.basename(file, '.scss');
-      content += `@use "./blocks/${blockName}";\n`;
-    });
-
-    fs.writeFile(styleFilePath, content, (err) => {
+  const readDir = (dir) => new Promise((resolve, reject) => {
+    fs.readdir(dir, (err, files) => {
       if (err) {
-        console.error('Error writing style.scss:', err);
-        return done(err);
+        reject(err);
+        return;
       }
-      done();
+      resolve(files.filter(file => path.extname(file) === '.scss'));
     });
   });
 
-  fs.readdir(paths.styles.pages, (err, files) => {
-    if (err) {
-      console.error('Error reading blocks directory:', err);
-      return done(err);
-    }
-
-    files.filter(file => path.extname(file) === '.scss').forEach(file => {
-      const blockName = path.basename(file, '.scss');
-      content += `@use "./pages/${blockName}";\n`;
-    });
-
-    fs.writeFile(styleFilePath, content, (err) => {
-      if (err) {
-        console.error('Error writing style.scss:', err);
-        return done(err);
-      }
-      done();
-    });
-  });
+  Promise.all([readDir(paths.styles.blocks), readDir(paths.styles.pages)])
+    .then(([blockFiles, pageFiles]) => {
+      let content = paths.styles.global.map(filePath => `@use "${filePath}";`).join('\n') + '\n\n';
+      blockFiles.forEach(file => {
+        content += `@use "./blocks/${path.basename(file, '.scss')}";\n`;
+      });
+      pageFiles.forEach(file => {
+        content += `@use "./pages/${path.basename(file, '.scss')}";\n`;
+      });
+      fs.writeFile(styleFilePath, content, done);
+    })
+    .catch(done);
 };
-exports.generateStyleFile = generateStyleFile;
 
 const styles = () => {
-  return gulp.src(paths.styles.src)
+  return gulp.src(paths.styles.src, {encoding: false})
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe(sourcemaps.init())
     .pipe(sass.sync({
-      outputStyle: 'compressed'
+      outputStyle: 'compressed',
+      charset: false
     }).on('error', sass.logError))
     .pipe(postcss([autoprefixer(), csso()]))
     .pipe(cleanCSS({level: 2}))
@@ -123,11 +107,10 @@ const styles = () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest));
 };
-exports.styles = styles;
 
 // Scripts
 const scripts = () => {
-  return gulp.src(paths.scripts.src)
+  return gulp.src(paths.scripts.src, {encoding: false})
     .pipe(cached('scripts'))
     .pipe(sourcemaps.init())
     .pipe(babel({
@@ -143,33 +126,40 @@ const scripts = () => {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest));
 };
-exports.scripts = scripts;
 
 // Images
-const images = () => {
-  return gulp.src(paths.images.src)
+const imagesRaster = () => {
+  return gulp.src(['src/img/**/*.{jpg,jpeg,png}', '!src/img/og-image.png'], {encoding: false})
     .pipe(imagemin([
-      imagemin.mozjpeg({quality: 75, progressive: true}),
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.svgo({
-        plugins: [
-          {removeViewBox: true},
-          {cleanupIDs: false}
-        ]
-      })
+      imageminMozjpeg({quality: 75, progressive: true}),
+      imageminOptipng({optimizationLevel: 5})
     ]))
     .pipe(webp({quality: 80}))
     .pipe(gulp.dest(paths.images.dest))
     .on('end', () => {
-      gulp.src('src/img/**/*.webp')
+      gulp.src('src/img/**/*.webp', {encoding: false})
         .pipe(gulp.dest(paths.images.dest));
     });
 };
-exports.images = images;
+
+const imagesVector = () => {
+  return gulp.src(['src/img/**/*.svg', '!src/img/svg/**/*'], {encoding: false})
+    .pipe(imagemin([
+      imageminSvgo({
+        plugins: [
+          {name: 'removeViewBox'},
+          {name: 'cleanupIds', active: false}
+        ]
+      })
+    ]))
+    .pipe(gulp.dest(paths.images.dest));
+};
+
+const images = gulp.parallel(imagesRaster, imagesVector);
 
 // Sprite
 const sprite = () => {
-  return gulp.src(paths.sprite.src)
+  return gulp.src(paths.sprite.src, {encoding: false})
     .pipe(cheerio({
       run: function ($, file) {
         const fileName = path.basename(file.relative, path.extname(file.relative));
@@ -224,21 +214,18 @@ const sprite = () => {
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest(paths.sprite.dest));
 };
-exports.sprite = sprite;
 
 // Copy
 const copy = (done) => {
-  gulp.src(paths.copy.src, {base: 'src'})
+  gulp.src(paths.copy.src, {base: 'src', encoding: false})
     .pipe(gulp.dest(paths.copy.dest));
   done();
 };
-exports.copy = copy;
 
 // Clean
 const clean = () => {
   return del([paths.clean], {force: true});
 };
-exports.clean = clean;
 
 // Build
 const build = gulp.series(
@@ -248,7 +235,6 @@ const build = gulp.series(
   generateStyleFile,
   gulp.parallel(styles, scripts, sprite)
 );
-exports.build = build;
 
 // Watch
 const watchFiles = () => {
@@ -257,5 +243,18 @@ const watchFiles = () => {
   gulp.watch(paths.images.watch, images);
 };
 
-// Default
-exports.default = build;
+export {
+  generateStyleFile,
+  styles,
+  scripts,
+  imagesRaster,
+  imagesVector,
+  images,
+  sprite,
+  copy,
+  clean,
+  build,
+  watchFiles
+};
+
+export default build;

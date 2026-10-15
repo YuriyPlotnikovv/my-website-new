@@ -32,6 +32,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const CLASS_INFO_INTO = 'info-into';
   const CLASS_INFO_INTO_ITEM = '.info-into__text';
 
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const runWithDelay = (callback, delay) => {
+    if (prefersReducedMotion) {
+      callback();
+      return;
+    }
+
+    setTimeout(callback, delay);
+  };
+
   (function observeSections() {
     const options = {
       root: null,
@@ -44,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           const target = entry.target;
 
-          setTimeout(() => {
+          runWithDelay(() => {
             target.classList.add(CLASS_ANIMATE);
 
             if (target.classList.contains(CLASS_QUOTE)) {
@@ -97,14 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }());
 
   function animateItems(section, itemsSelector, animateClass, pointingClass) {
-    setTimeout(() => {
+    runWithDelay(() => {
       const items = section.querySelectorAll(itemsSelector);
 
       items.forEach((item, index) => {
-        setTimeout(() => {
+        runWithDelay(() => {
           item.classList.add(animateClass);
 
-          setTimeout(() => {
+          runWithDelay(() => {
             item.classList.add(pointingClass);
           }, POINTING_DELAY);
         }, ITEM_ANIMATE_DELAY * index);
