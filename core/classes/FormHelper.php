@@ -135,7 +135,7 @@ class FormHelper
             'Reply-To' => $replyTo,
             'Content-Type' => 'text/plain; charset=utf-8',
             'X-Mailer' => 'PHP/' . PHP_VERSION,
-            'X-Priority' => '1',
+            'X-Priority' => '3',
         ];
 
         $body = "Сообщение с формы обратной связи на сайте yuriyplotnikovv.ru:\n\n";
