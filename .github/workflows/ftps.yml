@@ -68,16 +68,16 @@ jobs:
                   local-dir: ./
                   exclude: |
                       **/.git*
+                      **/.git*/**
                       **/.github/**
                       **/.info/**
                       **/node_modules/**
-                      **/src/**
-                      **/.editorconfig
-                      **/package.json
-                      **/package-lock.json
-                      **/gulpfile.js
-                      **/README.md
-                      **/LICENSE
-                      **/composer.json
-                      **/composer.lock
-                      **/.env.example
+                      src/**
+                      package.json
+                      package-lock.json
+                      gulpfile.mjs
+                      composer.json
+                      composer.lock
+                      .env.example
+                      .editorconfig
+                      README.md
