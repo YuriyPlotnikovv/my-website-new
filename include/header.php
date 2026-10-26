@@ -1,9 +1,9 @@
 <?php
 
 use core\Tools;
+use core\Env;
 
-require_once __DIR__ . '/../core/apiKeys.php';
-global $captchaPublicApiKey;
+require_once __DIR__ . '/../core/bootstrap.php';
 global $MESS, $PAGE_TYPE, $PATH, $LANG;
 ?>
 
@@ -63,7 +63,7 @@ global $MESS, $PAGE_TYPE, $PATH, $LANG;
 
     <?php if ($PAGE_TYPE === 'contacts'): ?>
         <script>
-            window.captchaPublicKey = '<?= $captchaPublicApiKey ?>'
+            window.captchaPublicKey = '<?= htmlspecialchars(Env::get('CAPTCHA_PUBLIC_API_KEY'), ENT_QUOTES) ?>'
         </script>
         <script src="/public/js/vendor/vue.min.js" defer></script>
         <script src="https://smartcaptcha.cloud.yandex.ru/captcha.js?render=onload&onload=onloadFunction" defer></script>

@@ -1,20 +1,14 @@
 <?php
-require_once __DIR__ . '/apiKeys.php';
-require_once __DIR__ . '/classes/Tools.php';
-require_once __DIR__ . '/classes/VkPhotoFetcher.php';
-require_once __DIR__ . '/classes/GitHubProjectsFetcher.php';
+require_once __DIR__ . '/bootstrap.php';
 
 use core\VkPhotoFetcher;
 use core\GitHubProjectsFetcher;
+use core\Env;
 
-global $ownerId;
-global $albumId;
-global $vkApiKey;
-global $gitHubApiKey;
 $username = 'YuriyPlotnikovv';
 
-$vkPhotoFetcher = new VkPhotoFetcher($ownerId, $albumId, $vkApiKey);
+$vkPhotoFetcher = new VkPhotoFetcher(Env::get('OWNER_ID'), Env::get('ALBUM_ID'), Env::get('VK_API_KEY'));
 $vkPhotoFetcher->getPhotos();
 
-$gitHubProjectsFetcher = new GitHubProjectsFetcher($username, $gitHubApiKey);
+$gitHubProjectsFetcher = new GitHubProjectsFetcher($username, Env::get('GIT_API_KEY'));
 $gitHubProjectsFetcher->getProjects();

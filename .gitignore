@@ -28,3 +28,8 @@ plugins/
 tmp/
 node_modules/
 public/
+
+.env
+vendor/
+.claude/
+.AI/

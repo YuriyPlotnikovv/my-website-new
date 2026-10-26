@@ -18,6 +18,15 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v6
 
+            - name: Set up PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.4'
+                  coverage: none
+
+            - name: Install PHP dependencies
+              run: composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+
             - name: Set up Node.js
               uses: actions/setup-node@v7
               with:
@@ -37,7 +46,7 @@ jobs:
             - name: Build project
               run: npm run build
 
-            - name: Generate API keys
+            - name: Generate .env
               env:
                   OWNER_ID: ${{ secrets.OWNER_ID }}
                   ALBUM_ID: ${{ secrets.ALBUM_ID }}
@@ -45,8 +54,9 @@ jobs:
                   GIT_API_KEY: ${{ secrets.GIT_API_KEY }}
                   CAPTCHA_PUBLIC_API_KEY: ${{ secrets.CAPTCHA_PUBLIC_API_KEY }}
                   CAPTCHA_PRIVATE_API_KEY: ${{ secrets.CAPTCHA_PRIVATE_API_KEY }}
+                  SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
                   GITHUB_WORKSPACE: ${{ github.workspace }}
-              run: node .github/scripts/generateApiKeys.js
+              run: node .github/scripts/generateEnv.js
 
             - name: SFTP Deploy
               uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -68,3 +78,6 @@ jobs:
                       **/gulpfile.js
                       **/README.md
                       **/LICENSE
+                      **/composer.json
+                      **/composer.lock
+                      **/.env.example

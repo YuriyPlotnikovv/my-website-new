@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../core/classes/FormHelper.php';
+require_once __DIR__ . '/../core/bootstrap.php';
 
 use core\FormHelper;
 

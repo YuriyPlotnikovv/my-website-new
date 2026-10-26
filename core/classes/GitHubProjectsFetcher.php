@@ -1,7 +1,6 @@
 <?php
 
 namespace core;
-require_once __DIR__ . '/Tools.php';
 
 use core\Tools;
 use DateTime;

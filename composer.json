@@ -1,0 +1,25 @@
+{
+    "name": "yuriyplotnikovv/my-website",
+    "description": "Личный сайт-портфолио yuriyplotnikovv.ru",
+    "type": "project",
+    "license": "AGPL-3.0-only",
+    "require": {
+        "php": ">=8.4",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "phpmailer/phpmailer": "^6.9",
+        "symfony/dotenv": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "core\\": "core/classes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.4"
+        },
+        "sort-packages": true
+    }
+}
